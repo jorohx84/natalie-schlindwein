@@ -28,7 +28,7 @@ header{
     align-items: center;
     justify-content: space-between;
    box-shadow: 0px 10px 30px 0px var(--primary);
-    transition: box-shadow 0.5s ease-in-out, border-width 0.5s ease-in-out;
+    transition: box-shadow 0.5s ease-in-out, border-width 0.5s ease-in-out, background-color 0.5s ease-out;
 }
 
 .blackBG{
@@ -41,7 +41,7 @@ header{
     border-bottom: solid; */
    /* border-color: var(--primary);*/
    /* border-width: 1px;*/
-  background-color: unset;
+   background-color: rgba(0, 0, 0, 0.423);
 
 }
 

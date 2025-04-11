@@ -43,17 +43,23 @@ function toogleRespMenu() {
             respMenuRef.classList.remove('slideIn');
             respMenuRef.classList.remove('lightBorder');
             contentRef.classList.remove('hideContent');
-            headerRef.classList.remove('blackBG');
+            setTimeout(() => {
+                headerRef.classList.remove('blackBG');
+            }, 500);
+            
+            
         }
     }
 }
+
+
 
 function scrollHeader() {
     const headerRef = document.getElementById('headerContainer');
     const navRef = document.getElementById('nav');
     const scrollHeight = window.scrollY;
 
-    if (scrollHeight > 100) {
+    if (scrollHeight > 1) {
         console.log('start');
         headerRef.classList.add('noShadow');
         navRef.classList.add('navBG');
