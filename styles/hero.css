@@ -1,7 +1,7 @@
 .hero {
     width: 100%;
     height: calc(100vh - 80px);
- 
+
 }
 
 .heroContainer {
@@ -13,18 +13,18 @@
 
 }
 
-.heroContent{
-width: 100%;
-max-width: 1440px;
+.heroContent {
+    width: 100%;
+    max-width: 1440px;
 
-display: flex;
-justify-content: center;
-align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
 
-.profilePhoto{
+.profilePhoto {
     width: 720px;
     height: 100%;
     position: relative;
@@ -32,12 +32,12 @@ align-items: center;
     justify-content: center;
 }
 
-.photo{
-   width: 600px;
+.photo {
+    width: 600px;
     border-radius: 15px;
 }
 
-.imageOverlay{
+.imageOverlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -47,7 +47,7 @@ align-items: center;
 }
 
 
-.headline{
+.headline {
     width: 720px;
     display: flex;
     flex-direction: column;
@@ -57,16 +57,16 @@ align-items: center;
 
 
 
-.firstName{
-width: 100%;
-height: 100%;
-display: flex;
-justify-content: flex-start;
+.firstName {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
 
 
 }
 
-.lastName{
+.lastName {
     width: 100%;
     height: 100%;
     display: flex;
@@ -74,29 +74,27 @@ justify-content: flex-start;
 
 }
 
-.nameSize{
+.nameSize {
     font-size: 96px;
     font-weight: 600;
 }
 
-.firstNamePosition{
- 
-}
-.lastNameTextPosition{
+.firstNamePosition {}
 
-}
+.lastNameTextPosition {}
 
-.nameAnimation{
+.nameAnimation {
 
-    animation: nameColor 10s ;
+    animation: nameColor 10s;
 }
 
-@keyframes nameColor{
- 
-    0%{
+@keyframes nameColor {
+
+    0% {
         color: var(--secondary);
     }
-    100%{
+
+    100% {
         color: white;
     }
 }
@@ -105,90 +103,178 @@ justify-content: flex-start;
 
 
 
-@media(max-width: 1600px){
-    .nameSize{
+@media(max-width: 1600px) {
+    .nameSize {
         font-size: 88px;
     }
-    .photo{
+
+    .photo {
         width: 500px;
     }
-    .headline{
-        width: 660px;
-    }
-    .profilePhoto{
+
+    .headline {
         width: 660px;
     }
 
-    .heroContent{
+    .profilePhoto {
+        width: 660px;
+    }
+
+    .heroContent {
         max-width: 1320px;
     }
 }
 
-@media(max-width: 1450px){
-    .nameSize{
+@media(max-width: 1450px) {
+    .nameSize {
         font-size: 72px;
     }
-    .photo{
+
+    .photo {
         width: 400px;
     }
-    .profilePhoto{
-        width: 540px;
-    }
-    .headline{
+
+    .profilePhoto {
         width: 540px;
     }
 
-    .heroContent{
+    .headline {
+        width: 540px;
+    }
+
+    .heroContent {
         max-width: 1080px;
     }
 }
 
 
-@media(max-width: 1230px){
-    .nameSize{
+@media(max-width: 1230px) {
+    .nameSize {
         font-size: 64px;
     }
-    .photo{
+
+    .photo {
         width: 400px;
     }
-    .profilePhoto{
-        width: 485px;
-    }
-    .headline{
+
+    .profilePhoto {
         width: 485px;
     }
 
-    .heroContent{
+    .headline {
+        width: 485px;
+    }
+
+    .heroContent {
         max-width: 970px;
     }
 }
 
-@media(max-width: 1115px){
-    .nameSize{
+@media(max-width: 1115px) {
+    .nameSize {
         font-size: 56px;
     }
-    .photo{
+
+    .photo {
         width: 350px;
     }
-    .profilePhoto{
-        width: 425px;
-    }
-    .headline{
+
+    .profilePhoto {
         width: 425px;
     }
 
-    .heroContent{
+    .headline {
+        width: 425px;
+    }
+
+    .heroContent {
         max-width: 850px;
     }
 }
 
-@media(max-width: 995px){
- 
+@media(max-width: 995px) {
+    .heroContent {
+        flex-direction: column;
+        gap: 56px;
+    }
+}
+
+@media(max-width: 500px) {
+    .nameSize {
+        font-size: 48px;
+    }
+
+    .photo {
+        width: 300px;
+    }
+
+    .profilePhoto {
+        width: 360px;
+    }
+
+    .headline {
+        width: 360px;
+    }
+
+    .heroContent {
+        width: 360px;
+    }
+}
+
+@media(max-width: 420px) {
+    .nameSize {
+        font-size: 36px;
+    }
+
+    .photo {
+        width: 250px;
+    }
+
+    .profilePhoto {
+        width: 280px;
+    }
+
+    .headline {
+        width: 280px;
+    }
+
+    .heroContent {
+        width: 280px;
+    }
+}
+
+@media(max-height: 720px) {
+    .nameSize {
+        font-size: 36px;
+    }
+
+    .photo {
+        width: 250px;
+    }
+
+    .profilePhoto {
+        width: 280px;
+    }
+
+    .headline {
+        width: 280px;
+    }
+
+    .heroContent {
+        width: 280px;
+    }
 }
 
 
-div, span{
-    border: solid;
-    border-width: 1x;
+@media(max-height: 1370px) {
+    .heroContainer {
+        margin-top: 56px;
+        align-items: flex-start;
+    }
 }
 
+@media (pointer: coarse) and (min-height: 1030px){
+    .hero{
+        height: fit-content;
+    }
+}
