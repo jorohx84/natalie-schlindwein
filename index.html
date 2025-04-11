@@ -15,12 +15,15 @@
     <script src="https://www.w3schools.com/lib/w3.js"></script>
 </head>
 
-<body>
+<body onscroll="scrollHeader()">
     <script>w3.includeHTML();</script>
-    <header w3-include-html="./templates/header.html"></header>
+    <div class="headerPlaceholder"></div>
+    <header id="header" w3-include-html="./templates/header.html"></header>
 
     <section class="content" id="content">
         <section class="hero" w3-include-html="./templates/hero.html"></section>
+
+        <div class="test"></div>
     </section>
 
 

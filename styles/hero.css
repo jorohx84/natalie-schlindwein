@@ -66,6 +66,7 @@
 
 }
 
+
 .lastName {
     width: 100%;
     height: 100%;
@@ -79,19 +80,21 @@
     font-weight: 600;
 }
 
-.firstNamePosition {}
-
-.lastNameTextPosition {}
 
 .nameAnimation {
 
-    animation: nameColor 10s;
+    animation: nameColor 6s;
 }
 
 @keyframes nameColor {
 
     0% {
         color: var(--secondary);
+    }
+
+    50%{
+
+color: var(--primary);
     }
 
     100% {
@@ -241,6 +244,29 @@
     .heroContent {
         width: 280px;
     }
+}
+
+@media(max-height: 1150px) {
+    .nameSize {
+        font-size: 64px;
+    }
+
+    .photo {
+        width: 400px;
+    }
+
+    .profilePhoto {
+        width: 485px;
+    }
+
+    .headline {
+        width: 485px;
+    }
+
+    .heroContent {
+        max-width: 970px;
+    }
+
 }
 
 @media(max-height: 720px) {

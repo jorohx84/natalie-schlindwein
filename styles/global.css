@@ -38,8 +38,10 @@ a:active {
 :root {
     --bg-color: rgb(0,0,0);
 
-    
-    --primary: rgb(132, 84, 2);
+    /* --primary: rgb(132, 84, 2);*/
+   /*--primary:rgb(242, 112, 144);*/
+  /* --primary:rgb(244, 124, 154);*/
+  --primary:rgb(55, 178, 245);
     --secondary: rgb(39, 76, 120);
     --bg-header: rgba(255, 255, 255);
 }
