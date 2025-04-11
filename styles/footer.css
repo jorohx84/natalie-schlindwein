@@ -1,0 +1,42 @@
+footer{
+    width: 100%;
+    
+}
+.footerContainer{
+    width: 100%;
+    min-height: 100px;
+    max-height: 100px;
+    border-top: solid;
+    border-width: 1px;
+    border-color: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 20px 72px;
+}
+
+.legal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.legal a:hover{
+color: var(--secondary);
+}
+
+@media(max-width: 580px){
+    .footerContainer{
+        flex-direction: column;
+        padding: 20px 20px;
+    }
+
+   
+}
+@media(max-width: 400px){
+    .footerContainer span{
+        font-size: 14px;
+    }
+}

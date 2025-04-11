@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Natalie Schlindwein</title>
     <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/hero.css">
+
+    <script src="javaScript/animations.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
 </head>
+
 <body>
-<header>
-    <div class="logoContainer">
-        <p class="logo">N</p>
-        <span>Natalie Schlindwein</span>
-    </div>
-<nav>
-    <a href="#">Home</a>
-    <a href="#">Über mich</a>
-    <a href="#">Fähigkeiten</a>
-    <a href="#">Kontakt</a>
-  
-</nav>
+    <script>w3.includeHTML();</script>
+    <header w3-include-html="./templates/header.html"></header>
 
-</header>
+    <section class="content" id="content">
+        <section class="hero" w3-include-html="./templates/hero.html"></section>
+    </section>
 
 
-   
+
+
+    <footer w3-include-html="./templates/footer.html"></footer>
+
+    <script>w3.includeHTML();</script>
 </body>
+
 </html>

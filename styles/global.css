@@ -1,4 +1,5 @@
 @font-face {
+    font-display: swap;
     font-family: 'Montserrat';
     src: url(./../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
 }
@@ -11,26 +12,36 @@ body {
 
     font-family: 'Montserrat';
     background-color: var(--bg-color);
-    color: white ;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
-p{
+p {
     margin: 0;
 }
 
-a{
+a {
     text-decoration: none;
     color: unset;
+    cursor: pointer;
 }
 
- a:active {
+
+
+a:active {
     transform: scale(0.95);
 }
 
 :root {
-    --bg-color: rgb(21, 20, 20);
+    --bg-color: rgb(0,0,0);
 
-
+    
+    --primary: rgb(132, 84, 2);
+    --secondary: rgb(39, 76, 120);
+    --bg-header: rgba(255, 255, 255);
 }
 
-/*rgb(39, 76, 120);*/
+/*;rgb(4, 79, 123);*/
