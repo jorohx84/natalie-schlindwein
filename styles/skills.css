@@ -1,19 +1,52 @@
 .skills{
     width: 100%;
     max-width: 1920px;
-    min-height: 900px;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    box-sizing: border-box;
+    padding: 56px;
+    margin-bottom: 200px;
   
+}
+
+.skillsContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 .skillContent{
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     opacity: 0;
     transition: opacity 3s ease-in-out;
+
+}
+.skillCards{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+
+}
+.skillCard{
+    border:solid;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    transition: border-color 0.4s ease-in-out;
+}
+
+.skillCard:hover{
+    border-color: rgb(255, 191, 0);
 }
 
