@@ -1,27 +1,110 @@
 
-.content{
+
+/* div {
+    border:solid;
+
+} */
+.content {
     width: 100%;
     max-width: 1920px;
     flex: 1;
-  box-sizing: border-box;
-  padding: 20px 72px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  transition: opacity 0.6s ease-in-out;
+    box-sizing: border-box;
+  
+    padding:0 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transition: opacity 0.6s ease-in-out;
+    gap: 56px;
 }
 
-.hideContent{
+.hideContent {
     opacity: 0.3;
 }
 
-.test{
-    width: 100%;
-    min-height: 900px ;
+
+
+.scrollBar {
+   width: 5px;
+  z-index: 10;
+position: relative;
+  
+ 
+    border-radius: 0 0 30px 30px;
 }
-@media(max-width: 570px){
-    .content{
+
+.scrollBarInner {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    border-radius: 0 0 30px 30px;
+    background-color:  rgb(45, 44, 44);
+}
+
+.test {
+    width: 100%;
+    min-height: 900px;
+    position: relative;
+}
+
+.title {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    border: solid;
+    width: 100px;
+    height: 50px;
+}
+/* .dividerContainer{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+.divider{
+    height: 3px;
+    background-color:  rgb(45, 44, 44);
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+.width{
+    width: 100%;
+} */
+
+
+.lettering {
+    transform: translateX(-130%);
+    transition: transform 1.8s ease-in-out, opacity 2s ease-in-out;
+    opacity: 0.5;
+
+
+}
+
+.lettering span {
+    font-size: 300px;
+    font-weight: bold;
+    /* color: rgb(45, 44, 44); */
+    color: var(--secondary);
+
+
+}
+
+.letteringSlide {
+    /* animation: slider 2s ease-in-out; */
+
+    transform: translateX(0%);
+
+}
+
+.sliderOpacity {
+    opacity: 0.3;
+}
+
+
+
+@media(max-width: 570px) {
+    .content {
         padding: 20px 20px;
     }
 }

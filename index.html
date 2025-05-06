@@ -10,26 +10,40 @@
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/hero.css">
+    <link rel="stylesheet" href="styles/aboutme.css">
+    <link rel="stylesheet" href="styles/skills.css">
 
     <script src="javaScript/animations.js"></script>
     <script src="https://www.w3schools.com/lib/w3.js"></script>
 </head>
 
-<body onscroll="scrollHeader()">
+<body onscroll="scrollHeader()" id="body">
     <script>w3.includeHTML();</script>
-    <div class="headerPlaceholder"></div>
-    <header id="header" w3-include-html="./templates/header.html"></header>
+    <div class="headerPlaceholder" id="header"></div>
+    <header w3-include-html="./templates/header.html"></header>
+    <section>
 
-    <section class="content" id="content">
-        <section class="hero" w3-include-html="./templates/hero.html"></section>
-
-        <div id="test" class="test"></div>
     </section>
 
+        <section class="content" id="content">
+            <section class="hero" w3-include-html="./templates/hero.html"></section>
+            <div class="dividerContainer">
+                <div class="divider"></div>
+            </div>
+
+            <section class="aboutme" id="aboutme" w3-include-html="./templates/aboutme.html"></section>
+            
+<section class="skills " id="skills" w3-include-html="./templates/skills.html"></section>
+        </section>
+
+
+  
 
 
 
-    <footer w3-include-html="./templates/footer.html"></footer>
+
+
+    <footer w3-include-html="./templates/footer.html" id="footer"></footer>
 
     <script>w3.includeHTML();</script>
 </body>
