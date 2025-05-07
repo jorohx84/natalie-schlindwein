@@ -1,23 +1,23 @@
 const skills=[
     {
         name:'Skill1',
-        description:'',
+        description:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores consectetur, eveniet reprehenderit illo aut accusantium dolorum nobis. Hic cupiditate adipisci, assumenda doloribus, aliquam quibusdam architecto autem deserunt commodi, distinctio maiores?',
     },
     {
         name:'Skill2',
-        description:'',
+        description:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores consectetur, eveniet reprehenderit illo aut accusantium dolorum nobis. Hic cupiditate adipisci, assumenda doloribus, aliquam quibusdam architecto autem deserunt commodi, distinctio maiores?',
     },
     {
         name:'Skill3',
-        description:'',
+        description:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores consectetur, eveniet reprehenderit illo aut accusantium dolorum nobis. Hic cupiditate adipisci, assumenda doloribus, aliquam quibusdam architecto autem deserunt commodi, distinctio maiores?',
     },
     {
         name:'Skill4',
-        description:'',
+        description:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores consectetur, eveniet reprehenderit illo aut accusantium dolorum nobis. Hic cupiditate adipisci, assumenda doloribus, aliquam quibusdam architecto autem deserunt commodi, distinctio maiores?',
     },
     {
         name:'Skill5',
-        description:'',
+        description:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores consectetur, eveniet reprehenderit illo aut accusantium dolorum nobis. Hic cupiditate adipisci, assumenda doloribus, aliquam quibusdam architecto autem deserunt commodi, distinctio maiores?',
     },
 ];
 
@@ -28,6 +28,7 @@ function renderSkills(){
         const skill = skills[index];
         skillRef.innerHTML+=`<div class="skillCard">
         <h3>${skill.name}</h3>
+        <p>${skill.description}</p>
         </div>`
     }
 }

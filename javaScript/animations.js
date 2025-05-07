@@ -92,6 +92,8 @@ function dividerAnimation() {
 function sliderAnimations() {
     letteringAnimation('aboutme', 'aboutmeLettering', 'aboutmeText');
     letteringAnimation('skills', 'skillsLettering', 'skillContent');
+    letteringAnimation('contact', 'contactLettering','contactContent');
+    letteringAnimation('experiences', 'experiencesLettering','experiencesContent');
 }
 
 function letteringAnimation(divID, sliderID, contentID) {
