@@ -18,13 +18,15 @@
     <script src="javaScript/animations.js"></script>
     <script src="javaScript/skills.js"></script>
     <script src="javaScript/experiences.js"></script>
+    <script src="javaScript/contactform.js"></script>
     <script src="https://www.w3schools.com/lib/w3.js"></script>
 </head>
 
-<body onscroll="scrollHeader(), getScrollbarPosition(), scrollVerticalBar()" onload="renderSkills(), renderExperiences()" id="body">
+<body onscroll="scrollHeader(), getScrollbarPosition(), scrollVerticalBar()"
+    onload="renderSkills(), renderExperiences()" id="body">
     <script>w3.includeHTML();</script>
-    <div class="headerPlaceholder" id="header"></div>
-    <header>
+    <div class="headerPlaceholder" ></div>
+    <header id="header">
         <div class="headerContainer" id="headerContainer">
             <div class="logoContainer">
                 <p class="logo">N</p>
@@ -83,29 +85,42 @@
                 <div class="lettering" id="aboutmeLettering">
                     <span>About me</span>
                 </div>
-                <div class="aboutmeContent">
+                <div class="aboutmeContent" id="aboutmeContent">
+                    <div class="aboutmeTextContainer">
+                        <div class="aboutmeText animationDiv" id="aboutmeText">
+                            <h2>About me</h2>
+                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem dolores
+                                harum asperiores
+                                ratione eligendi dolorem blanditiis, dolorum, minima obcaecati explicabo vero nihil
+                                fugiat
+                                aliquam
+                                saepe, illo amet a? Veniam? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Dicta
+                                voluptate
+                                error iste recusandae. Nam ipsam, dignissimos non doloremque nihil magnam itaque eveniet
+                                natus, ipsum
+                                earum mollitia exercitationem placeat animi deserunt? Lorem ipsum dolor sit amet,
+                                consectetur
+                                adipisicing elit. Corporis debitis quos quas natus molestiae enim praesentium rem iste,
+                                eos
+                                unde magnam
+                                porro dolores voluptates amet, vitae placeat quaerat voluptatem numquam! Lorem, ipsum
+                                dolor
+                                sit amet
+                                consectetur adipisicing elit. Nam consectetur unde reprehenderit rerum corrupti
+                                inventore,
+                                dolorum, quam
+                                aperiam suscipit saepe perferendis alias fuga quidem eos facere architecto sit sapiente
+                                quasi.</span>
+                        </div>
+                        <div class="aboutmeBtnContainer">
+                            <button onclick="window.location.href='#contact'">Kontakt</button>
+                        </div>
 
-                    <div class="aboutmeText animationDiv" id="aboutmeText">
-                        <h2>About me</h2>
-                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem dolores
-                            harum asperiores
-                            ratione eligendi dolorem blanditiis, dolorum, minima obcaecati explicabo vero nihil fugiat
-                            aliquam
-                            saepe, illo amet a? Veniam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
-                            voluptate
-                            error iste recusandae. Nam ipsam, dignissimos non doloremque nihil magnam itaque eveniet
-                            natus, ipsum
-                            earum mollitia exercitationem placeat animi deserunt? Lorem ipsum dolor sit amet,
-                            consectetur
-                            adipisicing elit. Corporis debitis quos quas natus molestiae enim praesentium rem iste, eos
-                            unde magnam
-                            porro dolores voluptates amet, vitae placeat quaerat voluptatem numquam! Lorem, ipsum dolor
-                            sit amet
-                            consectetur adipisicing elit. Nam consectetur unde reprehenderit rerum corrupti inventore,
-                            dolorum, quam
-                            aperiam suscipit saepe perferendis alias fuga quidem eos facere architecto sit sapiente
-                            quasi.</span>
                     </div>
+
+
+
 
                 </div>
             </div>
@@ -132,7 +147,7 @@
                         <div class="scrollbarInner" id="scrollbarInner"></div>
                     </div>
                     <div class="curriculum" id="curriculum">
-                    
+
                     </div>
                 </div>
             </div>
@@ -145,33 +160,65 @@
                     <span>Contact</span>
                 </div>
                 <div class="contactContent" id="contactContent">
-                    <span>Hallo</span>
+                    <div class="contactText">
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolorem porro nemo ipsum
+                            possimus illo harum provident. Alias perspiciatis quisquam error debitis aliquam ipsam
+                            possimus vero neque molestias officiis? Quidem.</span>
+                    </div>
+                    <div class="contactFields">
+                        <div class="form" >
+                            <div class="inputField focus">
+                                <input class="required" onfocus="animateInputFocus(0)" type="text" id="" name="Name" placeholder="Name" >
+                             
+                            </div>
+                            <span class="error" id="Name"></span>
+                            <div class="inputField focus">
+                                <input class="required" onfocus="animateInputFocus(1)" type="email" name="E-Mail-Adresse" placeholder="E-Mail" >
+                                
+                            </div>
+                            <span class="error" id="E-Mail-Adresse"></span>
+                            <div class="inputField focus">
+                                <input class="required" onfocus="animateInputFocus(2)" type="tel" name="Telefonnummer" placeholder="Telefon">
+                            </div>
+                            <span class="error" id="Telefonnummer"></span>
+                            <div class="textField focus">
+                                <textarea class="required" onfocus="animateInputFocus(3)" name="Nachricht" id=""
+                                    placeholder="Ihre Nachricht"></textarea>
+                                   
+                            </div>
+                            <span class="error" id="Nachricht"></span>
+                            <div class="privacy">
+                                <div class="checkbox" onclick="changePrivacy()">
+                                    <img class="privacyImage dnone" id="privacyImage" src="/assets/icons/check.svg" alt="">
+                                </div>
+                                <span>Ich stimmer der <a class="privacyLink">Datenschutzbestimmung</a> zu.</span>
+                            </div>
+                            <span class="error" id="privacyError"></span>
+                            <div class="formBtnContainer">
+                                <button type="submit" onclick="validateForm()">Senden</button>
+                            </div>
+                          
+                        </div>
+
+
+                    </div>
+
                 </div>
             </div>
-
-
-
-
         </section>
 
-
-
-
-
-
-
-
-        <footer id="footer">
-            <div class="footerContainer">
-                <span>© Natalie Schlindwein</span>
-                <div class="legal">
-                    <a href="#">Impressum</a>
-                    <a href="#">Datenschutz</a>
-                </div>
+   
+    </section>
+    <footer id="footer">
+        <div class="footerContainer">
+            <span>© Natalie Schlindwein</span>
+            <div class="legal">
+                <a href="#">Impressum</a>
+                <a href="#">Datenschutz</a>
             </div>
-        </footer>
-
-        <script>w3.includeHTML();</script>
+        </div>
+    </footer>
+    <script>w3.includeHTML();</script>
 </body>
 
 </html>

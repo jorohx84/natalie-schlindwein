@@ -45,10 +45,10 @@
 
 .lettering {
 
-    transform: translateX(-130%);
-    transition: transform 1.8s ease-in-out, opacity 2s ease-in-out;
+    transform: translateX(-100vw);
+    transition: transform 1.2s ease-in-out, opacity 2s ease-in-out;
     opacity: 1;
-
+margin-top: 56px;
 
 }
 
@@ -70,11 +70,11 @@
 }
 
 .sliderOpacity {
-    opacity: 0.3;
+    opacity: 0.5;
 }
 
 .reverse{
-    transform: translateX(300%);
+    transform: translateX(100vw);
 }
 
 

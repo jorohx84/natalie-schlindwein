@@ -55,7 +55,7 @@ function toogleRespMenu() {
 
 
 function scrollHeader() {
-    const headerRef = document.getElementById('headerContainer');
+    const headerRef = document.getElementById('header');
     const navRef = document.getElementById('nav');
     const scrollHeight = window.scrollY;
 
@@ -90,18 +90,18 @@ function dividerAnimation() {
 
 
 function sliderAnimations() {
-    letteringAnimation('aboutme', 'aboutmeLettering', 'aboutmeText');
+    letteringAnimation('aboutme', 'aboutmeLettering', 'aboutmeContent');
     letteringAnimation('skills', 'skillsLettering', 'skillContent');
-    letteringAnimation('contact', 'contactLettering','contactContent');
-    letteringAnimation('experiences', 'experiencesLettering','experiencesContent');
+    letteringAnimation('contact', 'contactLettering', 'contactContent');
+    letteringAnimation('experiences', 'experiencesLettering', 'experiencesContent');
 }
 
 function letteringAnimation(divID, sliderID, contentID) {
     const section = document.getElementById(divID);
-    const sectionRect = section.getBoundingClientRect().top;
+    const sectionRect = section.getBoundingClientRect();
     const lettering = document.getElementById(sliderID);
     const trigger = window.innerHeight * 0.5;
-    if (sectionRect < trigger) {
+    if (sectionRect.top < trigger) {
         lettering.classList.add('letteringSlide');
         setTimeout(() => {
             lettering.classList.add('sliderOpacity');
@@ -111,7 +111,7 @@ function letteringAnimation(divID, sliderID, contentID) {
         lettering.classList.remove('sliderOpacity')
 
     }
-    opacityAnimation(sectionRect, trigger,contentID);
+    opacityAnimation(sectionRect, trigger, contentID);
 }
 
 
@@ -120,17 +120,19 @@ function letteringAnimation(divID, sliderID, contentID) {
 
 
 function opacityAnimation(sectionRect, trigger, contentID) {
-   
+
     const text = document.getElementById(contentID);
 
-  
-    if (sectionRect < trigger) {
+
+    if (sectionRect.top < trigger) {
         text.classList.add('textOpacity');
     } else {
         text.classList.remove('textOpacity');
     }
 
 }
+
+
 
 window.addEventListener('resize', resetRespMenu);
 window.addEventListener('scroll', () => {
