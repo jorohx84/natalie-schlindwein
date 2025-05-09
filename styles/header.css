@@ -6,7 +6,7 @@ header{
     display: flex;
     justify-content: center;
     border-bottom: solid;
-    border-color:var(--primary);
+    border-color:var(--secondary);
     border-width: 1px;
     background-color:var(--bg-color);
     transition: border 0.5s ease-in-out, border-width 0.2s ease-in-out, background-color 0.5s ease-out; 
@@ -35,9 +35,10 @@ header{
    
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
   
    /* box-shadow: 0px 10px 30px 0px var(--primary);*/
+
    
 }
 
@@ -52,7 +53,8 @@ header{
     border-bottom: solid; */
    /* border-color: var(--primary);*/
    /* border-width: 1px;*/
-   background-color:#01151b2a;
+   /* background-color:#01151b2a; */
+background-color: unset;
 
 
 }
@@ -72,7 +74,7 @@ header{
     background-color: var(--bg-color);
     border-radius: 30px;
     border-bottom: solid;
-    border-color: var(--primary);
+    border-color: var(--highlight);
     
 }
 
@@ -91,6 +93,9 @@ header{
     color: var(--primary);
     transition: color 0.5s ease-in-out;
     cursor: pointer;
+
+
+    
 }
 
 .logo:hover {
@@ -118,11 +123,13 @@ nav a {
 }
 
 nav a:hover {
-    background-color: var(--bg-color);
-    border-radius: 30px;
-    border-bottom: solid;
-    border-color: var(--primary);
     
+  color: var(--secondary);
+ 
+    
+}
+nav a:active{
+    transform: scale(0.9);
 }
 .burger{
     width: 30px;
@@ -184,7 +191,7 @@ background-color: white;
     opacity: 0;
 }
 .respMenu a:hover{
-    color: var(--primary);
+    color: var(--highlight);
 }
 
 .respMenu.slideIn a {
@@ -211,17 +218,17 @@ background-color: white;
     /* box-shadow: 0px 30px 30px 0px var(--primary); */
     border-bottom: solid;
     border-width: 1px;
-    border-color: var(--primary);
+    border-color: var(--secondary);
 
 } 
 
-@media(max-width: 780px){
+@media(max-width: 1050px){
     nav{
         display: none;
     }
  
 }
-@media(min-width: 780px){
+@media(min-width: 1050px){
     .burger{
         display: none;
     }

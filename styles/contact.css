@@ -97,11 +97,12 @@
     width: 100%;
     display: flex;
     justify-content: center;
+  margin-top: 16px;
 }
 
 .formBtnContainer button{
     width: 100%;
-    margin-top: 56px;
+   
 }
 
 
@@ -127,7 +128,7 @@ gap: 16px;
 
 }
 .checkbox{
-width: 30px;
+min-width: 30px;
 height: 30px;
 border: solid;
 box-sizing: border-box;
@@ -145,4 +146,32 @@ width: 20px;
 
 .privacyLink{
     color: var(--highlight);
+}
+
+@media(max-width: 1300px){
+    .contactContent{
+        flex-direction: column;
+        align-items: center;
+        gap: 56px;
+    }
+    .contactText{
+        width: 100%;
+        text-align: center;
+    }
+  .contactFields{
+    width: 100%;
+  }
+
+}
+
+@media(max-width: 650px){
+    .contact{
+padding: 0px;
+    }
+    .contactContent{
+        margin-top: 32px;
+    }
+    .privacy span{
+        font-size: 14px;
+    }
 }

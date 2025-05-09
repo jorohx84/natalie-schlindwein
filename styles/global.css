@@ -3,11 +3,20 @@
     font-family: 'Montserrat';
     src: url(./../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
 }
-
+@font-face {
+    font-display: swap;
+    font-family: 'Pacifico' ;
+    src: url(./../assets/fonts/Pacifico/Pacifico-Regular.ttf);
+}
+@font-face {
+    font-display: swap;
+    font-family: 'Satisfy';
+    src: url(./../assets/fonts/Satisfy/Satisfy-Regular.ttf);
+}
 
 html {
     scroll-behavior: smooth;
-
+overflow-x: hidden;
 }
 
 /* div{
@@ -27,7 +36,9 @@ body {
     align-items: center;
     justify-content: space-between;
     color: var(--primary);
+    /* overflow-x: hidden; */
 }
+
 
 p {
     margin: 0;
@@ -44,8 +55,17 @@ button{
     background-color: var(--highlight);
     border-radius: 20px;
     border: none;
-  
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
     cursor: pointer;
+
+}
+
+button:active{
+    transform: scale(0.95);
+}
+
+button:hover{
+    background-color: #945201;
 
 }
 
@@ -124,7 +144,7 @@ a:active {
     /* --bg-color: #01151b; */
     /* --primary: rgb(132, 84, 2);*/
     /*--primary:rgb(242, 112, 144);*/
-    /* --primary:rgb(244, 124, 154);*/
+    /* --highlight:rgb(244, 124, 154); */
     /* --primary:rgb(55, 178, 245); */
     --primary: #A8C5CD;
     --secondary: rgb(39, 76, 120);

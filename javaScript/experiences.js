@@ -97,3 +97,5 @@ if (dotRect<barInnerRect.bottom) {
         
     }
 }
+
+window.addEventListener('resize', getScrollbarPosition)

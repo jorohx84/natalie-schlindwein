@@ -25,15 +25,15 @@
 <body onscroll="scrollHeader(), getScrollbarPosition(), scrollVerticalBar()"
     onload="renderSkills(), renderExperiences()" id="body">
     <script>w3.includeHTML();</script>
-    <div class="headerPlaceholder" ></div>
+    <div class="headerPlaceholder"></div>
     <header id="header">
         <div class="headerContainer" id="headerContainer">
-            <div class="logoContainer">
-                <p class="logo">N</p>
+            <!-- <div class="logoContainer">
+                <p class="logo"></p>
 
-            </div>
+            </div> -->
             <nav id="nav">
-                <a href="#header">Home</a>
+                <a href="#body">Home</a>
                 <a href="#aboutme">Über mich</a>
                 <a href="#skills">Fähigkeiten</a>
                 <a href="#experiences">Erfahrungen</a>
@@ -49,10 +49,11 @@
 
             <div onclick="toogleRespMenu()" class="respMenu" id="respMenu">
 
-                <a href="#test">Home</a>
-                <a href="#">Über mich</a>
-                <a href="#">Fähigkeiten</a>
-                <a href="#">Kontakt</a>
+                <a href="#body">Home</a>
+                <a href="#aboutme">Über mich</a>
+                <a href="#skills">Fähigkeiten</a>
+                <a href="#experiences">Erfahrungen</a>
+                <a href="#contact">Kontakt</a>
             </div>
         </div>
     </header>
@@ -66,9 +67,14 @@
 
                 <div class="heroContent">
                     <div class="heroTitle">
-                        <p>Natalie Schlindwein</p>
+                        <div class="nameContainer">
+                            <p>Natalie</p>
+                            <p> Schlindwein</p>
+                        </div>
+                   
                         <span>Professional Buyer</span>
                     </div>
+                    <img src="/assets/img/titlephoto_komprimiert.webp" alt="">
 
                 </div>
                 <div class="overlay"></div>
@@ -88,7 +94,7 @@
                 <div class="aboutmeContent" id="aboutmeContent">
                     <div class="aboutmeTextContainer">
                         <div class="aboutmeText animationDiv" id="aboutmeText">
-                            <h2>About me</h2>
+                            <!-- <h2>About me</h2> -->
                             <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem dolores
                                 harum asperiores
                                 ratione eligendi dolorem blanditiis, dolorum, minima obcaecati explicabo vero nihil

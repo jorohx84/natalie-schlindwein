@@ -15,18 +15,25 @@
      background-position: right;
      background-size: contain;
      background-repeat: no-repeat;
-    
+
  }
+
 
  .heroContent {
      width: 100%;
      max-width: 1440px;
      display: flex;
-     justify-content: center;
+     justify-content: flex-start;
      align-items: center;
  }
 
- .heroTitle p {
+ .nameContainer {
+     display: flex;
+     flex-direction: column;
+
+ }
+
+ .nameContainer p {
      font-size: 140px;
      color: var(--secondary);
      font-weight: bolder;
@@ -37,11 +44,134 @@
      font-size: 56px;
  }
 
- .overlay{
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.28);
+ .overlay {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.28);
  }
+
+ .heroContent img {
+     width: 500px;
+ }
+
+ @media(max-width:1750px) {
+     .nameContainer p {
+         font-size: 120px;
+     }
+
+     .heroTitle span {
+         font-size: 48px;
+     }
+
+ }
+
+ @media(max-width:1520px) {
+     .nameContainer p {
+         font-size: 100px;
+     }
+
+     .heroTitle span {
+         font-size: 40px;
+     }
+
+ }
+
+ @media(max-width:1220px) {
+     .nameContainer p {
+         font-size: 80px;
+     }
+
+     .heroTitle span {
+         font-size: 32px;
+     }
+
+ }
+
+ @media(max-width:1050px) {
+     .heroContainer {
+         background-image: none;
+     }
+
+     .heroContent {
+         flex-direction: column;
+     }
+
+
+ }
+
+ @media(min-width:1050px) {
+
+     .heroContent img {
+         display: none;
+     }
+
+ }
+
+
+ @media(max-width:900px) {
+     .heroContent img {
+         width: 450px;
+     }
+
+ }
+
+ @media(max-width:790px) {
+     .heroContent img {
+         width: 400px;
+     }
+
+ }
+
+ @media(max-width:670px) {
+
+    .heroContainer{
+        margin-top: 96px;
+        justify-content: flex-start;
+    }
+    .nameContainer p {
+        font-size: 60px;
+    }
+
+    .heroTitle span {
+        font-size: 24px;
+    }
+    .heroContent img {
+        width: 300px;
+    }
+
+}
+
+@media(max-width:670px) {
+
+    .heroContainer{
+        margin-top: 96px;
+        justify-content: flex-start;
+    }
+    .nameContainer p {
+        font-size: 48px;
+    }
+
+    .heroTitle span {
+        font-size: 20px;
+    }
+    .heroContent img {
+        width: 290px;
+    }
+
+}
+
+@media(max-width:670px) {
+    .nameContainer p {
+        font-size: 40px;
+    }
+
+    .heroTitle span {
+        font-size: 20px;
+    }
+    .heroContent img {
+        width: 270px;
+    }
+}

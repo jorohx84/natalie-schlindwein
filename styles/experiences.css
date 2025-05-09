@@ -44,7 +44,7 @@ position: relative;
     gap: 56px;
 }
 .stationDot{
-    width: 50px;
+    min-width: 50px;
     height: 50px;
     background-color:var(--secondary) ;
     border-radius: 100px;
@@ -77,4 +77,16 @@ position: relative;
     width: 100%;
 
     background-color: var(--highlight);
+}
+
+@media(max-width:750px){
+    .station{
+        gap: 16px;
+    }
+}
+@media(max-width:450px){
+ .stationDot{
+    min-width: 30px;
+    height: 30px;
+ }
 }
