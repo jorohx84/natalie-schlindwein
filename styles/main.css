@@ -50,11 +50,12 @@
     transition: transform 1.2s ease-in-out, opacity 2s ease-in-out;
     opacity: 1;
     margin-top: 112px;
+    
 
 }
 
 .lettering span {
-    font-size: 250px;
+    font-size: 150px;
     font-weight: bold;
     /* color: rgb(45, 44, 44); */
     color: var(--secondary);
@@ -78,11 +79,11 @@
     transform: translateX(100vw);
 }
 
-@media(max-width:1800px) {
+/* @media(max-width:1800px) {
     .lettering span {
         font-size: 200px;
     }
-}
+} */
 
 @media(max-width:1600px) {
     .lettering span {

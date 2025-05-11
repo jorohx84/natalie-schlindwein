@@ -137,6 +137,10 @@ function skillCardHighlight() {
     const trigger = window.innerHeight * 0.5
     for (let index = 0; index < skillCards.length; index++) {
         const card = skillCards[index];
+        if (window.innerHeight>745) {
+            const cardRef=document.getElementById('skillContent');
+            const cardRect=
+        }
         const cardRect = card.getBoundingClientRect();
 
         if (cardRect.top < trigger) {
