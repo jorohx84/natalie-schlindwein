@@ -41,6 +41,7 @@ function renderExperiences() {
 function getScrollbarPosition() {
     const dots = document.getElementsByClassName('stationDot');
     const scrollbar = document.getElementById('scrollbar');
+    const scrollbarRect=scrollbar.getBoundingClientRect();
     const divRef = document.getElementById('experiencesContent');
     const divRect = divRef.getBoundingClientRect();
     const lastIndex = dots.length - 1;
@@ -50,7 +51,8 @@ function getScrollbarPosition() {
     const finalDotRect = finalDot.getBoundingClientRect();
     const currentHeight = finalDotRect.bottom - startDotRect.top;
     scrollbar.style.top = `${startDotRect.top - divRect.top}px`;
-    scrollbar.style.left = `${(startDotRect.left - divRect.left) + (startDotRect.width / 2)-2}px`;
+    const scrollbarPosition = startDotRect.left + (startDotRect.width / 2) - divRect.left-(scrollbarRect.width/2);
+    scrollbar.style.left = `${scrollbarPosition}px`
     scrollbar.style.height = `${currentHeight}px`;
 }
 
@@ -63,7 +65,7 @@ function scrollVerticalBar() {
     const barInnerRect = barInner.getBoundingClientRect();
     const barRect = bar.getBoundingClientRect();
     let currentHeight = getCurrentHeight(startpoint, barRect, barInnerRect);
-    barInner.style.height=`${currentHeight}%`;
+    barInner.style.height = `${currentHeight}%`;
     giveDotsHighlight(barInnerRect)
 }
 
@@ -74,27 +76,27 @@ function getCurrentHeight(startpoint, barRect, barInnerRect) {
     if (startpoint < barRect.top) {
         currentHeight = 0;
     } else if (startpoint > barRect.top && startpoint < barRect.bottom) {
-        currentHeight = (innerHeight / barHeight)*100;
-    }else if(startpoint>barRect.bottom){
-        currentHeight=100;
+        currentHeight = (innerHeight / barHeight) * 100;
+    } else if (startpoint > barRect.bottom) {
+        currentHeight = 100;
     }
     return currentHeight
 }
 
-function giveDotsHighlight(barInnerRect){
-    const dots=document.getElementsByClassName('stationDot');
- 
+function giveDotsHighlight(barInnerRect) {
+    const dots = document.getElementsByClassName('stationDot');
+
     for (let index = 0; index < dots.length; index++) {
         const dot = dots[index];
-        const dotRect=dot.getBoundingClientRect().top;
-if (dotRect<barInnerRect.bottom) {
-    // dot.style.backgroundColor='var(--highlight)';
-    dot.classList.add('changeColor');
-}else{
-    // dot.style.backgroundColor='var(--secondary)';
-    dot.classList.remove('changeColor');
-}
-        
+        const dotRect = dot.getBoundingClientRect().top;
+        if (dotRect < barInnerRect.bottom) {
+            // dot.style.backgroundColor='var(--highlight)';
+            dot.classList.add('changeColor');
+        } else {
+            // dot.style.backgroundColor='var(--secondary)';
+            dot.classList.remove('changeColor');
+        }
+
     }
 }
 

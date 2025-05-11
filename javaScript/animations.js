@@ -79,8 +79,8 @@ function dividerAnimation() {
         const dividerRect = divider.getBoundingClientRect().top;
         console.log(dividerRect);
         const trigger = window.innerHeight * 0.5;
-        const scrollbarRect = document.getElementById('scrollBarInner').getBoundingClientRect().bottom;
-        if (dividerRect < scrollbarRect) {
+      
+        if (dividerRect < trigger) {
             divider.classList.add('width');
         } else {
             divider.classList.remove('width');
@@ -132,6 +132,40 @@ function opacityAnimation(sectionRect, trigger, contentID) {
 
 }
 
+function skillCardHighlight() {
+    const skillCards = document.getElementsByClassName('skillCard');
+    const trigger = window.innerHeight * 0.5
+    for (let index = 0; index < skillCards.length; index++) {
+        const card = skillCards[index];
+        const cardRect = card.getBoundingClientRect();
+
+        if (cardRect.top < trigger) {
+            card.classList.add('skillHighlight');
+          
+        } else {
+            card.classList.remove('skillHighlight');
+          
+        }
+
+    }
+
+}
+
+function btnHighlight() {
+    const btn = document.getElementById('aboutmeBtn');
+    const btnRect = btn.getBoundingClientRect();
+    const trigger = window.innerHeight * 0.6;
+    if (btnRect.top < trigger) {
+        btn.style.width = '200px';
+
+
+    } else {
+        btn.style.width = '100px';
+
+    }
+
+}
+
 
 
 window.addEventListener('resize', resetRespMenu);
@@ -139,5 +173,7 @@ window.addEventListener('scroll', () => {
     // opacityAnimation();
 
     // dividerAnimation();
+    btnHighlight();
+    skillCardHighlight();
     sliderAnimations();
 });

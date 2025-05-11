@@ -19,6 +19,10 @@ const skills=[
         name:'Skill5',
         description:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores consectetur, eveniet reprehenderit illo aut accusantium dolorum nobis. Hic cupiditate adipisci, assumenda doloribus, aliquam quibusdam architecto autem deserunt commodi, distinctio maiores?',
     },
+    {
+        name:'Skill6',
+        description:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores consectetur, eveniet reprehenderit illo aut accusantium dolorum nobis. Hic cupiditate adipisci, assumenda doloribus, aliquam quibusdam architecto autem deserunt commodi, distinctio maiores?',
+    },
 ];
 
 function renderSkills(){

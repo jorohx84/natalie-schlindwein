@@ -24,19 +24,21 @@
 
 
 
-/* .dividerContainer{
+/* .dividerContainer {
     width: 100%;
     display: flex;
     justify-content: flex-start;
 }
-.divider{
+
+.divider {
     height: 3px;
-    background-color:  rgb(45, 44, 44);
+    background-color: var(--highlight);
     width: 0;
     transition: width 1s ease-in-out;
 }
-.width{
-    width: 100%;
+
+.width {
+    width: 50%;
 } */
 
 
@@ -76,13 +78,13 @@
     transform: translateX(100vw);
 }
 
-@media(max-width:1700px) {
+@media(max-width:1800px) {
     .lettering span {
         font-size: 200px;
     }
 }
 
-@media(max-width:1400px) {
+@media(max-width:1600px) {
     .lettering span {
         font-size: 150px;
     }
@@ -91,6 +93,10 @@
 @media(max-width:1200px) {
     .lettering span {
         font-size: 100px;
+    }
+
+    .lettering {
+        transform: translateX(0) !important;
     }
 }
 
@@ -134,11 +140,5 @@
 
     .lettering {
         justify-content: center;
-    }
-}
-
-@media(pointer: coarse) {
-    .lettering {
-        transform: translateX(0) !important;
     }
 }

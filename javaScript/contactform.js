@@ -42,12 +42,20 @@ function removeErrorMessages(array) {
     }
 }
 
+function scrollToDiv(errorMessage) {
+    errorMessage.scrollIntoView({
+        block: 'center'
+    });
+
+}
+
 function checkFieldInput(field, validate, index) {
     const errorMessage = document.getElementById(`${field.name}`);
     if (field.value.trim() === '') {
         errorMessage.innerHTML = `Bitte ${field.name} eingeben`;
         fields[index].classList.add('errorBorder');
         validate = false;
+        scrollToDiv(errorMessage);
     } else {
         errorMessage.innerHTML = '';
         fields[index].classList.remove('errorBorder');
@@ -71,6 +79,7 @@ function checkEmail(field, errorMessage) {
         errorMessage.innerHTML = '';
         errorMessage.innerHTML = 'Bitte E-Mail-Adresse prüfen';
         validate = false;
+        scrollToDiv(errorMessage);
     } else {
         errorMessage.innerHTML = '';
         validate = true;

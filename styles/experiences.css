@@ -68,7 +68,7 @@ position: relative;
 .scrollbar{
     position: absolute;
    background-color: var(--secondary);
-    width: 3px;
+    width: 4px;
 }
 
 .scrollbarInner{
@@ -77,6 +77,12 @@ position: relative;
     width: 100%;
 
     background-color: var(--highlight);
+}
+
+@media(max-width: 1200px) {
+    .experiencesContent {
+        opacity: 1;
+    }
 }
 
 @media(max-width:750px){
