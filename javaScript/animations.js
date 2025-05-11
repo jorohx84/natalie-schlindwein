@@ -103,12 +103,12 @@ function letteringAnimation(divID, sliderID, contentID) {
     const trigger = window.innerHeight * 0.5;
     if (sectionRect.top < trigger) {
         lettering.classList.add('letteringSlide');
-        setTimeout(() => {
-            lettering.classList.add('sliderOpacity');
-        }, 1000);
+        // setTimeout(() => {
+        //     lettering.classList.add('sliderOpacity');
+        // }, 1000);
     } else {
         lettering.classList.remove('letteringSlide');
-        lettering.classList.remove('sliderOpacity')
+        // lettering.classList.remove('sliderOpacity')
 
     }
     opacityAnimation(sectionRect, trigger, contentID);
