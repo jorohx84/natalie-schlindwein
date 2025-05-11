@@ -79,7 +79,7 @@ function dividerAnimation() {
         const dividerRect = divider.getBoundingClientRect().top;
         console.log(dividerRect);
         const trigger = window.innerHeight * 0.5;
-      
+
         if (dividerRect < trigger) {
             divider.classList.add('width');
         } else {
@@ -133,27 +133,22 @@ function opacityAnimation(sectionRect, trigger, contentID) {
 }
 
 function skillCardHighlight() {
+
+    const cardContainer = document.getElementById('skillContent');
     const skillCards = document.getElementsByClassName('skillCard');
     const trigger = window.innerHeight * 0.5
     for (let index = 0; index < skillCards.length; index++) {
         const card = skillCards[index];
-        if (window.innerHeight>745) {
-            const cardRef=document.getElementById('skillContent');
-            const cardRect=
-        }
-        const cardRect = card.getBoundingClientRect();
-
-        if (cardRect.top < trigger) {
-            card.classList.add('skillHighlight');
-          
-        } else {
-            card.classList.remove('skillHighlight');
-          
-        }
-
+        const cardRect=card.getBoundingClientRect();
+        // if (cardRect.top < trigger) {
+        //     card.classList.add('skillHighlight');
+        // } else {
+        //     card.classList.remove('skillHighlight');
+        // }
     }
-
 }
+
+
 
 function btnHighlight() {
     const btn = document.getElementById('aboutmeBtn');

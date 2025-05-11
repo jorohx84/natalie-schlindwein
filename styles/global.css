@@ -146,11 +146,13 @@ a:active {
     /*--primary:rgb(242, 112, 144);*/
     /* --highlight:rgb(244, 124, 154); */
     /* --primary:rgb(55, 178, 245); */
-    --primary: #A8C5CD;
+    /* --primary: #A8C5CD; */
+    --primary: rgb(185, 170, 153);
     --secondary: rgb(39, 76, 120);
     --bg-header: rgba(255, 255, 255);
     /* --highlight: rgb(255, 149, 0); */
-    --highlight: #FF8C00;
+    /* --highlight: #FF8C00; */
+    --highlight: #f7b25d;
 }
 
 /*;rgb(4, 79, 123);*/
