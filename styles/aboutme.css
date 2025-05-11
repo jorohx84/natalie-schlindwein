@@ -44,6 +44,7 @@
     align-items: flex-start;
     margin-top: 56px;
     background-color: var(--text-bg);
+    border-radius: 30px;
 }
 
 .aboutmeText p {

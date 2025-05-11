@@ -60,13 +60,16 @@ position: relative;
 
 .stationDescription{
     width: 500px;
+    min-height: fit-content;
     height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: var(--text-bg);
-    padding: 16px;
+    box-sizing: border-box;
+    padding: 32px;
+    border-radius: 30px;
 }
 
 .scrollbar{
