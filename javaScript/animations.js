@@ -1,5 +1,5 @@
 let hide = false;
-
+let toggleKey = false;
 
 
 function resetRespMenu() {
@@ -56,6 +56,7 @@ function toogleRespMenu() {
 
 function scrollHeader() {
     const headerRef = document.getElementById('header');
+    const lang = document.getElementById('languages');
     const navRef = document.getElementById('nav');
     const scrollHeight = window.scrollY;
 
@@ -63,10 +64,11 @@ function scrollHeader() {
 
         headerRef.classList.add('noShadow');
         navRef.classList.add('navBG');
-
+        lang.style.opacity = "0";
     } else {
         headerRef.classList.remove('noShadow');
         navRef.classList.remove('navBG');
+        lang.style.opacity = "1";
 
     }
 
@@ -139,7 +141,7 @@ function skillCardHighlight() {
     const trigger = window.innerHeight * 0.5
     for (let index = 0; index < skillCards.length; index++) {
         const card = skillCards[index];
-        const cardRect=card.getBoundingClientRect();
+        const cardRect = card.getBoundingClientRect();
         // if (cardRect.top < trigger) {
         //     card.classList.add('skillHighlight');
         // } else {
@@ -166,13 +168,31 @@ function btnHighlight() {
 }
 
 
+function moveSidebar(currentIndex) {
+    console.log(currentIndex);
+    const elements = document.getElementsByClassName('sidebarContainer');
+    console.log(elements);
+    
+    for (let index = 0; index < elements.length; index++) {
+        const element = elements[index];
+        if (index === currentIndex) {
+            element.classList.toggle('moveSidebar');
+
+        }
+
+    }
+
+}
+
+
+
 
 window.addEventListener('resize', resetRespMenu);
 window.addEventListener('scroll', () => {
     // opacityAnimation();
 
     // dividerAnimation();
-    btnHighlight();
+    // btnHighlight();
     skillCardHighlight();
     sliderAnimations();
 });

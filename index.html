@@ -19,11 +19,12 @@
     <script src="javaScript/skills.js"></script>
     <script src="javaScript/experiences.js"></script>
     <script src="javaScript/contactform.js"></script>
+    <script src="javaScript/language.js"></script>
     <script src="https://www.w3schools.com/lib/w3.js"></script>
 </head>
 
 <body onscroll="scrollHeader(), getScrollbarPosition(), scrollVerticalBar()"
-    onload="renderSkills(), renderExperiences()" id="body">
+    onload="renderSkills(), renderExperiences(), loadLanguage()" id="body">
     <script>w3.includeHTML();</script>
     <div class="headerPlaceholder"></div>
     <header id="header">
@@ -38,9 +39,12 @@
                 <a href="#skills">Fähigkeiten</a>
                 <a href="#experiences">Erfahrungen</a>
                 <a href="#contact">Kontakt</a>
-
             </nav>
-
+            <!-- <div class="languages" id="languages">
+                <button onclick="setLanguage('de', event)">DE</button>
+                <button onclick="setLanguage('en', event)">EN</button>
+                <button onclick="setLanguage('es', event)">ES</button>
+            </div> -->
             <div onclick="toogleRespMenu()" class="burger" id="burger">
                 <div></div>
                 <div></div>
@@ -54,12 +58,41 @@
                 <a href="#skills">Fähigkeiten</a>
                 <a href="#experiences">Erfahrungen</a>
                 <a href="#contact">Kontakt</a>
+
             </div>
+
+
         </div>
     </header>
-    <section>
-
-    </section>
+    <div class="sidebar">
+        <div class="sidebarContainer">
+            <button onclick="moveSidebar(0)"></button>
+            <div class="languages" id="languages">
+                <button onclick="setLanguage('de', event)">DE</button>
+                <button onclick="setLanguage('en', event)">EN</button>
+                <button onclick="setLanguage('es', event)">ES</button>
+            </div>
+        </div>
+        <div class="sidebarContainer">
+            <button onclick="moveSidebar(1)"></button>
+            <div class="languages" id="languages">
+                <button onclick="setLanguage('de', event)">DE</button>
+                <button onclick="setLanguage('en', event)">EN</button>
+                <button onclick="setLanguage('es', event)">ES</button>
+            </div>
+        </div>
+        <div class="sidebarContainer">
+            <button onclick="moveSidebar(2)"></button>
+            <div class="languages" id="languages">
+                <button onclick="setLanguage('de', event)">DE</button>
+                <button onclick="setLanguage('en', event)">EN</button>
+                <button onclick="setLanguage('es', event)">ES</button>
+            </div>
+        </div>
+        <div class="sidebarContainer">
+            <button onclick="window.scrollTo(0,0)"></button>
+        </div>
+    </div>
 
     <section class="content" id="content">
         <section class="hero">
@@ -71,13 +104,13 @@
                             <p>Natalie</p>
                             <p> Schlindwein</p>
                         </div>
-                   
-                        <span>Professional Buyer</span>
+
+                        <span data-i18n="title"></span>
                     </div>
                     <img src="./assets/img/titlephoto_komprimiert.webp" alt="">
 
                 </div>
-                <div class="overlay"></div>
+                <!-- <div class="overlay"></div> -->
 
 
             </div>
@@ -89,48 +122,57 @@
         <section class="aboutme" id="aboutme">
             <div class="aboutmeContainer">
                 <div class="lettering" id="aboutmeLettering">
-                    <span>Über mich</span>
+                    <span>About me</span>
                 </div>
-                <div class="aboutmeContent" id="aboutmeContent">
-                    <div class="aboutmeTextContainer">
-                        <div class="aboutmeText animationDiv" id="aboutmeText">
-                            <!-- <h2>About me</h2> -->
-                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem dolores
-                                harum asperiores
-                                ratione eligendi dolorem blanditiis, dolorum, minima obcaecati explicabo vero nihil
-                                fugiat
-                                aliquam
-                                saepe, illo amet a? Veniam? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                Dicta
-                                voluptate
-                                error iste recusandae. Nam ipsam, dignissimos non doloremque nihil magnam itaque eveniet
-                                natus, ipsum
-                                earum mollitia exercitationem placeat animi deserunt? Lorem ipsum dolor sit amet,
-                                consectetur
-                                adipisicing elit. Corporis debitis quos quas natus molestiae enim praesentium rem iste,
-                                eos
-                                unde magnam
-                                porro dolores voluptates amet, vitae placeat quaerat voluptatem numquam! Lorem, ipsum
-                                dolor
-                                sit amet
-                                consectetur adipisicing elit. Nam consectetur unde reprehenderit rerum corrupti
-                                inventore,
-                                dolorum, quam
-                                aperiam suscipit saepe perferendis alias fuga quidem eos facere architecto sit sapiente
-                                quasi.</span>
-                        </div>
-                        <div class="aboutmeBtnContainer">
-                            <div class="btnBG">
-                                <button id="aboutmeBtn" onclick="window.location.href='#contact'">Kontakt</button>
+                <div class="aboutmeContentContainer" id="aboutmeContent">
+                    <h2>Ich bringe Struktur, Herz und internationale Erfahrung zusammen.</h2>
+                    <div class="aboutmeContent">
+
+
+                        <div class="aboutmeTextContainer">
+
+                            <div class="aboutmeText animationDiv" id="aboutmeText">
+                                <span>Ich liebe es, wenn Menschen zusammenkommen – egal ob in Sydney, Sevilla oder
+                                    Frankfurt. Nach einer Karriere im Einkauf und vielen Jahren im Ausland habe ich mich
+                                    entschieden, meiner Leidenschaft zu folgen: kreative Organisation, klare Abläufe und
+                                    echte Begegnungen.</span>
                             </div>
-                            
+                            <div class="aboutmeText animationDiv" id="aboutmeText">
+                                <span>Auslandserfahrung : 1 Jahr in Australien, 4 Jahre in Spanien</span>
+                            </div>
+                            <div class="aboutmeText animationDiv" id="aboutmeText">
+                                <span>Sprachkenntnisse : Deutsch, Englisch, Spanisch</span>
+                            </div>
+                            <div class="aboutmeText animationDiv" id="aboutmeText">
+                                <span>Strukturierte Planerin mit Herz fürs Detail</span>
+                            </div>
+                            <div class="aboutmeText animationDiv" id="aboutmeText">
+                                <span>Freelancerin für Events mit internationalem Flair</span>
+                            </div>
+
+
+                        </div>
+                        <div class="ctaContainer">
+                            <span>Du möchtest mehr über ich mich erfahren?</span>
+                            <div class="aboutmeBtnContainer">
+
+                                <div class="btnBG">
+                                    <button id="aboutmeBtn" onclick="window.location.href='#contact'">Lass uns
+                                        sprechen</button>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <div class="countries">
+                            <img src="assets/img/germany-svgrepo-com.svg" alt="">
+                            <img src="assets/img/australia-svgrepo-com Kopie.svg" alt="">
+
+                            <img src="assets/img/spain-map-country-land-svgrepo-com.svg" alt="">
                         </div>
 
                     </div>
-
-
-
-
                 </div>
             </div>
         </section>
@@ -140,13 +182,13 @@
                 <div class="lettering reverse" id="skillsLettering">
                     <span>Fähigkeiten</span>
                 </div>
-             
+
                 <div class="skillContent" id="skillContent">
-              
+
                     <div class="skillCards" id="skillCards"></div>
-               
+
                 </div>
-             
+
             </div>
         </section>
         <section class="experiences" id="experiences">
@@ -178,30 +220,34 @@
                             possimus vero neque molestias officiis? Quidem.</span>
                     </div>
                     <div class="contactFields">
-                        <div class="form" >
+                        <div class="form">
                             <div class="inputField focus">
-                                <input class="required" onfocus="animateInputFocus(0)" type="text" id="" name="Name" placeholder="Name" >
-                             
+                                <input class="required" onfocus="animateInputFocus(0)" type="text" id="" name="Name"
+                                    placeholder="Name">
+
                             </div>
                             <span class="error" id="Name"></span>
                             <div class="inputField focus">
-                                <input class="required" onfocus="animateInputFocus(1)" type="email" name="E-Mail-Adresse" placeholder="E-Mail" >
-                                
+                                <input class="required" onfocus="animateInputFocus(1)" type="email"
+                                    name="E-Mail-Adresse" placeholder="E-Mail">
+
                             </div>
                             <span class="error" id="E-Mail-Adresse"></span>
                             <div class="inputField focus">
-                                <input class="required" onfocus="animateInputFocus(2)" type="tel" name="Telefonnummer" placeholder="Telefon">
+                                <input class="required" onfocus="animateInputFocus(2)" type="tel" name="Telefonnummer"
+                                    placeholder="Telefon">
                             </div>
                             <span class="error" id="Telefonnummer"></span>
                             <div class="textField focus">
                                 <textarea class="required" onfocus="animateInputFocus(3)" name="Nachricht" id=""
                                     placeholder="Ihre Nachricht"></textarea>
-                                   
+
                             </div>
                             <span class="error" id="Nachricht"></span>
                             <div class="privacy">
                                 <div class="checkbox" onclick="changePrivacy()">
-                                    <img class="privacyImage dnone" id="privacyImage" src="./assets/icons/check.svg" alt="">
+                                    <img class="privacyImage dnone" id="privacyImage"
+                                        src="./assets/icons/check_darkblue.svg" alt="">
                                 </div>
                                 <span>Ich stimme der <a class="privacyLink">Datenschutzerklärung</a> zu.</span>
                             </div>
@@ -209,7 +255,7 @@
                             <div class="formBtnContainer">
                                 <button type="submit" onclick="validateForm()">Senden</button>
                             </div>
-                          
+
                         </div>
 
 
@@ -219,7 +265,7 @@
             </div>
         </section>
 
-   
+
     </section>
     <footer id="footer">
         <div class="footerContainer">

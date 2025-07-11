@@ -122,7 +122,7 @@ nav a {
 
 nav a:hover {
 
-    color: var(--secondary);
+    color: var(--highlight);
 
 
 }
@@ -130,6 +130,10 @@ nav a:hover {
 nav a:active {
     transform: scale(0.9);
 }
+
+
+
+
 
 .burger {
     width: 30px;
@@ -228,6 +232,9 @@ nav a:active {
 
 @media(max-width: 1050px) {
     nav {
+        display: none;
+    }
+    .languages{
         display: none;
     }
 .noShadow{

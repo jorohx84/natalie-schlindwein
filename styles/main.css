@@ -21,7 +21,44 @@
     opacity: 0.3;
 }
 
+.sidebar{
+    position: fixed;
+    right: 4px;
+    top: 50%;
+    transform: translateX(calc(100% - 56px));
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
 
+.sidebarContainer{
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    transition: transform 0.5s ease-in-out;
+} 
+
+.sidebarContainer button{
+    width: 56px;
+    height: 56px;
+}
+
+.moveSidebar{
+    transform: translateX(calc(-100% + 56px)) !important;
+}
+
+.languages{
+    display: flex;
+   gap: 4px;
+}
+
+.languages button{
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    background-color: var(--secondary);
+    color: var(--primary);
+}
 
 
 /* .dividerContainer {
