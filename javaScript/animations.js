@@ -64,11 +64,11 @@ function scrollHeader() {
 
         headerRef.classList.add('noShadow');
         navRef.classList.add('navBG');
-        lang.style.opacity = "0";
+        // lang.style.opacity = "0";
     } else {
         headerRef.classList.remove('noShadow');
         navRef.classList.remove('navBG');
-        lang.style.opacity = "1";
+        // lang.style.opacity = "1";
 
     }
 
@@ -172,7 +172,10 @@ function moveSidebar(currentIndex) {
     console.log(currentIndex);
     const elements = document.getElementsByClassName('sidebarContainer');
     console.log(elements);
-    
+    removeSidebar(elements)
+    if (currentIndex === undefined ) {
+        return
+    }
     for (let index = 0; index < elements.length; index++) {
         const element = elements[index];
         if (index === currentIndex) {
@@ -184,13 +187,18 @@ function moveSidebar(currentIndex) {
 
 }
 
-
+function removeSidebar(elements){
+for (let index = 0; index < elements.length; index++) {
+    const element = elements[index];
+    element.classList.remove('moveSidebar');
+}
+}
 
 
 window.addEventListener('resize', resetRespMenu);
 window.addEventListener('scroll', () => {
     // opacityAnimation();
-
+moveSidebar();
     // dividerAnimation();
     // btnHighlight();
     skillCardHighlight();

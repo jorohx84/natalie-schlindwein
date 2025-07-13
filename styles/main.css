@@ -25,40 +25,91 @@
     position: fixed;
     right: 4px;
     top: 50%;
-    transform: translateX(calc(100% - 56px));
+    transform: translate(calc(100% - 56px), -50%);
     display: flex;
     flex-direction: column;
     gap: 4px;
+    z-index: 1;
 }
 
 .sidebarContainer{
+  width: fit-content;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: center;
     gap: 8px;
     transition: transform 0.5s ease-in-out;
+   background-color: var(--text-bg);
+   border-radius:10px;
+
 } 
 
 .sidebarContainer button{
     width: 56px;
     height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.sidebarContainer button img{
+    width: 24px;
+    height: 24px;
+    
+}
+
+.socialmedia{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+.socialmedia button{
+    background-color: transparent;
+}
+
+.socialmedia button img{
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+}
+
 
 .moveSidebar{
     transform: translateX(calc(-100% + 56px)) !important;
 }
 
+.sidebarLink{
+    color: var(--primary);
+       box-sizing: border-box;
+   padding: 0 16px;
+}
+
 .languages{
     display: flex;
+    justify-content: space-between;
    gap: 4px;
+   box-sizing: border-box;
+   padding: 0 16px;
 }
 
 .languages button{
-    width: 30px;
-    height: 30px;
-    border-radius: 4px;
-    background-color: var(--secondary);
+    width: 96px;
+    height: 56px;
+border-radius: 0;
+  background-color: transparent;
     color: var(--primary);
+  
 }
+
+.btnDivider{
+   
+    width: 1px;
+    background-color: var(--primary);
+}
+
+
 
 
 /* .dividerContainer {

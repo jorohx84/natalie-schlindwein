@@ -37,7 +37,7 @@
 
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    
     gap: 32px;
     margin-top: 112px;
 
@@ -94,7 +94,14 @@
 
     background-color: rgba(255, 255, 255, 0.145);
 }
-
+@media(max-width: 1230px) {
+    .skillCards {
+justify-content: center;
+    }
+    .skillCard{
+        height: fit-content;
+    }
+}
 @media(max-width: 1200px) {
     .skillContent {
         opacity: 1;

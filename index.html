@@ -29,10 +29,10 @@
     <div class="headerPlaceholder"></div>
     <header id="header">
         <div class="headerContainer" id="headerContainer">
-            <!-- <div class="logoContainer">
-                <p class="logo"></p>
+            <div class="logoContainer">
+              <img class="logo" src="assets/img/Bildschirmfoto_2025-07-13_um_11.44.20-removebg-preview.png" alt="">
 
-            </div> -->
+            </div>
             <nav id="nav">
                 <a href="#body">Home</a>
                 <a href="#aboutme">Über mich</a>
@@ -65,32 +65,33 @@
         </div>
     </header>
     <div class="sidebar">
-        <div class="sidebarContainer">
-            <button onclick="moveSidebar(0)"></button>
+        <div class="sidebarContainer" onmouseleave="moveSidebar()">
+            <button onclick="moveSidebar(0)"><img src="assets/icons/language.svg" alt=""></button>
             <div class="languages" id="languages">
                 <button onclick="setLanguage('de', event)">DE</button>
+                <div class="btnDivider"></div>
                 <button onclick="setLanguage('en', event)">EN</button>
+                <div class="btnDivider"></div>
                 <button onclick="setLanguage('es', event)">ES</button>
             </div>
         </div>
-        <div class="sidebarContainer">
-            <button onclick="moveSidebar(1)"></button>
-            <div class="languages" id="languages">
-                <button onclick="setLanguage('de', event)">DE</button>
-                <button onclick="setLanguage('en', event)">EN</button>
-                <button onclick="setLanguage('es', event)">ES</button>
+        <div class="sidebarContainer" onmouseleave="moveSidebar()">
+            <button onclick="moveSidebar(1)"><img src="assets/icons/phone.svg" alt=""></button>
+            <a class="sidebarLink" href="tel:0151 12345678">0151 12345678</a>
+        </div>
+        <div class="sidebarContainer" onmouseleave="moveSidebar()">
+            <button onclick="moveSidebar(2)"><img src="assets/icons/mail.svg" alt=""></button>
+            <a class="sidebarLink" href="mailto:kontakt@natalie-schlindwein.de">kontakt@natalie-schlindwein.de</a>
+        </div>
+        <div class="sidebarContainer" onmouseleave="moveSidebar()">
+            <button onclick="moveSidebar(3)"><img src="assets/icons/socialmedia.svg" alt=""></button>
+            <div class="socialmedia">
+                <button><img src="assets/icons/linkedin.svg" alt=""></button>
+                <button><img src="assets/icons/xing.svg" alt=""></button>
             </div>
         </div>
-        <div class="sidebarContainer">
-            <button onclick="moveSidebar(2)"></button>
-            <div class="languages" id="languages">
-                <button onclick="setLanguage('de', event)">DE</button>
-                <button onclick="setLanguage('en', event)">EN</button>
-                <button onclick="setLanguage('es', event)">ES</button>
-            </div>
-        </div>
-        <div class="sidebarContainer">
-            <button onclick="window.scrollTo(0,0)"></button>
+        <div class="sidebarContainer" onmouseleave="moveSidebar()">
+            <button onclick="window.scrollTo(0,0), moveSidebar()"><img src="assets/icons/arrow_up.svg" alt=""></button>
         </div>
     </div>
 
@@ -214,11 +215,37 @@
                     <span>Kontakt</span>
                 </div>
                 <div class="contactContent" id="contactContent">
-                    <div class="contactText">
-                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolorem porro nemo ipsum
-                            possimus illo harum provident. Alias perspiciatis quisquam error debitis aliquam ipsam
-                            possimus vero neque molestias officiis? Quidem.</span>
+                    <div class="contactInformationsContainer">
+                        <div class="contactText">
+                            <h2>Lass uns gemeinsam besondere Momente gestalten.</h2>
+                            <span>Wenn du Fragen hast oder über ein mögliches Event sprechen möchtest, schreib mir gern.
+                                Egal ob du schon konkrete Pläne hast oder einfach mal schauen willst, ob es passt – ich
+                                freue mich auf deine Nachricht.</span>
+                        </div>
+                        <div class="contactInformations">
+                            <div>
+                                <h3>Natalie Schlindwein</h3>
+                                <p>Laurentiusring 12</p>
+                                <p>76863 Herxheim</p>
+                            </div>
+                            <div class="contactNumbersContainer">
+                                <div class="contactNumber">
+                                    <img src="assets/icons/phone.svg" alt="">
+                                    <a href="tel:015112345678">0151 12345678</a>
+                                </div>
+                                <div class="contactNumber">
+                                    <img src="assets/icons/mail.svg" alt="">
+                                    <a href="mailto:kontakt@natalie-schlindwein.de">kontakt@natalie-schlindwein.de</a>
+                                </div>
+                            </div>
+
+                            <div class="socialmediaContact">
+                                <a href="#"><img src="assets/icons/linkedin.svg" alt=""></a>
+                                <a href="#"><img src="assets/icons/xing.svg" alt=""></a>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="contactFields">
                         <div class="form">
                             <div class="inputField focus">

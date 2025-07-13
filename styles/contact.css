@@ -1,4 +1,4 @@
-.contact{
+.contact {
     width: 100%;
     max-width: 1920px;
     height: fit-content;
@@ -9,21 +9,26 @@
     align-items: flex-start;
     position: relative;
     box-sizing: border-box;
-    padding: 56px;
+
     margin-bottom: 200px;
 }
 
-.contactContainer{
+
+/* div {
+    border: solid 1px;
+} */
+
+.contactContainer {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 }
 
-.contactContent{
+.contactContent {
     width: 100%;
-    max-width: 1440px;
+
     height: 100%;
     display: flex;
     justify-content: center;
@@ -33,13 +38,65 @@
     margin-top: 112px;
 }
 
-.contactText{
+.contactInformationsContainer {
     width: 50%;
-    height: 100%;
-  
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
 }
 
-.contactFields{
+.contactText {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+}
+.contactText h2{
+    margin: 0;
+}
+
+.contactInformations {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+
+.contactNumbersContainer {
+    display: flex;
+    flex-direction: column;
+gap: 4px;
+}
+
+.contactNumber {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+}
+
+.contactNumber img {
+    width: 20px;
+    height: 20px;
+}
+
+.socialmediaContact {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+}
+
+.socialmediaContact img {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.contactFields {
     width: 50%;
     height: 100%;
     display: flex;
@@ -48,20 +105,20 @@
 
 }
 
-.form{
+.form {
     width: 100%;
-    max-width: 450px;
+    max-width: 550px;
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-.inputField{
+.inputField {
     width: 100%;
     height: 60px;
     /* border-bottom: solid;
     border-color: var(--primary); */
-    
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -71,17 +128,17 @@
     /* transition: border-color 0.2s ease-in-out; */
     background-color: rgba(255, 255, 255, 0.145);
     border-radius: 10px;
-    
+
 }
 
-.focusAnimation{
+.focusAnimation {
     border: solid;
     border-width: 1px;
     border-color: var(--highlight);
 }
-   
 
-.textField{
+
+.textField {
     width: 100%;
     height: 200px;
     /* border: solid;
@@ -94,20 +151,20 @@
     background-color: rgba(255, 255, 255, 0.145);
 }
 
-.formBtnContainer{
+.formBtnContainer {
     width: 100%;
     display: flex;
     justify-content: center;
-  margin-top: 16px;
+    margin-top: 16px;
 }
 
-.formBtnContainer button{
+.formBtnContainer button {
     width: 100%;
-   
+
 }
 
 
-.error{
+.error {
     width: 100%;
     height: 10px;
     display: flex;
@@ -117,54 +174,61 @@
     color: rgb(193, 11, 11);
 }
 
-.errorBorder{
+.errorBorder {
     border: solid;
     border-color: rgb(193, 11, 11);
 }
-.privacy{
-width: 100%;
-display: flex;
-align-items: center;
-gap: 16px;
+
+.privacy {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
 
 }
-.checkbox{
-min-width: 30px;
-max-width: 30px;
-height: 30px;
-border: solid;
-box-sizing: border-box;
-padding: 5px;
-border-radius: 5px;
-border-color: var(--highlight);
-display: flex;
-justify-content: center;
-align-items: center;
-cursor: pointer;
-position: relative;
+
+.checkbox {
+    min-width: 30px;
+    max-width: 30px;
+    height: 30px;
+    border: solid;
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 5px;
+    border-color: var(--highlight);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
 }
-.privacyImage{
+
+.privacyImage {
     position: absolute;
-width: 20px;
+    width: 20px;
 }
 
-.privacyLink{
+.privacyLink {
     color: var(--highlight);
 }
 
-@media(max-width: 1300px){
-    .contactContent{
+@media(max-width: 1300px) {
+    .contactContent {
         flex-direction: column;
         align-items: center;
         gap: 56px;
     }
-    .contactText{
+.contactInformationsContainer{
+    width: 100%;
+}
+    .contactText {
         width: 100%;
         text-align: center;
     }
-  .contactFields{
-    width: 100%;
-  }
+
+    .contactFields {
+        width: 100%;
+    }
 
 }
 
@@ -174,18 +238,20 @@ width: 20px;
     }
 }
 
-@media(max-width: 650px){
-    .contact{
-padding: 0px;
+@media(max-width: 650px) {
+    .contact {
+        padding: 0px;
     }
-    .contactContent{
+
+    .contactContent {
         margin-top: 32px;
     }
-    .privacy span{
+
+    .privacy span {
         font-size: 14px;
     }
 
-    .error{
+    .error {
         font-size: 14px;
     }
 }

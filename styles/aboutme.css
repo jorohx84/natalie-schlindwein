@@ -27,9 +27,9 @@
     display: flex;
     flex-direction: column;
     gap: 32px;
-      margin-top: 56px;
-opacity: 0;
-transition: opacity 2s ease-in-out;
+    margin-top: 56px;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
 }
 
 .aboutmeContent {
@@ -39,7 +39,7 @@ transition: opacity 2s ease-in-out;
     justify-content: space-between;
     gap: 56px;
     margin-top: 56px;
-  
+
 }
 
 .aboutmeText {
@@ -93,7 +93,7 @@ transition: opacity 2s ease-in-out;
     margin-top: 5%;
     width: 30%;
     filter: brightness(0.3);
-      
+
 }
 
 
@@ -138,9 +138,9 @@ transition: opacity 2s ease-in-out;
 .btnBG {
     width: 200px;
     background-color: rgba(255, 255, 255, 0.145);
-    border-radius: 20px;
+    border-radius: 10px;
     height: 60px;
-position: relative;
+    position: relative;
 }
 
 .aboutmeBtnContainer button:hover {
@@ -195,7 +195,40 @@ position: relative;
     .aboutmeContent {
         opacity: 1;
     }
+
+    .countries {
+        align-items: center;
+    }
+
+    .countries img {
+        margin-top: -50%;
+    }
 }
+
+@media(max-width: 1020px) {
+    .aboutmeContainer{
+        height: fit-content;
+    }
+    .aboutmeContentContainer{
+        height: fit-content;
+    }
+    .aboutmeContent{
+        flex-direction: column;
+        height: fit-content;
+    }
+    .countries {
+     flex-direction: column;
+   justify-content: flex-start;
+   gap: 32px;
+       
+    }
+    .countries img{
+width: 300px;
+height: 300px;
+margin-top: 0;
+    }
+}
+
 
 @media(max-width: 500px) {
 
