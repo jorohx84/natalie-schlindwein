@@ -28,8 +28,6 @@ function toogleRespMenu() {
     const respMenuRef = document.getElementById('respMenu');
     const contentRef = document.getElementById('content');
     const headerRef = document.getElementById('headerContainer');
-
-    console.log(hide);
     if (respMenuRef) {
         if (hide) {
             respMenuRef.classList.add('slideIn');
@@ -79,7 +77,6 @@ function dividerAnimation() {
     for (let index = 0; index < dividers.length; index++) {
         const divider = dividers[index];
         const dividerRect = divider.getBoundingClientRect().top;
-        console.log(dividerRect);
         const trigger = window.innerHeight * 0.5;
 
         if (dividerRect < trigger) {
@@ -95,6 +92,7 @@ function sliderAnimations() {
     letteringAnimation('aboutme', 'aboutmeLettering', 'aboutmeContent');
     letteringAnimation('skills', 'skillsLettering', 'skillContent');
     letteringAnimation('contact', 'contactLettering', 'contactContent');
+        letteringAnimation('advantages', 'advantagesLettering', 'advantagesContent');
     letteringAnimation('experiences', 'experiencesLettering', 'experiencesContent');
 }
 
@@ -169,9 +167,7 @@ function btnHighlight() {
 
 
 function moveSidebar(currentIndex) {
-    console.log(currentIndex);
     const elements = document.getElementsByClassName('sidebarContainer');
-    console.log(elements);
     removeSidebar(elements)
     if (currentIndex === undefined ) {
         return

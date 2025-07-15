@@ -231,9 +231,7 @@ nav a:active {
     nav {
         display: none;
     }
-    .languages{
-        display: none;
-    }
+
 .noShadow{
     background-color: rgba(0, 0, 0, 0.741);
 }

@@ -14,29 +14,31 @@
     <link rel="stylesheet" href="styles/skills.css">
     <link rel="stylesheet" href="styles/contact.css">
     <link rel="stylesheet" href="styles/experiences.css">
-
+    <link rel="stylesheet" href="styles/advantages.css">
     <script src="javaScript/animations.js"></script>
     <script src="javaScript/skills.js"></script>
     <script src="javaScript/experiences.js"></script>
     <script src="javaScript/contactform.js"></script>
     <script src="javaScript/language.js"></script>
+    <script src="javaScript/advantages.js"></script>
     <script src="https://www.w3schools.com/lib/w3.js"></script>
 </head>
 
 <body onscroll="scrollHeader(), getScrollbarPosition(), scrollVerticalBar()"
-    onload="renderSkills(), renderExperiences(), loadLanguage()" id="body">
+    onload="renderSkills(), loadLanguage()" id="body">
     <script>w3.includeHTML();</script>
     <div class="headerPlaceholder"></div>
     <header id="header">
         <div class="headerContainer" id="headerContainer">
             <div class="logoContainer">
-              <img class="logo" src="assets/img/Bildschirmfoto_2025-07-13_um_11.44.20-removebg-preview.png" alt="">
+                <img class="logo" src="assets/img/Bildschirmfoto_2025-07-13_um_11.44.20-removebg-preview.png" alt="">
 
             </div>
             <nav id="nav">
                 <a href="#body">Home</a>
                 <a href="#aboutme">Über mich</a>
                 <a href="#skills">Fähigkeiten</a>
+                <a href="#advantages">Leistungen</a>
                 <a href="#experiences">Erfahrungen</a>
                 <a href="#contact">Kontakt</a>
             </nav>
@@ -192,10 +194,31 @@
 
             </div>
         </section>
+        <section class="advantages" id="advantages">
+            <div class="advantagesContainer">
+                <div class="lettering" id="advantagesLettering">
+                    <span data-i18n="advantagesTitle"></span>
+                </div>
+                <h3 data-i18n="advantagesSubtitle"></h3>
+                <div class="advantagesContentContainer">
+                    <div class="advantagesContent" id="advantagesContent"></div>
+                    <div class="advantagesRespHeadline" id="advantagesRespHeadline"></div>
+                    <div class="subadvantages" id="subadvantages"></div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+
+
         <section class="experiences" id="experiences">
             <div class="experiencesContainer">
                 <div class="lettering " id="experiencesLettering">
-                    <span>Erfahrungen</span>
+                    <span data-i18n="experienceTitle"></span>
                 </div>
                 <div class="experiencesContent" id="experiencesContent">
                     <div class="scrollbar" id="scrollbar">

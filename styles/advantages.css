@@ -1,0 +1,220 @@
+.advantages {
+    width: 100%;
+    max-width: 1920px;
+    height: fit-content;
+    min-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    box-sizing: border-box;
+    margin-bottom: 200px;
+}
+
+.advantagesContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.advantagesContainer h3{
+    font-size: 24px;
+}
+
+.advantagesContent {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 32px;
+
+
+}
+
+.advantagesContentContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.advantageCard {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: var(--text-bg);
+    transition: height 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    ;
+}
+
+.advantageCard img {
+    width: 50px;
+}
+
+.cardHighlight {
+    background-color: var(--highlight) !important;
+}
+
+.subOpacity {
+    transition: opacity 1s ease-in-out;
+    opacity: 1 !important;
+}
+
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+.advantageTitle {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+
+    border-radius: 10px;
+    text-align: center;
+
+
+}
+
+
+
+.advantageTitle h4 {
+    font-size: 18px;
+}
+
+.subadvantages {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    opacity: 0;
+
+}
+
+.subadvantageRow {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+    height: 80px;
+
+}
+
+
+.subText {
+    display: flex;
+    align-items: center;
+    background-color: var(--text-bg);
+    box-sizing: border-box;
+    padding: 8px 32px;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    transition: color 0.3s ease-in-out;
+}
+
+.subImage {
+    width: 30px;
+    transition: transform 1s ease-in-out;
+}
+
+.subadvantageRow:hover .subImage {
+    transform: rotate(360deg) !important;
+    color: var(--highlight);
+}
+
+.subadvantageRow:hover .subText {
+
+    color: var(--highlight);
+}
+
+@keyframes rotateCircle {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media(max-width: 1350px) {
+    .advantageTitle h4 {
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 1050px) {
+    .advantagesContent {
+        gap: 16px;
+    }
+}
+
+@media(max-width: 950px) {
+    .advantageTitle {
+        display: none;
+    }
+
+    .advantageCard {
+        width: 100%;
+        width: 200px;
+        height: 120px;
+
+    }
+    .advantagesContainer h3{
+        font-size: 18px;
+    }
+  
+}
+
+@media(min-width: 950px) {
+  .advantagesRespHeadline{
+        display: none;
+    }
+}
+
+@media(max-width: 500px) {
+    .advantageCard {
+        width: 80px;
+        height: 80px;
+    }
+
+    .advantageCard img {
+        width: 40px;
+    }
+
+    .subadvantageRow {
+        gap: 8px;
+    }
+
+    .subImage {
+        width: 20px;
+    }
+
+    .advantagesContainer h3 {
+        text-align: center;
+    }
+
+    .subadvantageRow {
+        height: 120px;
+    }
+}
