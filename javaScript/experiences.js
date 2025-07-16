@@ -1,7 +1,6 @@
 const stations = [
     {
         path: 'assets/icons/education_grey.svg',
-        changedPath: 'assets/icons/education_blue.svg',
         de: {
             title: 'Kaufmännische Ausbildung – Der Grundstein',
             description: 'Meine berufliche Laufbahn begann bereits im Alter von 16 Jahren mit einer Ausbildung zur Groß- und Außenhandelskauffrau, die mir ein solides Fundament im kaufmännischen Bereich vermittelte.',
@@ -16,8 +15,8 @@ const stations = [
         }
     },
     {
-        path: 'assets/icons/ausbildung.svg',
-        changedPath: 'assets/icons/speak_blue.svg',
+        path: 'assets/icons/shopping_grey.svg',
+     
         de: {
             title: 'Berufserfahrung im Einkauf & Service Management',
             description: 'Im Anschluss war ich über sechs Jahre im operativen Einkauf sowie im Service Management tätig – Bereiche, in denen ich nicht nur mein Organisationstalent, sondern auch mein wirtschaftliches Denken gezielt einsetzen und weiterentwickeln konnte.',
@@ -33,7 +32,7 @@ const stations = [
     },
     {
         path: 'assets/icons/ausbildung.svg',
-        changedPath: 'assets/icons/speak_blue.svg',
+     
         de: {
             title: 'Weiterbildung zur Betriebswirtin mit Spanien-Fokus',
             description: 'Im Jahr 2017 entschied ich mich für eine berufliche Weiterbildung zur Staatlich geprüften Betriebswirtin (Bachelor Professional in Wirtschaft) mit dem Schwerpunkt „Europa-Betriebswirtschaft“. Hier vertiefte ich meine Kenntnisse im internationalen Kontext und legte meinen Fokus auf die Fremdsprache Spanisch.',
@@ -49,7 +48,7 @@ const stations = [
     },
     {
         path: 'assets/icons/ausbildung.svg',
-        changedPath: 'assets/icons/speak_blue.svg',
+        
         de: {
             title: 'Auslandspraktikum in Valencia – Marketing & Sprache',
             description: 'Im Rahmen des Erasmus+-Programms hatte ich die Möglichkeit, ein Auslandspraktikum in Spanien zu absolvieren. Über sieben Monate hinweg arbeitete ich in der Marketingabteilung der renommierten Sprachschule „Españolé International House Valencia“, um meine Sprachkenntnisse weiter auszubauen.',
@@ -65,7 +64,7 @@ const stations = [
     },
     {
         path: 'assets/icons/speak.svg',
-        changedPath: 'assets/icons/speak_blue.svg',
+       
         de: {
             title: 'Sprachassistenz & Bildungsurlaub in Cádiz',
             description: 'Anschließend war ich für sechs Monate als Sprachassistentin an einem College in Cádiz tätig. Dort unterstützte ich die Lehrkräfte bei der Vorbereitung der Schüler auf die international anerkannte Sprachprüfung IELTS und agierte zugleich als Dolmetscherin und Bindeglied zwischen deutschen Landesbehörden und spanischen Bildungseinrichtungen – insbesondere im Hinblick auf die Organisation von Bildungsurlauben für deutsche Arbeitnehmer.',
@@ -81,7 +80,7 @@ const stations = [
     },
     {
         path: 'assets/icons/ausbildung.svg',
-        changedPath: 'assets/icons/speak_blue.svg',
+      
         de: {
             title: 'Start in die Selbstständigkeit als Freelancerin',
             description: 'Die Erfahrungen in Spanien waren wegweisend für meinen weiteren Weg: Ich entschied mich, den Schritt in die Selbstständigkeit zu wagen. Seit Oktober 2022 bin ich als Freelancerin tätig und berate Unternehmen in unterschiedlichen Bereichen – mit internationalem Blick, interkultureller Kompetenz und einem klaren Gespür für Organisation, Sprache und Struktur.',
@@ -163,12 +162,9 @@ function getCurrentHeight(startpoint, barRect, barInnerRect) {
 
 function giveDotsHighlight(barInnerRect) {
     const dots = document.getElementsByClassName('stationDot');
-    const images = document.getElementsByClassName('dotImage');
-
-
     for (let index = 0; index < dots.length; index++) {
         const dot = dots[index];
-        const image = images[index];
+     
 
         const dotRect = dot.getBoundingClientRect().top;
         if (dotRect < barInnerRect.bottom) {

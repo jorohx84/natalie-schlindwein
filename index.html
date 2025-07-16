@@ -24,8 +24,8 @@
     <script src="https://www.w3schools.com/lib/w3.js"></script>
 </head>
 
-<body onscroll="scrollHeader(), getScrollbarPosition(), scrollVerticalBar()"
-    onload="renderSkills(), loadLanguage()" id="body">
+<body onscroll="scrollHeader(), getScrollbarPosition(), scrollVerticalBar()" onload="loadLanguage()"
+    id="body">
     <script>w3.includeHTML();</script>
     <div class="headerPlaceholder"></div>
     <header id="header">
@@ -35,12 +35,11 @@
 
             </div>
             <nav id="nav">
-                <a href="#body">Home</a>
-                <a href="#aboutme">Über mich</a>
-                <a href="#skills">Fähigkeiten</a>
-                <a href="#advantages">Leistungen</a>
-                <a href="#experiences">Erfahrungen</a>
-                <a href="#contact">Kontakt</a>
+                <a href="#aboutme" data-i18n="header1"></a>
+                <a href="#skills" data-i18n="header2"></a>
+                <a href="#advantages" data-i18n="header3"></a>
+                <a href="#experiences" data-i18n="header4"></a>
+                <a href="#contact" data-i18n="header5"></a>
             </nav>
             <!-- <div class="languages" id="languages">
                 <button onclick="setLanguage('de', event)">DE</button>
@@ -55,11 +54,12 @@
 
             <div onclick="toogleRespMenu()" class="respMenu" id="respMenu">
 
-                <a href="#body">Home</a>
-                <a href="#aboutme">Über mich</a>
-                <a href="#skills">Fähigkeiten</a>
-                <a href="#experiences">Erfahrungen</a>
-                <a href="#contact">Kontakt</a>
+
+                <a href="#aboutme" data-i18n="header1"></a>
+                <a href="#skills" data-i18n="header2"></a>
+                <a href="#advantages" data-i18n="header3"></a>
+                <a href="#experiences" data-i18n="header4"></a>
+                <a href="#contact" data-i18n="header5"></a>
 
             </div>
 
@@ -125,43 +125,39 @@
         <section class="aboutme" id="aboutme">
             <div class="aboutmeContainer">
                 <div class="lettering" id="aboutmeLettering">
-                    <span>About me</span>
+                    <span data-i18n="aboutmeTitle"></span>
                 </div>
                 <div class="aboutmeContentContainer" id="aboutmeContent">
-                    <h2>Ich bringe Struktur, Herz und internationale Erfahrung zusammen.</h2>
+                    <h2 data-i18n="aboutmeSubtitle"></h2>
                     <div class="aboutmeContent">
 
 
                         <div class="aboutmeTextContainer">
 
                             <div class="aboutmeText animationDiv" id="aboutmeText">
-                                <span>Ich liebe es, wenn Menschen zusammenkommen – egal ob in Sydney, Sevilla oder
-                                    Frankfurt. Nach einer Karriere im Einkauf und vielen Jahren im Ausland habe ich mich
-                                    entschieden, meiner Leidenschaft zu folgen: kreative Organisation, klare Abläufe und
-                                    echte Begegnungen.</span>
+                                <span data-i18n="aboutmeDescription"></span>
                             </div>
                             <div class="aboutmeText animationDiv" id="aboutmeText">
-                                <span>Auslandserfahrung : 1 Jahr in Australien, 4 Jahre in Spanien</span>
+                                <span data-i18n="aboutmeFact1">Auslandserfahrung : 1 Jahr in Australien, 4 Jahre in Spanien</span>
                             </div>
                             <div class="aboutmeText animationDiv" id="aboutmeText">
-                                <span>Sprachkenntnisse : Deutsch, Englisch, Spanisch</span>
+                                <span data-i18n="aboutmeFact2">Sprachkenntnisse : Deutsch, Englisch, Spanisch</span>
                             </div>
                             <div class="aboutmeText animationDiv" id="aboutmeText">
-                                <span>Strukturierte Planerin mit Herz fürs Detail</span>
+                                <span data-i18n="aboutmeFact3">Strukturierte Planerin mit Herz fürs Detail</span>
                             </div>
                             <div class="aboutmeText animationDiv" id="aboutmeText">
-                                <span>Freelancerin für Events mit internationalem Flair</span>
+                                <span data-i18n="aboutmeFact4">Freelancerin für Events mit internationalem Flair</span>
                             </div>
 
 
                         </div>
                         <div class="ctaContainer">
-                            <span>Du möchtest mehr über ich mich erfahren?</span>
+                            <span data-i18n="aboutmeCtaText"></span>
                             <div class="aboutmeBtnContainer">
 
                                 <div class="btnBG">
-                                    <button id="aboutmeBtn" onclick="window.location.href='#contact'">Lass uns
-                                        sprechen</button>
+                                    <button id="aboutmeBtn" onclick="window.location.href='#contact'" data-i18n="aboutmeBtn"></button>
                                 </div>
 
                             </div>
@@ -183,12 +179,13 @@
         <section class="skills " id="skills">
             <div class="skillsContainer">
                 <div class="lettering reverse" id="skillsLettering">
-                    <span>Fähigkeiten</span>
+                    <span data-i18n="skillsTitle"></span>
                 </div>
 
                 <div class="skillContent" id="skillContent">
 
-                    <div class="skillCards" id="skillCards"></div>
+                    <div class="skillCards" id="skillCards1"></div>
+                    <div class="skillCards" id="skillCards2"></div>
 
                 </div>
 

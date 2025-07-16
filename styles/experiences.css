@@ -59,20 +59,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
-.stationDot img{
+.stationDot img {
     width: 30px;
     height: 30px;
-    
-    
+
+
 }
 
 
-.animateImage{
-   transform: scale(1.2);
-   
+.animateImage {
+    transform: scale(1.2);
+
 }
 
 .changeColor {
@@ -141,15 +141,16 @@
     .stationDot {
         min-width: 30px;
         height: 30px;
+        position: absolute;
+        left: -15px;
     }
 
     .stationDescription h4 {
         font-size: 16px;
     }
 
-    .stationDot {
-        position: absolute;
-        left: -15px;
-
+    .stationDot img {
+        width: 15px;
+        height: 15px;
     }
 }

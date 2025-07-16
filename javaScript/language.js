@@ -1,24 +1,73 @@
 const translations = {
     de: {
-      
+
         title: "Professionelle Einkäuferin",
         advantagesTitle: 'Leistungen',
         advantagesSubtitle: 'Von der Planung bis zur Umsetzung des Events, sorge ich für einen reibungslosen Ablauf und behalte den Überblick.',
         experienceTitle: 'Erfahrungen',
+        header1: 'Über mich',
+        header2: 'Fähigkeiten',
+        header3: 'Leistungen',
+        header4: 'Erfahrungen',
+        header5: 'Kontakt',
+        header6: '',
+        aboutmeTitle: 'Über mich',
+        aboutmeSubtitle: 'Ich bringe Struktur, Herz und internationale Erfahrung zusammen.',
+        aboutmeDescription: 'Mein Name ist Natalie, ich bin 32 Jahre alt und lebe in Frankfurt am Main. Ich liebe es, wenn Menschen zusammenkommen – sei es in Sydney, Sevilla oder hier in Frankfurt. Diese Begeisterung für Begegnungen, Austausch und Organisation begleitet mich schon mein ganzes Leben. Nach vielen Jahren im internationalen Einkauf, spannenden Auslandsstationen und einer fundierten Weiterbildung habe ich mich entschieden, meiner wahren Leidenschaft zu folgen: Menschen verbinden, Projekte gestalten und Erlebnisse schaffen.',
+        aboutmeFact1: 'Auslandserfahrung : 1 Jahr in Australien, 4 Jahre in Spanien',
+        aboutmeFact2: 'Sprachkenntnisse : Deutsch, Englisch, Spanisch',
+        aboutmeFact3: 'Strukturierte Planerin mit Herz fürs Detail',
+        aboutmeFact4: 'Freelancerin für Events mit internationalem Flair',
+        aboutmeCtaText: 'Du möchtest mehr über ich mich erfahren?',
+        aboutmeBtn: 'Lass uns reden',
+        skillsTitle: 'Fähigkeiten',
     },
     en: {
-       
+
         title: "Professional Buyer",
-        advantagesTitle: 'Advantages',
+        advantagesTitle: 'Services',
         advantagesSubtitle: 'From planning to implementation of the event, I ensure that everything runs smoothly and keep an overview.',
         experienceTitle: 'Experiences',
+        header1: 'About me',
+        header2: 'Skills',
+        header3: 'Services',
+        header4: 'Experiences',
+        header5: 'Contact',
+        header6: '',
+        aboutmeTitle: 'About me',
+        aboutmeSubtitle: 'I bring together structure, heart and international experience.',
+        aboutmeDescription: 'My name is Natalie, I am 32 years old and live in Frankfurt am Main. I love it when people come together – whether in Sydney, Seville, or here in Frankfurt. This enthusiasm for encounters, exchange, and organization has accompanied me my entire life. After many years in international purchasing, exciting assignments abroad, and in-depth continuing education, I decided to follow my true passion: connecting people, shaping projects, and creating experiences.',
+        aboutmeFact1: 'International experience: 1 year in Australia, 4 years in Spain',
+        aboutmeFact2: 'Languages: German, English, Spanish',
+        aboutmeFact3: 'Structured planner with an eye for detail',
+        aboutmeFact4: 'Freelance event manager with international flair',
+        aboutmeCtaText: 'Want to learn more about me?',
+        aboutmeBtn: 'Let’s talk',
+         skillsTitle: 'Skills',
+
     },
     es: {
-      
+
         title: "comprador profesional",
         advantagesTitle: 'Servicios',
         advantagesSubtitle: 'Desde la planificación hasta la implementación del evento, me aseguro de que todo transcurra sin problemas y mantengo una visión general.',
         experienceTitle: 'Experiencias',
+        header1: 'Acerca de mí',
+        header2: 'Habilidades',
+        header3: 'Servicios',
+        header4: 'Experiencias',
+        header5: 'Contacto',
+        header6: '',
+        aboutmeTitle: 'Acerca de mí',
+        aboutmeSubtitle: 'Reúno estructura, corazón y experiencia internacional.',
+        aboutmeDescription: 'Me llamo Natalie, tengo 32 años y vivo en Fráncfort del Meno. Me encanta cuando la gente se reúne, ya sea en Sídney, Sevilla o aquí en Fráncfort. Este entusiasmo por los encuentros, el intercambio y la organización me ha acompañado toda la vida. Tras muchos años en compras internacionales, emocionantes misiones en el extranjero y una formación continua exhaustiva, decidí seguir mi verdadera pasión: conectar personas, dar forma a proyectos y crear experiencias.',
+        aboutmeFact1: 'Experiencia internacional: 1 año en Australia, 4 años en España',
+        aboutmeFact2: 'Idiomas: alemán, inglés, español',
+        aboutmeFact3: 'Planificadora estructurada con atención al detalle',
+        aboutmeFact4: 'Freelancer de eventos con un toque internacional',
+        aboutmeCtaText: 'Quieres saber más sobre mí?',
+        aboutmeBtn: 'Hablemos',
+         skillsTitle: 'Habilidades',
     }
 }
 
@@ -39,6 +88,7 @@ function setLanguage(lang, event) {
     }
 
     renderExperiences(lang);
+    renderSkills(lang);
 }
 
 function toggleLanguage() {

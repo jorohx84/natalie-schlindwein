@@ -25,21 +25,20 @@
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     opacity: 0;
     transition: opacity 3s ease-in-out;
-
+    gap: 32px;
 }
 
 .skillCards {
     width: 100%;
-
     display: flex;
     justify-content: space-between;
-    
     gap: 32px;
-    margin-top: 112px;
+
 
     /* border-right: solid;
     border-left: solid; */
@@ -51,8 +50,8 @@
 }
 
 .skillCard {
-
-    width: 500px;
+width: 100%;
+    max-width: 500px;
     height: 400px;
     display: flex;
     flex-direction: column;
@@ -72,8 +71,8 @@
 }
 
 .skillCard h3 {
-   
-    font-size: 24px;
+
+    font-size: 20px;
 
 
 
@@ -85,7 +84,7 @@
     height: 100%;
 }
 
-.skillCard img{
+.skillCard img {
     width: 70px;
 }
 
@@ -94,29 +93,67 @@
 
     background-color: rgba(255, 255, 255, 0.145);
 }
-@media(max-width: 1230px) {
-    .skillCards {
-justify-content: center;
-    }
+
+@media(max-width: 1600px) {
     .skillCard{
-        height: fit-content;
+        height: 450px;
     }
 }
+
+@media(max-width: 1300px) {
+    .skillContent{
+        flex-direction: row;
+    }
+ .skillCards{
+    flex-direction: column;
+ }
+ .skillCard{
+    height: 350px;
+ }
+}
+
+@media(max-width: 1230px) {
+    .skillCards {
+        justify-content: center;
+    }
+
+  
+}
+
 @media(max-width: 1200px) {
     .skillContent {
         opacity: 1;
     }
 }
 
-@media(max-width: 900px) {
-    .skillCards {
-        margin-top: 16px;
-    }
+@media(max-width: 950px) {
+  .skillCard{
+    height: 420px;
+  }
 }
 
+@media(max-width: 780px) {
+.skillContent{
+    flex-direction: column;
+    align-items: center;
+}
+.skillCards{
+    align-items: center;
+}
+.skillCard{
+    height: 350px;
+}
+}
 @media(max-width: 450px) {
     .skillCard {
-        width: 300px;
+        height: 400px;
+    }
+
+}
+
+@media(max-width: 350px) {
+    .skillCard {
+        height: 450px;
     }
 
 }
