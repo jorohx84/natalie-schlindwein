@@ -31,7 +31,7 @@ const stations = [
         }
     },
     {
-        path: 'assets/icons/ausbildung.svg',
+        path: '',
 
         de: {
             title: 'Weiterbildung zur Betriebswirtin mit Spanien-Fokus',
@@ -47,7 +47,7 @@ const stations = [
         }
     },
     {
-        path: 'assets/icons/ausbildung.svg',
+        path: '',
 
         de: {
             title: 'Auslandspraktikum in Valencia – Marketing & Sprache',
@@ -79,7 +79,7 @@ const stations = [
         }
     },
     {
-        path: 'assets/icons/ausbildung.svg',
+        path: '',
 
         de: {
             title: 'Start in die Selbstständigkeit als Freelancerin',

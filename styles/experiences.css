@@ -132,8 +132,6 @@
 }
 
 
-.animateImage {}
-
 .changeColor {
     background-color: var(--highlight);
 }
@@ -148,8 +146,8 @@
 }
 
 .stationImage {
-    min-width: 100px;
-    height: 100px;
+    min-width: 80px;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -159,13 +157,15 @@
 
 }
 
+.stationImage img {
+    width: 30px;
+}
+
 .imageBGColor {
     background-color: var(--highlight) !important;
 }
 
-.stationImage img {
-    width: 50px;
-}
+
 
 .stationDescription {
     width: 100%;
@@ -178,10 +178,17 @@
     /* background-color: var(--text-bg);  */
     box-sizing: border-box;
     padding: 32px 32px 32px 32px;
+border-radius: 10px;
 
 
 
-
+}
+.stationDescription p{
+    color: var(--highlight);
+    font-size: 20px;
+    font-weight: 500;
+    padding: 8px;
+    border-radius: 5px;
 }
 
 .stationDescription h4 {
