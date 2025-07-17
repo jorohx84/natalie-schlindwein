@@ -28,7 +28,7 @@
     flex-direction: column;
     gap: 32px;
     margin-top: 56px;
-    opacity: 0;
+    /* opacity: 0; */
     transition: opacity 2s ease-in-out;
 }
 

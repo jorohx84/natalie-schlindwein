@@ -16,7 +16,7 @@ const stations = [
     },
     {
         path: 'assets/icons/shopping_grey.svg',
-     
+
         de: {
             title: 'Berufserfahrung im Einkauf & Service Management',
             description: 'Im Anschluss war ich über sechs Jahre im operativen Einkauf sowie im Service Management tätig – Bereiche, in denen ich nicht nur mein Organisationstalent, sondern auch mein wirtschaftliches Denken gezielt einsetzen und weiterentwickeln konnte.',
@@ -32,7 +32,7 @@ const stations = [
     },
     {
         path: 'assets/icons/ausbildung.svg',
-     
+
         de: {
             title: 'Weiterbildung zur Betriebswirtin mit Spanien-Fokus',
             description: 'Im Jahr 2017 entschied ich mich für eine berufliche Weiterbildung zur Staatlich geprüften Betriebswirtin (Bachelor Professional in Wirtschaft) mit dem Schwerpunkt „Europa-Betriebswirtschaft“. Hier vertiefte ich meine Kenntnisse im internationalen Kontext und legte meinen Fokus auf die Fremdsprache Spanisch.',
@@ -48,7 +48,7 @@ const stations = [
     },
     {
         path: 'assets/icons/ausbildung.svg',
-        
+
         de: {
             title: 'Auslandspraktikum in Valencia – Marketing & Sprache',
             description: 'Im Rahmen des Erasmus+-Programms hatte ich die Möglichkeit, ein Auslandspraktikum in Spanien zu absolvieren. Über sieben Monate hinweg arbeitete ich in der Marketingabteilung der renommierten Sprachschule „Españolé International House Valencia“, um meine Sprachkenntnisse weiter auszubauen.',
@@ -64,7 +64,7 @@ const stations = [
     },
     {
         path: 'assets/icons/speak.svg',
-       
+
         de: {
             title: 'Sprachassistenz & Bildungsurlaub in Cádiz',
             description: 'Anschließend war ich für sechs Monate als Sprachassistentin an einem College in Cádiz tätig. Dort unterstützte ich die Lehrkräfte bei der Vorbereitung der Schüler auf die international anerkannte Sprachprüfung IELTS und agierte zugleich als Dolmetscherin und Bindeglied zwischen deutschen Landesbehörden und spanischen Bildungseinrichtungen – insbesondere im Hinblick auf die Organisation von Bildungsurlauben für deutsche Arbeitnehmer.',
@@ -80,7 +80,7 @@ const stations = [
     },
     {
         path: 'assets/icons/ausbildung.svg',
-      
+
         de: {
             title: 'Start in die Selbstständigkeit als Freelancerin',
             description: 'Die Erfahrungen in Spanien waren wegweisend für meinen weiteren Weg: Ich entschied mich, den Schritt in die Selbstständigkeit zu wagen. Seit Oktober 2022 bin ich als Freelancerin tätig und berate Unternehmen in unterschiedlichen Bereichen – mit internationalem Blick, interkultureller Kompetenz und einem klaren Gespür für Organisation, Sprache und Struktur.',
@@ -100,18 +100,61 @@ function renderExperiences(lang) {
     const experiencesRef = document.getElementById('curriculum');
     experiencesRef.innerHTML = '';
     for (let index = 0; index < stations.length; index++) {
-        const dot = stations[index];
+        const image = stations[index];
         const station = stations[index][lang];
         experiencesRef.innerHTML += ` <div class="station">
+                              <div class="timeStamp">
+                                     <p>2000</p>
+                                      <div class="stationLine"></div>
+                             </div>
                             <div class="stationDot">
-                            <img class="dotImage" src="${dot.path}">
+                          <img src="${image.path}">
+                            </div>
+                             
+                            <div class="descriptionContainer">
+                            <div class="stationLine">
+                            <div class="descriptionLine"></div>
+                            </div>
+                            <div class="stationImage">
+                            <img src="${image.path}">
                             </div>
                             <div class="stationDescription">
+                            <p>2000</p>
                             <h4>${station.title}</h4>
                             <div class="experiencesDivider"></div>
                             <span>${station.description}</span>
+                               
+                            </div>
                             </div>
                         </div>`
+    }
+    setStationPosition()
+}
+
+function setStationPosition() {
+    const stationElements = document.getElementsByClassName('station');
+    const timeStamps = document.getElementsByClassName('timeStamp');
+    const descriptions = document.getElementsByClassName('descriptionContainer');
+    for (let index = 0; index < stationElements.length; index++) {
+        const element = stationElements[index];
+        const stamp = timeStamps[index];
+        const description = descriptions[index];
+        if (index % 2 === 0) {
+            changeStationPosition(element, stamp, description);
+        }
+    }
+}
+
+function changeStationPosition(element, stamp, description) {
+    if (window.innerWidth > 1000) {
+        element.classList.add('stationReverse');
+        stamp.classList.add('stampReverse');
+        description.classList.add('stampReverse');
+    } else {
+        element.classList.remove('stationReverse');
+        stamp.classList.remove('stampReverse');
+        description.classList.remove('stampReverse');
+
     }
 }
 
@@ -164,21 +207,54 @@ function giveDotsHighlight(barInnerRect) {
     const dots = document.getElementsByClassName('stationDot');
     for (let index = 0; index < dots.length; index++) {
         const dot = dots[index];
-     
-
         const dotRect = dot.getBoundingClientRect().top;
         if (dotRect < barInnerRect.bottom) {
-
-            // dot.style.backgroundColor='var(--highlight)';
             dot.classList.add('changeColor');
             dot.classList.add('animateImage');
+            changeLine(index, 'add');
         } else {
-            // dot.style.backgroundColor='var(--secondary)';
             dot.classList.remove('changeColor');
             dot.classList.remove('animateImage');
+            changeLine(index, 'remove');
         }
 
     }
 }
 
-window.addEventListener('resize', getScrollbarPosition)
+function changeLine(index, changeKey) {
+    const lines = document.getElementsByClassName('descriptionLine');
+    const line = lines[index];
+    if (changeKey === 'add') {
+        line.classList.add('changeLine');
+
+            changeImageColor(index, 'add');
+        
+    } else {
+           changeImageColor(index, 'remove');
+           
+            line.classList.remove('changeLine');
+          
+        
+    }
+    if (index % 2 !== 0) {
+        line.classList.add('transOriginLeft');
+    }
+
+}
+
+function changeImageColor(index, changeKey) {
+    const images = document.getElementsByClassName('stationImage');
+    const image = images[index];
+    if (changeKey === 'add') {
+        image.classList.add('imageBGColor');
+    } else {
+        image.classList.remove('imageBGColor');
+    }
+
+
+}
+
+window.addEventListener('resize', () => {
+    getScrollbarPosition();
+    setStationPosition();
+});

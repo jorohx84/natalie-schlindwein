@@ -18,35 +18,97 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    position: relative;
 }
+
+
 
 .experiencesContent {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
-    opacity: 0;
+    /* opacity: 0; */
     transition: opacity 3s ease-in-out;
     position: relative;
+    margin-top: 56px;
+
+
 }
 
 .curriculum {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 32px;
-    margin-top: 56px;
+    align-items: center;
+    gap: 112px;
+    margin-top: 300px;
+
 }
 
 .station {
     /* border: solid; */
     width: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    gap: 56px;
+    gap: 24px;
 
+}
+
+.timeStamp {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 24px;
+
+}
+
+.timeStamp p {
+    font-size: 48px;
+}
+
+.stationLine {
+    min-width: 60px;
+    height: 4px;
+    background-color: var(--secondary);
+    border-radius: 10px;
+}
+
+.descriptionLine {
+    width: 100%;
+    height: 100%;
+    transform: scaleX(0);
+    background-color: var(--highlight);
+    transform-origin: right;
+    transition: transform 0.5s ease-in-out;
+    border-radius: 10px;
+}
+
+.changeLine {
+    transform: scaleX(1);
+
+
+}
+
+.transOriginLeft {
+    transform-origin: left !important;
+}
+
+.stationReverse {
+    flex-direction: row-reverse;
+}
+
+
+.stampReverse {
+    flex-direction: row-reverse;
+}
+
+.transOrigin {
+    transform-origin: right !important;
 }
 
 .stationDot {
@@ -70,28 +132,56 @@
 }
 
 
-.animateImage {
-    transform: scale(1.2);
-
-}
+.animateImage {}
 
 .changeColor {
     background-color: var(--highlight);
 }
 
+.descriptionContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+
+}
+
+.stationImage {
+    min-width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary);
+    border-radius: 10px;
+    transition: background-color 1.5s ease-in-out;
+
+}
+
+.imageBGColor {
+    background-color: var(--highlight) !important;
+}
+
+.stationImage img {
+    width: 50px;
+}
+
 .stationDescription {
     width: 100%;
-    max-width: 800px;
-    min-height: fit-content;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     gap: 16px;
-    background-color: var(--text-bg);
+    /* background-color: var(--text-bg);  */
     box-sizing: border-box;
-    padding: 32px;
-    border-radius: 10px;
+    padding: 32px 32px 32px 32px;
+
+
+
+
 }
 
 .stationDescription h4 {
@@ -101,14 +191,17 @@
 }
 
 .experiencesDivider {
-    width: 100%;
+    width: 80%;
     height: 4px;
     background-color: var(--secondary);
 }
 
 .stationDescription span {
     width: 100%;
-    max-width: 800px;
+    /* box-sizing: border-box;
+    padding: 16px; */
+    border-radius: 10px;
+    /* background-color: var(--text-bg); */
 }
 
 .scrollbar {
@@ -123,11 +216,64 @@
     width: 100%;
 
     background-color: var(--highlight);
+    border-radius: 100px;
+}
+
+@media(max-width: 1400px) {
+    .curriculum {
+        gap: 0px;
+    }
+
+    .stationImage {
+        min-width: 70px;
+        height: 70px;
+    }
+
+    .stationImage img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .stationLine {
+        min-width: 50px;
+    }
+
+    .station {
+        gap: 12px;
+    }
+
+    .descriptionContainer {
+        gap: 12px;
+    }
 }
 
 @media(max-width: 1200px) {
     .experiencesContent {
         opacity: 1;
+    }
+}
+
+@media(max-width: 1100px) {
+    .stationImage {
+        min-width: 50px;
+        height: 50px;
+    }
+
+    .stationImage img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .stationLine {
+        min-width: 30px;
+    }
+
+    .station {
+        gap: 6px;
+    }
+
+    .descriptionContainer {
+        gap: 6px;
     }
 }
 
@@ -137,12 +283,55 @@
     }
 }
 
+@media(max-width: 1000px) {
+    .curriculum{
+        gap: 32px;
+    }
+    .stationImage {
+        display: none;
+    }
+
+    .stationImage img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .stationLine {
+        display: none;
+    }
+
+    .timeStamp {
+        display: none;
+    }
+
+    .stationDescription {
+        background-color: var(--text-bg);
+    }
+}
+
+@media(min-width: 1000px) {
+    .stationDot img {
+        display: none;
+    }
+
+    .stationDescription p {
+        display: none;
+    }
+}
+
 @media(max-width:450px) {
+    .station {
+        align-items: flex-start;
+        position: relative;
+        width: calc(100% - 10px);
+    }
+
     .stationDot {
-        min-width: 30px;
-        height: 30px;
+        min-width: 40px;
+        height: 40px;
         position: absolute;
-        left: -15px;
+        left: -20px;
+        top: -20px;
     }
 
     .stationDescription h4 {

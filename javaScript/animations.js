@@ -197,6 +197,6 @@ window.addEventListener('scroll', () => {
 moveSidebar();
     // dividerAnimation();
     // btnHighlight();
-    skillCardHighlight();
-    sliderAnimations();
+    // skillCardHighlight();
+    // sliderAnimations();
 });
