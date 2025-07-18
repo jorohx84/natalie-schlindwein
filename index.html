@@ -14,18 +14,17 @@
     <link rel="stylesheet" href="styles/skills.css">
     <link rel="stylesheet" href="styles/contact.css">
     <link rel="stylesheet" href="styles/experiences.css">
-    <link rel="stylesheet" href="styles/advantages.css">
+    <link rel="stylesheet" href="styles/services.css">
     <script src="javaScript/animations.js"></script>
     <script src="javaScript/skills.js"></script>
     <script src="javaScript/experiences.js"></script>
     <script src="javaScript/contactform.js"></script>
     <script src="javaScript/language.js"></script>
-    <script src="javaScript/advantages.js"></script>
+    <script src="javaScript/services.js"></script>
     <script src="https://www.w3schools.com/lib/w3.js"></script>
 </head>
 
-<body onscroll="scrollHeader(), getScrollbarPosition(), scrollVerticalBar()" onload="loadLanguage()"
-    id="body">
+<body onscroll="scrollHeader(), getScrollbarPosition(), scrollVerticalBar()" onload="loadLanguage()" id="body">
     <script>w3.includeHTML();</script>
     <div class="headerPlaceholder"></div>
     <header id="header">
@@ -138,16 +137,16 @@
                                 <span data-i18n="aboutmeDescription"></span>
                             </div>
                             <div class="aboutmeText animationDiv" id="aboutmeText">
-                                <span data-i18n="aboutmeFact1">Auslandserfahrung : 1 Jahr in Australien, 4 Jahre in Spanien</span>
+                                <span data-i18n="aboutmeFact1"></span>
                             </div>
                             <div class="aboutmeText animationDiv" id="aboutmeText">
-                                <span data-i18n="aboutmeFact2">Sprachkenntnisse : Deutsch, Englisch, Spanisch</span>
+                                <span data-i18n="aboutmeFact2"></span>
                             </div>
                             <div class="aboutmeText animationDiv" id="aboutmeText">
-                                <span data-i18n="aboutmeFact3">Strukturierte Planerin mit Herz fürs Detail</span>
+                                <span data-i18n="aboutmeFact3"></span>
                             </div>
                             <div class="aboutmeText animationDiv" id="aboutmeText">
-                                <span data-i18n="aboutmeFact4">Freelancerin für Events mit internationalem Flair</span>
+                                <span data-i18n="aboutmeFact4"></span>
                             </div>
 
 
@@ -157,7 +156,8 @@
                             <div class="aboutmeBtnContainer">
 
                                 <div class="btnBG">
-                                    <button id="aboutmeBtn" onclick="window.location.href='#contact'" data-i18n="aboutmeBtn"></button>
+                                    <button id="aboutmeBtn" onclick="window.location.href='#contact'"
+                                        data-i18n="aboutmeBtn"></button>
                                 </div>
 
                             </div>
@@ -165,10 +165,10 @@
 
 
                         <div class="countries">
-                            <img src="assets/img/germany-svgrepo-com.svg" alt="">
-                            <img src="assets/img/australia-svgrepo-com Kopie.svg" alt="">
+                            <img src="assets/img/germany.svg" alt="">
+                            <img src="assets/img/australia.svg" alt="">
 
-                            <img src="assets/img/spain-map-country-land-svgrepo-com.svg" alt="">
+                            <img src="assets/img/spain.svg" alt="">
                         </div>
 
                     </div>
@@ -191,16 +191,16 @@
 
             </div>
         </section>
-        <section class="advantages" id="advantages">
-            <div class="advantagesContainer">
+        <section class="services" id="services">
+            <div class="servicesContainer">
                 <div class="lettering" id="advantagesLettering">
-                    <span data-i18n="advantagesTitle"></span>
+                    <span data-i18n="servicesTitle"></span>
                 </div>
-                <h3 data-i18n="advantagesSubtitle"></h3>
-                <div class="advantagesContentContainer">
-                    <div class="advantagesContent" id="advantagesContent"></div>
-                    <div class="advantagesRespHeadline" id="advantagesRespHeadline"></div>
-                    <div class="subadvantages" id="subadvantages"></div>
+                <h3 data-i18n="servicesSubtitle"></h3>
+                <div class="servicesContentContainer">
+                    <div class="servicesContent" id="servicesContent"></div>
+                    <div class="servicesRespHeadline" id="servicesRespHeadline"></div>
+                    <div class="subservices" id="subservices"></div>
                 </div>
 
             </div>
@@ -224,9 +224,9 @@
                     <div class="curriculum" id="curriculum">
 
                     </div>
-                   
+
                 </div>
-              
+
             </div>
 
         </section>
@@ -234,15 +234,13 @@
 
             <div class="contactContainer">
                 <div class="lettering reverse" id="contactLettering">
-                    <span>Kontakt</span>
+                    <span data-i18n="contactTitle"></span>
                 </div>
                 <div class="contactContent" id="contactContent">
                     <div class="contactInformationsContainer">
                         <div class="contactText">
-                            <h2>Lass uns gemeinsam besondere Momente gestalten.</h2>
-                            <span>Wenn du Fragen hast oder über ein mögliches Event sprechen möchtest, schreib mir gern.
-                                Egal ob du schon konkrete Pläne hast oder einfach mal schauen willst, ob es passt – ich
-                                freue mich auf deine Nachricht.</span>
+                            <h2 data-i18n="contactSubtitle"></h2>
+                            <span data-i18n="contactText"></span>
                         </div>
                         <div class="contactInformations">
                             <div>
@@ -271,38 +269,41 @@
                     <div class="contactFields">
                         <div class="form">
                             <div class="inputField focus">
-                                <input class="required" onfocus="animateInputFocus(0)" type="text" id="" name="Name"
-                                    placeholder="Name">
+                                <input class="required" onfocus="animateInputFocus(0)" type="text" id="" name="contactName"
+                                    placeholder="" data-i18n-placeholder="contactName">
 
                             </div>
-                            <span class="error" id="Name"></span>
+                            <span class="error" id="contactName"></span>
                             <div class="inputField focus">
-                                <input class="required" onfocus="animateInputFocus(1)" type="email"
-                                    name="E-Mail-Adresse" placeholder="E-Mail">
+                                <input class="required" onfocus="animateInputFocus(1)" type="email" placeholder=""
+                                    data-i18n-placeholder="contactMail" name="contactMail">
 
                             </div>
-                            <span class="error" id="E-Mail-Adresse"></span>
+                            <span class="error" id="contactMail"></span>
                             <div class="inputField focus">
-                                <input class="required" onfocus="animateInputFocus(2)" type="tel" name="Telefonnummer"
-                                    placeholder="Telefon">
+                                <input class="required" onfocus="animateInputFocus(2)" type="tel" name="contactPhone"
+                                    placeholder="" data-i18n-placeholder="contactPhone">
                             </div>
-                            <span class="error" id="Telefonnummer"></span>
+                            <span class="error" id="contactPhone"></span>
                             <div class="textField focus">
-                                <textarea class="required" onfocus="animateInputFocus(3)" name="Nachricht" id=""
-                                    placeholder="Ihre Nachricht"></textarea>
+                                <textarea class="required" onfocus="animateInputFocus(3)" name="contactMessage" id=""
+                                    placeholder="" data-i18n-placeholder="contactMessage"
+                                    data-errorKey="message"></textarea>
 
                             </div>
-                            <span class="error" id="Nachricht"></span>
+                            <span class="error" id="contactMessage"></span>
                             <div class="privacy">
                                 <div class="checkbox" onclick="changePrivacy()">
                                     <img class="privacyImage dnone" id="privacyImage"
                                         src="./assets/icons/check_darkblue.svg" alt="">
                                 </div>
-                                <span>Ich stimme der <a class="privacyLink">Datenschutzerklärung</a> zu.</span>
+                                <span><span data-i18n="contactPrivacyText1"></span> <a class="privacyLink"
+                                        data-i18n="contactPrivacy"></a> <span
+                                        data-i18n="contactPrivacyText2"></span></span>
                             </div>
                             <span class="error" id="privacyError"></span>
                             <div class="formBtnContainer">
-                                <button type="submit" onclick="validateForm()">Senden</button>
+                                <button type="submit" onclick="validateForm()" data-i18n="contactBtn"></button>
                             </div>
 
                         </div>

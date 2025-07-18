@@ -2,8 +2,8 @@ const translations = {
     de: {
 
         title: "Professionelle Einkäuferin",
-        advantagesTitle: 'Leistungen',
-        advantagesSubtitle: 'Von der Planung bis zur Umsetzung des Events, sorge ich für einen reibungslosen Ablauf und behalte den Überblick.',
+        servicesTitle: 'Leistungen',
+        servicesSubtitle: 'Von der Planung bis zur Umsetzung des Events, sorge ich für einen reibungslosen Ablauf und behalte den Überblick.',
         experienceTitle: 'Erfahrungen',
         header1: 'Über mich',
         header2: 'Fähigkeiten',
@@ -21,12 +21,26 @@ const translations = {
         aboutmeCtaText: 'Du möchtest mehr über ich mich erfahren?',
         aboutmeBtn: 'Lass uns reden',
         skillsTitle: 'Fähigkeiten',
+        contactTitle: 'Kontakt',
+        contactSubtitle: 'Lass uns gemeinsam besondere Momente gestalten.',
+        contactText: 'Wenn du Fragen hast oder über ein mögliches Event sprechen möchtest, schreib mir gern. Egal ob du schon konkrete Pläne hast oder einfach mal schauen willst, ob es passt – ich freue mich auf deine Nachricht.',
+        contactName: 'Name',
+        contactMail: 'E-Mail',
+        contactPhone: 'Telefon',
+        contactMessage: 'Nachricht',
+        contactPrivacy: 'Datenschutzerklärung',
+        contactPrivacyText1: 'Ich stimme der',
+        contactPrivacyText2: 'zu',
+        contactBtn: 'Senden',
+        contactEmailError: 'Bitte E-Mail-Adresse prüfen',
+        contactPhoneError:'Bitte Telefonnummer prüfen',
+        contactPrivacyError:'Bitte stimmen Sie der Datenschutzerklärung zu',
     },
     en: {
 
         title: "Professional Buyer",
-        advantagesTitle: 'Services',
-        advantagesSubtitle: 'From planning to implementation of the event, I ensure that everything runs smoothly and keep an overview.',
+        servicesTitle: 'Services',
+        servicesSubtitle: 'From planning to implementation of the event, I ensure that everything runs smoothly and keep an overview.',
         experienceTitle: 'Experiences',
         header1: 'About me',
         header2: 'Skills',
@@ -43,14 +57,29 @@ const translations = {
         aboutmeFact4: 'Freelance event manager with international flair',
         aboutmeCtaText: 'Want to learn more about me?',
         aboutmeBtn: 'Let’s talk',
-         skillsTitle: 'Skills',
+        skillsTitle: 'Skills',
+        contactTitle: 'Contact',
+        contactSubtitle: 'Let’s create special moments together.',
+        contactText: 'If you have any questions or would like to talk about a possible event, feel free to reach out. Whether you already have specific plans or just want to see if we’re a good fit – I look forward to hearing from you.',
+        contactName: 'name',
+        contactMail: 'mail',
+        contactPhone: 'phone',
+        contactMessage: 'message',
+        contactPrivacy: 'Privacy Policy',
+        contactPrivacyText1: 'I agree to the',
+        contactPrivacyText2: '',
+        contactBtn: 'Send',
+        contactEmailError: 'Please check your email address',
+contactPhoneError:'Please check your phone number',
+contactPrivacyError:'Please accept the privacy policy',
+
 
     },
     es: {
 
         title: "comprador profesional",
-        advantagesTitle: 'Servicios',
-        advantagesSubtitle: 'Desde la planificación hasta la implementación del evento, me aseguro de que todo transcurra sin problemas y mantengo una visión general.',
+        servicesTitle: 'Servicios',
+        servicesSubtitle: 'Desde la planificación hasta la implementación del evento, me aseguro de que todo transcurra sin problemas y mantengo una visión general.',
         experienceTitle: 'Experiencias',
         header1: 'Acerca de mí',
         header2: 'Habilidades',
@@ -67,9 +96,24 @@ const translations = {
         aboutmeFact4: 'Freelancer de eventos con un toque internacional',
         aboutmeCtaText: 'Quieres saber más sobre mí?',
         aboutmeBtn: 'Hablemos',
-         skillsTitle: 'Habilidades',
+        skillsTitle: 'Habilidades',
+        contactTitle: 'Contacto',
+        contactSubtitle: 'Creemos juntos momentos especiales.',
+        contactText: 'Si tienes alguna pregunta o quieres hablar sobre un posible evento, no dudes en escribirme. Ya sea que tengas planes concretos o solo quieras ver si encajamos – estaré encantada de saber de ti.',
+        contactName: 'Nombre',
+        contactMail: 'Correo electrónico',
+        contactPhone: 'Teléfono',
+        contactMessage: 'Mensaje',
+        contactPrivacy: 'Política de privacidad',
+        contactPrivacyText1: 'Estoy de acuerdo con la',
+        contactPrivacyText2: '',
+        contactBtn: 'Enviar',
+        contactEmailError: 'Por favor, revisa tu dirección de correo',
+        contactPhoneError:'Por favor, revisa tu número de teléfono',
+        contactPrivacyError:'Por favor, acepta la política de privacidad',
     }
 }
+
 
 function setLanguage(lang, event) {
     localStorage.setItem("lang", lang);
@@ -77,14 +121,24 @@ function setLanguage(lang, event) {
         const key = el.getAttribute("data-i18n");
         el.textContent = translations[lang][key];
     });
+
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        el.placeholder = translations[lang][key];
+    });
+
+    document.querySelectorAll('[data-i18n-name]').forEach(el => {
+        const key = el.getAttribute('data-i18n-name');
+        el.name = translations[lang][key] || '';
+    });
     event.stopPropagation();
-    renderAdvantages(lang);
+    renderServices(lang);
     if (currentSubIndex != undefined) {
         console.log(currentSubIndex);
 
-        renderSubadvantages(currentSubIndex, lang);
+        renderSubservices(currentSubIndex, lang);
     } else {
-        renderSubadvantages(0, lang)
+        renderSubservices(0, lang)
     }
 
     renderExperiences(lang);

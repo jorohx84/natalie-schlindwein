@@ -1,13 +1,13 @@
 let currentSubIndex;
 
-const advantages = [
+const services = [
     {
         path: 'assets/icons/volunteer_pink.svg',
         changePath: 'assets/icons/volunteer_grey.svg',
         de: {
             title: 'Volunteer Management',
 
-            subadvantages: [
+            subservices: [
                 'Daten-Administration (Zuteilung und Erstellung von Schichtplanung)',
                 'Laufende Kommunikation mit den Volunteers',
                 'Akkreditierungsmanagement (Verwalten von Daten und die Ausgabe von Akkreditierung)',
@@ -19,7 +19,7 @@ const advantages = [
         en: {
             title: 'Volunteer management',
 
-            subadvantages: [
+            subservices: [
                 'Data administration (allocation and creation of shift plans)',
                 'Ongoing communication with volunteers',
                 'Accreditation management (handling data and issuing credentials)',
@@ -30,7 +30,7 @@ const advantages = [
         es: {
             title: 'Gestión de voluntariado',
 
-            subadvantages: [
+            subservices: [
                 'Administración de datos (asignación y creación de turnos)',
                 'Comunicación continua con los voluntarios',
                 'Gestión de acreditaciones (manejo de datos y entrega de credenciales)',
@@ -47,7 +47,7 @@ const advantages = [
         de: {
             title: 'Finanz Management',
 
-            subadvantages: [
+            subservices: [
                 'Erstellung eines Haushaltsplans',
                 'Rechnungsstellung',
                 'Finanzierungsplan/Budgetplan des Projektes',
@@ -58,7 +58,7 @@ const advantages = [
         en: {
             title: 'Financial management',
 
-            subadvantages: [
+            subservices: [
                 'Creating a budget plan',
                 'Invoicing',
                 'Financial/budget planning of the project',
@@ -69,7 +69,7 @@ const advantages = [
         es: {
             title: 'Gestión financiera',
 
-            subadvantages: [
+            subservices: [
                 'Elaboración de un plan presupuestario',
                 'Facturación',
                 'Planificación financiera/presupuestaria del proyecto',
@@ -84,7 +84,7 @@ const advantages = [
         de: {
             title: 'Buchungs- und Programmassistentin',
 
-            subadvantages: [
+            subservices: [
                 'Planung und Erstellung von Zeitplänen und Einsatzplänen (Organisation)',
                 'Pflege der Zeitpläne und diese in allen Bereichen im Blick behalten',
                 'Troubleshooting bei Zeitverzögerungen oder technischen Sonderfällen',
@@ -96,7 +96,7 @@ const advantages = [
         },
         en: {
             title: 'Booking and Program Assistant',
-            subadvantages: [
+            subservices: [
                 'Planning and creating schedules and deployment plans (organization)',
                 'Maintaining schedules and keeping an overview across all areas',
                 'Troubleshooting delays or technical special cases',
@@ -108,7 +108,7 @@ const advantages = [
         },
         es: {
             title: 'Asistente de reservas y programación',
-            subadvantages: [
+            subservices: [
                 'Planificación y creación de horarios y planes de despliegue (organización)',
                 'Mantenimiento de horarios y supervisión en todas las áreas',
                 'Resolución de problemas en retrasos o casos técnicos especiales',
@@ -124,7 +124,7 @@ const advantages = [
         changePath: 'assets/icons/shopping_grey.svg',
         de: {
             title: 'Einkäuferin',
-            subadvantages: [
+            subservices: [
                 'Operativer und Strategischer Einkauf',
                 'Materialbeschaffung',
                 'Vertragsverhandlung',
@@ -133,7 +133,7 @@ const advantages = [
         },
         en: {
             title: 'Buyer',
-            subadvantages: [
+            subservices: [
                 'Operational and strategic purchasing',
                 'Material procurement',
                 'Contract negotiation',
@@ -142,7 +142,7 @@ const advantages = [
         },
         es: {
             title: 'Compradora',
-            subadvantages: [
+            subservices: [
                 'Compras operativas y estratégicas',
                 'Adquisición de materiales',
                 'Negociación de contratos',
@@ -154,59 +154,58 @@ const advantages = [
 
 
 
-function renderAdvantages(lang) {
-    const ref = document.getElementById('advantagesContent');
+function renderServices(lang) {
+    const ref = document.getElementById('servicesContent');
     ref.innerHTML = '';
-    for (let index = 0; index < advantages.length; index++) {
-        const advantage = advantages[index];
+    for (let index = 0; index < services.length; index++) {
+        const service = services[index];
 
         ref.innerHTML += `
-                                    <div class="advantageCard" id="advantageCard${index}" onclick="renderSubadvantages(${index}, '${lang}')">
-                                    <img id="titleImage${index}" src="${advantage.path}">
-                                        <div class="advantageTitle" id="advantageTitle${index}">
-                                            <h4>${advantage[lang].title}</h4> 
+                                    <div class="serviceCard" id="serviceCard${index}" onclick="renderSubservices(${index}, '${lang}')">
+                                    <img id="titleImage${index}" src="${service.path}">
+                                        <div class="serviceTitle" id="serviceTitle${index}">
+                                            <h4>${service[lang].title}</h4> 
                                         </div>
                                        
                                     </div>  
         `;
-        // renderSubadvantages(index, lang);
+      
     }
 
 }
 
 
-function renderSubadvantages(index, lang) {
-    const subadvantagesRef = document.getElementById(`subadvantages`);
-    subadvantagesRef.innerHTML = '';
+function renderSubservices(index, lang) {
+    const subservicesRef = document.getElementById(`subservices`);
+    subservicesRef.innerHTML = '';
     currentSubIndex = index;
     removeOpacity();
-    subadvantagesRef.classList.add('subOpacity')
-    const currentSubarray = advantages[index][lang].subadvantages;
-    // clearSubadvantages();
+    subservicesRef.classList.add('subOpacity')
+    const currentSubarray = services[index][lang].subservices;
     for (let index = 0; index < currentSubarray.length; index++) {
-        const subadvantage = currentSubarray[index];
-        subadvantagesRef.innerHTML += ` <div class="subadvantageRow">
+        const subservice = currentSubarray[index];
+        subservicesRef.innerHTML += ` <div class="subservicesRow">
                                         <img class="subImage" src="assets/icons/circle.png" alt="">
-                                        <span class="subText">${subadvantage}</span>
+                                        <span class="subText">${subservice}</span>
                                         </div>`;
 
     }
     giveCardHighlight(index);
-    renderAdvantagesRespHeadline(index, lang);
+    renderServiceRespHeadline(index, lang);
 }
 
 
 function removeOpacity() {
-    for (let index = 0; index < advantages.length; index++) {
-        const subadvantagesRef = document.getElementById(`subadvantages`);
-        subadvantagesRef.classList.remove('subOpacity')
+    for (let index = 0; index < services.length; index++) {
+        const subservicesRef = document.getElementById(`subservices`);
+        subservicesRef.classList.remove('subOpacity')
     }
 }
 
-function clearSubadvantages() {
-    for (let index = 0; index < advantages.length; index++) {
-        const subelement = advantages[index];
-        const ref = document.getElementById(`subadvantages${index}`);
+function clearSubservices() {
+    for (let index = 0; index < services.length; index++) {
+        const subelement = services[index];
+        const ref = document.getElementById(`subservices${index}`);
         ref.innerHTML = '';
     }
 }
@@ -215,20 +214,20 @@ function giveCardHighlight(currentIndex) {
     console.log(currentIndex);
 
 
-    for (let index = 0; index < advantages.length; index++) {
-        const cardRef = document.getElementById(`advantageCard${index}`);
+    for (let index = 0; index < services.length; index++) {
+        const cardRef = document.getElementById(`serviceCard${index}`);
         if (currentIndex === index) {
             cardRef.classList.add('cardHighlight');
         } else {
             cardRef.classList.remove('cardHighlight');
         }
     }
-    changeAdvantageImageColor(currentIndex)
+    changeServiceImageColor(currentIndex)
 }
 
-function changeAdvantageImageColor(currentIndex) {
-    for (let index = 0; index < advantages.length; index++) {
-        const card = advantages[index];
+function changeServiceImageColor(currentIndex) {
+    for (let index = 0; index < services.length; index++) {
+        const card = services[index];
         const image = document.getElementById(`titleImage${index}`);
 
 
@@ -243,23 +242,16 @@ function changeAdvantageImageColor(currentIndex) {
 
 }
 
-function renderAdvantagesRespHeadline(index, lang) {
+function renderServiceRespHeadline(index, lang) {
 
     console.log(index);
     console.log(lang);
-    const headlineRef = document.getElementById('advantagesRespHeadline');
+    const headlineRef = document.getElementById('servicesRespHeadline');
     headlineRef.innerHTML = '';
     if (window.innerWidth > 950) { return }
-    const headline = advantages[index][lang].title;
+    const headline = services[index][lang].title;
     console.log(headline);
     headlineRef.innerHTML += `<h3>${headline}</h3>`;
 
 
 }
-
-
-//  window.addEventListener('load',()=>{
-
-// renderAdvantages();
-// renderSubadvantages(0, 'de')
-//  } )
