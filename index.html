@@ -24,7 +24,7 @@
     <script src="https://www.w3schools.com/lib/w3.js"></script>
 </head>
 
-<body onscroll="scrollHeader(), getScrollbarPosition(), scrollVerticalBar()" onload="loadLanguage()" id="body">
+<body onscroll="scrollHeader(), getScrollbarPosition(), scrollVerticalBar()" onload="loadLanguage()" onclick="closeSidebar()" id="body">
     <script>w3.includeHTML();</script>
     <div class="headerPlaceholder"></div>
     <header id="header">
@@ -40,11 +40,7 @@
                 <a href="#experiences" data-i18n="header4"></a>
                 <a href="#contact" data-i18n="header5"></a>
             </nav>
-            <!-- <div class="languages" id="languages">
-                <button onclick="setLanguage('de', event)">DE</button>
-                <button onclick="setLanguage('en', event)">EN</button>
-                <button onclick="setLanguage('es', event)">ES</button>
-            </div> -->
+
             <div onclick="toogleRespMenu()" class="burger" id="burger">
                 <div></div>
                 <div></div>
@@ -59,15 +55,26 @@
                 <a href="#advantages" data-i18n="header3"></a>
                 <a href="#experiences" data-i18n="header4"></a>
                 <a href="#contact" data-i18n="header5"></a>
+                <!-- <div class="respLanguages" id="respLanguages">
+                    <span>Sprachen</span>
+                    <div class="respLanguagesBtns">
+                        <button onclick="setLanguage('de', event)">DE</button>
+                        <button onclick="setLanguage('en', event)">EN</button>
+                        <button onclick="setLanguage('es', event)">ES</button>
+                    </div>
 
+                </div> -->
             </div>
 
 
         </div>
     </header>
-    <div class="sidebar">
+    <div class="sidebarOpenBtn" id="sidebarOpenBtn" >
+        <button onclick="toggleSidbar(event)"><img src="assets/icons/sidebar.svg" alt=""></button>
+    </div>
+    <div class="sidebar" id="sidebar">
         <div class="sidebarContainer" onmouseleave="moveSidebar()">
-            <button onclick="moveSidebar(0)"><img src="assets/icons/language.svg" alt=""></button>
+            <button onclick="moveSidebar(0, event)"><img src="assets/icons/language.svg" alt=""></button>
             <div class="languages" id="languages">
                 <button onclick="setLanguage('de', event)">DE</button>
                 <div class="btnDivider"></div>
@@ -77,15 +84,15 @@
             </div>
         </div>
         <div class="sidebarContainer" onmouseleave="moveSidebar()">
-            <button onclick="moveSidebar(1)"><img src="assets/icons/phone.svg" alt=""></button>
+            <button onclick="moveSidebar(1, event)"><img src="assets/icons/phone.svg" alt=""></button>
             <a class="sidebarLink" href="tel:0151 12345678">0151 12345678</a>
         </div>
         <div class="sidebarContainer" onmouseleave="moveSidebar()">
-            <button onclick="moveSidebar(2)"><img src="assets/icons/mail.svg" alt=""></button>
+            <button onclick="moveSidebar(2, event)"><img src="assets/icons/mail.svg" alt=""></button>
             <a class="sidebarLink" href="mailto:kontakt@natalie-schlindwein.de">kontakt@natalie-schlindwein.de</a>
         </div>
         <div class="sidebarContainer" onmouseleave="moveSidebar()">
-            <button onclick="moveSidebar(3)"><img src="assets/icons/socialmedia.svg" alt=""></button>
+            <button onclick="moveSidebar(3, event)"><img src="assets/icons/socialmedia.svg" alt=""></button>
             <div class="socialmedia">
                 <button><img src="assets/icons/linkedin.svg" alt=""></button>
                 <button><img src="assets/icons/xing.svg" alt=""></button>
@@ -269,8 +276,8 @@
                     <div class="contactFields">
                         <div class="form">
                             <div class="inputField focus">
-                                <input class="required" onfocus="animateInputFocus(0)" type="text" id="" name="contactName"
-                                    placeholder="" data-i18n-placeholder="contactName">
+                                <input class="required" onfocus="animateInputFocus(0)" type="text" id=""
+                                    name="contactName" placeholder="" data-i18n-placeholder="contactName">
 
                             </div>
                             <span class="error" id="contactName"></span>

@@ -174,7 +174,7 @@ border-color: var(--secondary);
 }
 
 @media(max-width: 950px) {
-    .servicesTitle {
+    .serviceTitle {
         display: none;
     }
 

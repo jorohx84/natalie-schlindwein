@@ -92,7 +92,7 @@ function sliderAnimations() {
     letteringAnimation('aboutme', 'aboutmeLettering', 'aboutmeContent');
     letteringAnimation('skills', 'skillsLettering', 'skillContent');
     letteringAnimation('contact', 'contactLettering', 'contactContent');
-        letteringAnimation('advantages', 'advantagesLettering', 'advantagesContent');
+    letteringAnimation('advantages', 'advantagesLettering', 'advantagesContent');
     letteringAnimation('experiences', 'experiencesLettering', 'experiencesContent');
 }
 
@@ -166,10 +166,10 @@ function btnHighlight() {
 }
 
 
-function moveSidebar(currentIndex) {
+function moveSidebar(currentIndex, event) {
     const elements = document.getElementsByClassName('sidebarContainer');
     removeSidebar(elements)
-    if (currentIndex === undefined ) {
+    if (currentIndex === undefined) {
         return
     }
     for (let index = 0; index < elements.length; index++) {
@@ -180,23 +180,39 @@ function moveSidebar(currentIndex) {
         }
 
     }
-
+    event.stopPropagation();
 }
 
-function removeSidebar(elements){
-for (let index = 0; index < elements.length; index++) {
-    const element = elements[index];
-    element.classList.remove('moveSidebar');
+function removeSidebar(elements) {
+    for (let index = 0; index < elements.length; index++) {
+        const element = elements[index];
+        element.classList.remove('moveSidebar');
+    }
 }
+
+function toggleSidbar(event) {
+    const sidebar = document.getElementById('sidebar');
+
+    sidebar.classList.toggle('showSidebar');
+
+    event.stopPropagation();
+}
+
+function closeSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    
+    sidebar.classList.remove('showSidebar');
+
 }
 
 
 window.addEventListener('resize', resetRespMenu);
 window.addEventListener('scroll', () => {
     // opacityAnimation();
-moveSidebar();
+    moveSidebar();
     // dividerAnimation();
     // btnHighlight();
     // skillCardHighlight();
     // sliderAnimations();
+    closeSidebar();
 });
