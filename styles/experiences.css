@@ -42,7 +42,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 112px;
+    /* gap: 112px; */
     margin-top: 300px;
 
 }
@@ -169,7 +169,7 @@
 
 .stationDescription {
     width: 100%;
-    height: fit-content;
+    height: 280px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -229,9 +229,9 @@
 
 .freelancer {
     width: 100%;
-display: flex;
-flex-direction: column;
-gap: 56px;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
 }
 
 .freelancerTitle {
@@ -266,11 +266,11 @@ gap: 56px;
     border-radius: 10px;
     box-sizing: border-box;
     padding: 32px 32px 64px 32px;
- transition: border 1s ease-in-out;
+    transition: border 1s ease-in-out;
 }
 
 .freelancerCardBorder {
-   
+
     border: solid 2px var(--secondary);
 }
 
@@ -321,6 +321,19 @@ gap: 56px;
     border-radius: 10px;
 }
 
+@media(max-width: 1700px) {
+    .stationDescription {
+        height: 320px;
+    }
+}
+
+@media(max-width: 1560px) {
+    .stationDescription {
+        height: 380px;
+    }
+}
+
+
 @media(max-width: 1400px) {
     .curriculum {
         gap: 0px;
@@ -349,9 +362,19 @@ gap: 56px;
     }
 }
 
+@media(max-width: 1330px) {
+    .stationDescription {
+        height: 460px;
+    }
+}
+
 @media(max-width: 1200px) {
     .experiencesContent {
         opacity: 1;
+    }
+
+    .stationDescription {
+        height: 520px;
     }
 }
 
@@ -411,8 +434,12 @@ gap: 56px;
         background-color: var(--text-bg);
     }
 
-    .freelancerContent{
+    .freelancerContent {
         flex-direction: column;
+    }
+
+    .stationDescription {
+        height: fit-content;
     }
 }
 
@@ -425,17 +452,33 @@ gap: 56px;
         display: none;
     }
 }
+
 @media(max-width:550px) {
-    .taskRow{
+    .taskRow {
         gap: 12px;
     }
-    .freelanceCardDivider{
-        width:100%;
+
+    .freelanceCardDivider {
+        width: 100%;
     }
-    .bulletPoint{
-        min-width:10px;
+
+    .bulletPoint {
+        min-width: 10px;
     }
 }
+
+/* @media(max-width:770px) {
+    .stationDescription {
+        height: 380px;
+    }
+} */
+
+/* @media(max-width:600px) {
+    .stationDescription {
+        height: 460px;
+    }
+} */
+
 @media(max-width:450px) {
     .station {
         align-items: flex-start;
@@ -460,3 +503,9 @@ gap: 56px;
         height: 15px;
     }
 }
+
+/* @media(max-width:400px) {
+    .stationDescription {
+        height: 560px;
+    }
+} */
