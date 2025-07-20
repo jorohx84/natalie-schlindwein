@@ -96,6 +96,97 @@ const stations = [
     }
 ];
 
+
+const freelanceExperiences = [
+  {
+    path: '',
+    de: {
+      title: 'Einkäuferin von IT-Hardware für einen Konzernkunde in Frankfurt',
+      timeText: 'Projektzeit',
+      time: 'Januar 2023 - heute',
+      tasks: [
+        'Auf- und Ausbau des Leasinggeschäfts im Lifecycle',
+        'Beratung in allen beschaffungsrelevanten Fragen',
+        'Einholung und Auswertung von Angeboten ',
+        'Planung und Durchführung von Preisverhandlungen',
+        'Liefermanagement, sowie Reklamationsbearbeitung und Beschwerdemanagement',
+        'Prüfung und Kontierung der IT-Rechnungen ',
+      ]
+    },
+    en: {
+      title: 'IT Hardware Buyer for a Corporate Client in Frankfurt',
+      timeText: 'Project Duration',
+      time: 'January 2023 – Present',
+      tasks: [
+        'Development and expansion of the leasing business in the lifecycle',
+        'Consulting on all procurement-related matters',
+        'Obtaining and evaluating quotations',
+        'Planning and conducting price negotiations',
+        'Delivery management, complaint handling, and customer service',
+        'Reviewing and booking IT invoices'
+      ]
+    },
+    es: {
+      title: 'Compradora de hardware informático para un cliente corporativo en Fráncfort',
+      timeText: 'Duración del proyecto',
+      time: 'Enero de 2023 – Actualidad',
+      tasks: [
+        'Desarrollo y expansión del negocio de arrendamiento en el ciclo de vida',
+        'Asesoramiento en todas las cuestiones relacionadas con las adquisiciones',
+        'Solicitud y evaluación de presupuestos',
+        'Planificación y realización de negociaciones de precios',
+        'Gestión de entregas, tramitación de reclamaciones y atención al cliente',
+        'Revisión y contabilización de facturas de TI'
+      ]
+    },
+  },
+  {
+    path: '',
+    de: {
+      title: 'Betriebsleitung für ein schweizer Vertriebsunternehmen',
+      timeText: 'Projektzeit',
+      time: '2 Jahre',
+      tasks: [
+        'Leadgenerierung für verschiedene Vertriebskampagnen',
+        'Botprogrammierung über LinkedHelper',
+        'Dashboardüberwachung der wöchentlichen Performance der Kampagnen',
+        'Technischer Support für die Freelancer weltweit der verschiedenen Vertriebskampagnen',
+        'Einrichtung des CRM-Systems „HubSpot“ und Verknüpfung mit dem Bot',
+        'Lizenzverwaltung von Surfe',
+        'Backup und Updates der Cloudsysteme'
+      ],
+    },
+    en: {
+      title: 'Operations Manager for a Swiss Sales Company',
+      timeText: 'Project Duration',
+      time: '2 years',
+      tasks: [
+        'Lead generation for various sales campaigns',
+        'Bot programming using LinkedHelper',
+        'Dashboard monitoring of weekly campaign performance',
+        'Technical support for freelancers worldwide across various sales campaigns',
+        'Setup of the HubSpot CRM system and integration with the bot',
+        'License management of Surfe',
+        'Backups and updates of cloud systems'
+      ],
+    },
+    es: {
+      title: 'Directora de operaciones para una empresa suiza de ventas',
+      timeText: 'Duración del proyecto',
+      time: '2 años',
+      tasks: [
+        'Generación de leads para diversas campañas de ventas',
+        'Programación de bots con LinkedHelper',
+        'Supervisión del panel de rendimiento semanal de las campañas',
+        'Soporte técnico para freelancers de todo el mundo en diferentes campañas',
+        'Configuración del CRM HubSpot y conexión con el bot',
+        'Gestión de licencias de Surfe',
+        'Copias de seguridad y actualizaciones de los sistemas en la nube'
+      ],
+    },
+  },
+];
+
 function renderExperiences(lang) {
     const experiencesRef = document.getElementById('curriculum');
     experiencesRef.innerHTML = '';
@@ -227,14 +318,14 @@ function changeLine(index, changeKey) {
     if (changeKey === 'add') {
         line.classList.add('changeLine');
 
-            changeImageColor(index, 'add');
-        
+        changeImageColor(index, 'add');
+
     } else {
-           changeImageColor(index, 'remove');
-           
-            line.classList.remove('changeLine');
-          
-        
+        changeImageColor(index, 'remove');
+
+        line.classList.remove('changeLine');
+
+
     }
     if (index % 2 !== 0) {
         line.classList.add('transOriginLeft');
@@ -249,6 +340,50 @@ function changeImageColor(index, changeKey) {
         image.classList.add('imageBGColor');
     } else {
         image.classList.remove('imageBGColor');
+    }
+
+
+}
+
+function renderFreelancerExperiences(lang) {
+    const freelancerRef = document.getElementById('freelancerContent');
+    freelancerRef.innerHTML = '';
+    for (let index = 0; index < freelanceExperiences.length; index++) {
+        const freelanceCard = freelanceExperiences[index][lang];
+        freelancerRef.innerHTML += `  <div class="freelancerCard">
+                                <div class="freelanceCardHead">
+                                    <div class="freelanceCardHeadTitle">
+                                        <h3>${freelanceCard.title}</h3>
+                                    </div>
+                                    <div class="timeContainer">
+                                        <span>${freelanceCard.timeText}:</span>
+                                        <span>${freelanceCard.time}</span>
+                                    </div>
+
+                                </div>
+                            
+                                <div class="freelanceCardDivider"></div>
+                                <div class="freelanceTasks" id="freelanceTasks${index}"></div>
+                            </div>`;
+        renderFreelanceTasks(index, lang);
+    }
+
+}
+
+function renderFreelanceTasks(cardIndex, lang) {
+    const tasksRef = document.getElementById(`freelanceTasks${cardIndex}`);
+    tasksRef.innerHTML = '';
+    const tasks = freelanceExperiences[cardIndex][lang].tasks;
+    console.log(tasks);
+    
+    for (let index = 0; index < tasks.length; index++) {
+        const task = tasks[index];
+        console.log(index);
+        
+        tasksRef.innerHTML += `<div class="taskRow">
+                                    <div class="bulletPoint"></div>
+                                    <span>${task}</span>
+                                </div>`;
     }
 
 

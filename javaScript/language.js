@@ -33,8 +33,9 @@ const translations = {
         contactPrivacyText2: 'zu',
         contactBtn: 'Senden',
         contactEmailError: 'Bitte E-Mail-Adresse prüfen',
-        contactPhoneError:'Bitte Telefonnummer prüfen',
-        contactPrivacyError:'Bitte stimmen Sie der Datenschutzerklärung zu',
+        contactPhoneError: 'Bitte Telefonnummer prüfen',
+        contactPrivacyError: 'Bitte stimmen Sie der Datenschutzerklärung zu',
+        freelancerTitle: 'Erfahrung als Freelancerin',
     },
     en: {
 
@@ -70,9 +71,9 @@ const translations = {
         contactPrivacyText2: '',
         contactBtn: 'Send',
         contactEmailError: 'Please check your email address',
-contactPhoneError:'Please check your phone number',
-contactPrivacyError:'Please accept the privacy policy',
-
+        contactPhoneError: 'Please check your phone number',
+        contactPrivacyError: 'Please accept the privacy policy',
+        freelancerTitle: 'Experience as a Freelancer',
 
     },
     es: {
@@ -109,8 +110,9 @@ contactPrivacyError:'Please accept the privacy policy',
         contactPrivacyText2: '',
         contactBtn: 'Enviar',
         contactEmailError: 'Por favor, revisa tu dirección de correo',
-        contactPhoneError:'Por favor, revisa tu número de teléfono',
-        contactPrivacyError:'Por favor, acepta la política de privacidad',
+        contactPhoneError: 'Por favor, revisa tu número de teléfono',
+        contactPrivacyError: 'Por favor, acepta la política de privacidad',
+        freelancerTitle: 'Experiencia como autónoma',
     }
 }
 
@@ -143,6 +145,7 @@ function setLanguage(lang, event) {
 
     renderExperiences(lang);
     renderSkills(lang);
+    renderFreelancerExperiences(lang);
 }
 
 function toggleLanguage() {

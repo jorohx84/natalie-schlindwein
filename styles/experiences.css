@@ -178,12 +178,13 @@
     /* background-color: var(--text-bg);  */
     box-sizing: border-box;
     padding: 32px 32px 32px 32px;
-border-radius: 10px;
+    border-radius: 10px;
 
 
 
 }
-.stationDescription p{
+
+.stationDescription p {
     color: var(--highlight);
     font-size: 20px;
     font-weight: 500;
@@ -224,6 +225,100 @@ border-radius: 10px;
 
     background-color: var(--highlight);
     border-radius: 100px;
+}
+
+.freelancer {
+    width: 100%;
+display: flex;
+flex-direction: column;
+gap: 56px;
+}
+
+.freelancerTitle {
+    width: 100%;
+
+    text-align: center;
+}
+
+.freelancerTitle h2 {
+    font-size: 56px;
+}
+
+.lineContainer {
+    height: 150px;
+    position: relative;
+}
+
+
+.freelancerContent {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 56px;
+}
+
+.freelancerCard {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+    border: solid 1px var(--bg-color);
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 32px 32px 64px 32px;
+ transition: border 1s ease-in-out;
+}
+
+.freelancerCardBorder {
+   
+    border: solid 2px var(--secondary);
+}
+
+.freelanceCardHead {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.freelanceCardHeadTitle {
+    font-size: 18px;
+}
+
+.timeContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+}
+
+.freelanceCardDivider {
+    width: 80%;
+    height: 1px;
+    background-color: var(--highlight);
+    border-radius: 10px;
+}
+
+.freelanceTasks {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.taskRow {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+
+}
+
+.bulletPoint {
+    min-width: 16px;
+    height: 4px;
+    background-color: var(--secondary);
+    border-radius: 10px;
 }
 
 @media(max-width: 1400px) {
@@ -291,9 +386,10 @@ border-radius: 10px;
 }
 
 @media(max-width: 1000px) {
-    .curriculum{
+    .curriculum {
         gap: 32px;
     }
+
     .stationImage {
         display: none;
     }
@@ -314,6 +410,10 @@ border-radius: 10px;
     .stationDescription {
         background-color: var(--text-bg);
     }
+
+    .freelancerContent{
+        flex-direction: column;
+    }
 }
 
 @media(min-width: 1000px) {
@@ -325,7 +425,17 @@ border-radius: 10px;
         display: none;
     }
 }
-
+@media(max-width:550px) {
+    .taskRow{
+        gap: 12px;
+    }
+    .freelanceCardDivider{
+        width:100%;
+    }
+    .bulletPoint{
+        min-width:10px;
+    }
+}
 @media(max-width:450px) {
     .station {
         align-items: flex-start;

@@ -200,8 +200,23 @@ function toggleSidbar(event) {
 
 function closeSidebar() {
     const sidebar = document.getElementById('sidebar');
-    
+
     sidebar.classList.remove('showSidebar');
+
+}
+
+function freelanceCardHighlight() {
+    const trigger = window.innerHeight * 0.5;
+const cards=document.getElementsByClassName('freelancerCard');
+for (let index = 0; index < cards.length; index++) {
+    const card = cards[index];
+   const cardRect=card.getBoundingClientRect().top;
+   if (cardRect<trigger) {
+    card.classList.add('freelancerCardBorder');
+   }else{
+       card.classList.remove('freelancerCardBorder');
+   }
+}
 
 }
 
@@ -215,4 +230,5 @@ window.addEventListener('scroll', () => {
     // skillCardHighlight();
     // sliderAnimations();
     closeSidebar();
+    freelanceCardHighlight();
 });
