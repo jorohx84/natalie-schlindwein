@@ -202,20 +202,12 @@ border-radius: 0 0 10px 10px;
 }
 
 .respMenu.slideIn a {
-    animation: showLinks 5s;
+    
     opacity: 1;
 
 }
 
-@keyframes showLinks {
-    0% {
-        opacity: 0;
-    }
 
-    100% {
-        opacity: 1;
-    }
-}
 
 .slideIn {
     /* transform: scaleY(1) */

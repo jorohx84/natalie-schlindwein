@@ -163,7 +163,8 @@ a:active {
     /* --highlight: rgb(255, 149, 0); */
     --highlight: #D07A7E;
     /* --highlight: #f7b25d; */
-    --text-bg: rgba(255, 255, 255, 0.145);
+    /* --text-bg: rgba(255, 255, 255, 0.145); */
+      --text-bg: rgba(0, 157, 255, 0.063);
 }
 
 /*;rgb(4, 79, 123);*/

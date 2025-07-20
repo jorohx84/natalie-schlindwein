@@ -103,7 +103,7 @@
 
 .infoContainer{
     width: 100%;
-    height: 60px;
+    height: 40px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -123,14 +123,14 @@ background-color: var(--highlight);
 }
 
 .changingLineContainer{
-    height: 60px;
+    height: 40px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
 .changingLine{
-  height: 60px;
+  height: 40px;
   width: 3px;
   background-color: var(--highlight);
   transition: width 0.5s ease-in-out, height 0.5s ease-in-out, border-radius 0.5s ease-in-out;
