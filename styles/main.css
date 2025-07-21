@@ -178,7 +178,7 @@ border-radius: 0;
 }
 
 .lettering span {
-    font-size: 150px;
+    font-size: 120px;
     font-weight: bold;
     /* color: rgb(45, 44, 44); */
     color: var(--secondary);

@@ -52,7 +52,7 @@
 .skillCard {
 width: 100%;
     max-width: 500px;
-    height: 400px;
+    height: 350px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -85,7 +85,7 @@ width: 100%;
 }
 
 .skillCard img {
-    width: 70px;
+    width: 50px;
 }
 
 
@@ -96,7 +96,7 @@ width: 100%;
 
 @media(max-width: 1600px) {
     .skillCard{
-        height: 450px;
+        height: 400px;
     }
 }
 
@@ -128,7 +128,7 @@ width: 100%;
 
 @media(max-width: 950px) {
   .skillCard{
-    height: 420px;
+    height: 350px;
   }
 }
 
