@@ -270,7 +270,7 @@ function getScrollbarPosition() {
 
 
 function scrollVerticalBar() {
-    const startpoint = window.innerHeight * 0.5;
+    const startpoint = window.innerHeight * 0.3;
     const barInner = document.getElementById('scrollbarInner');
     const bar = document.getElementById('scrollbar');
     const barInnerRect = barInner.getBoundingClientRect();

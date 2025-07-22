@@ -2,7 +2,8 @@
      width: 100%;
      height: calc(100vh - 120px)
  }
-/* div{
+
+ /* div{
     border: solid 1px white;
 } */
  .heroContainer {
@@ -13,17 +14,12 @@
      flex-direction: column;
      justify-content: center;
      align-items: center;
-     /* background-image: url(./../assets/img/titlephoto_komprimiert.webp);
-     background-position: right;
-     background-size: contain;
-     background-repeat: no-repeat; */
-position: relative;
+     position: relative;
  }
 
 
  .heroContent {
      width: 100%;
-   
      height: 100%;
      display: flex;
      justify-content: flex-start;
@@ -38,30 +34,78 @@ position: relative;
 
  .nameContainer p {
      font-size: 140px;
-     color: var(--secondary);
+     color: var(--primary);
      font-weight: bolder;
 
  }
 
+ .heroTitle {
+     display: flex;
+     flex-direction: column;
+ }
+
  .heroTitle span {
-     font-size: 56px;
+     font-size: 48px;
+     color: var(--secondary);
  }
 
- .overlay {
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-
+ .heroTitle h2 {
+     font-size: 40px;
+     margin: 0;
  }
 
- .heroContent img {
-   width: 45%;
+ .heroTitle button {
+     margin-top: 56px;
+ }
+
+
+ .titlePhoto:not(.contactImage) {
+     width: 45%;
      filter: brightness(0.9);
      border-radius: 10px;
-     
+
  }
+
+ .heroContactBtns {
+     width: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 32px;
+     position: absolute;
+     bottom: 4px;
+     left: 0;
+     background-color: var(--text-bg);
+     border-radius: 10px;
+     box-sizing: border-box;
+     padding: 16px;
+     opacity: 0.4;
+ }
+
+ .heroContactBtnsLink {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border: solid 1px var(--text-bg);
+     border-radius: 10px;
+     box-sizing: border-box;
+     padding: 8px;
+     cursor: pointer;
+     transition: border-color 0.5s ease-in-out;
+ }
+
+ .heroContactBtnsLink:hover {
+     border: solid 1px var(--primary);
+ }
+
+ .heroContactBtnsLink:active {
+     transform: scale(0.90);
+ }
+
+ .contactImage {
+     width: 30px;
+ }
+
 
  @media(max-width:1750px) {
      .nameContainer p {
@@ -93,7 +137,9 @@ position: relative;
      .heroTitle span {
          font-size: 32px;
      }
-
+.heroTitle h2{
+    font-size: 32px;
+}
  }
 
  @media(max-width:1050px) {
@@ -104,7 +150,20 @@ position: relative;
      .heroContent {
          flex-direction: column;
      }
+.heroContactBtns{
+    bottom: 56px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+.contactImage{
+    width: 20px;
+    height: 20px;
+}
 
+.titlePhoto{
+    display: none;
+}
 
  }
 
@@ -113,71 +172,80 @@ position: relative;
      /* .heroContent img {
          display: none;
      } */
-
+.aboutmePhoto{
+    display: none;
+}
  }
 
 
- @media(max-width:900px) {
-     .heroContent img {
+ /* @media(max-width:900px) {
+     .titlePhoto {
          width: 450px;
      }
 
- }
+ } */
 
- @media(max-width:790px) {
-     .heroContent img {
+ /* @media(max-width:790px) {
+     .titlePhoto {
          width: 400px;
      }
+
+ } */
+
+ @media(max-width:670px) {
+
+     .heroContainer {
+         margin-top: 96px;
+         justify-content: flex-start;
+     }
+
+     .nameContainer p {
+         font-size: 60px;
+     }
+
+     .heroTitle span {
+         font-size: 24px;
+     }
+.heroTitle h2{
+    font-size: 18px;
+}
+     /* .titlePhoto {
+         width: 300px;
+     } */
 
  }
 
  @media(max-width:670px) {
 
-    .heroContainer{
-        margin-top: 96px;
-        justify-content: flex-start;
-    }
-    .nameContainer p {
-        font-size: 60px;
-    }
+     .heroContainer {
+         margin-top: 96px;
+         justify-content: flex-start;
+     }
 
-    .heroTitle span {
-        font-size: 24px;
-    }
-    .heroContent img {
-        width: 300px;
-    }
+     .nameContainer p {
+         font-size: 48px;
+     }
 
-}
+     .heroTitle span {
+         font-size: 20px;
+     }
 
-@media(max-width:670px) {
+     /* .titlePhoto {
+         width: 290px;
+     } */
 
-    .heroContainer{
-        margin-top: 96px;
-        justify-content: flex-start;
-    }
-    .nameContainer p {
-        font-size: 48px;
-    }
+ }
 
-    .heroTitle span {
-        font-size: 20px;
-    }
-    .heroContent img {
-        width: 290px;
-    }
+ @media(max-width:670px) {
+     .nameContainer p {
+         font-size: 40px;
+     }
 
-}
+     .heroTitle span {
+         font-size: 20px;
+     }
 
-@media(max-width:670px) {
-    .nameContainer p {
-        font-size: 40px;
-    }
-
-    .heroTitle span {
-        font-size: 20px;
-    }
-    .heroContent img {
-        width: 270px;
-    }
-}
+     /* .titlePhoto{
+         width: 270px;
+     } */
+ }

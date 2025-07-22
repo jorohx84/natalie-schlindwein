@@ -70,11 +70,13 @@
 }
 .sidebarOpenBtn button{
     width: 20px !important;
-    height: 180px;
+    height: fit-content;
     border-radius: 5px 0 0 5px;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
+    padding-block: 12px;
 }
 
 .sidebarOpenBtn button img{
@@ -92,8 +94,9 @@
 
 
 .socialmedia{
+    width: 160px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: center;
     
 }
@@ -102,6 +105,9 @@
     background-color: transparent;
 }
 
+.socialmedia button:hover{
+border: solid;
+}
 .socialmedia button img{
     width: 30px;
     height: 30px;
@@ -119,6 +125,10 @@
    padding: 0 16px;
 }
 
+.sidebarLink:hover{
+    color: var(--highlight);
+}
+
 .languages{
     display: flex;
     justify-content: space-between;
@@ -133,7 +143,11 @@
 border-radius: 0;
   background-color: transparent;
     color: var(--primary);
-  
+  font-size: 16px;
+}
+
+.languages button:hover{
+    color: var(--highlight);
 }
 
 
@@ -210,7 +224,7 @@ border-radius: 0;
 
 @media(max-width:1600px) {
     .lettering span {
-        font-size: 150px;
+        font-size: 110px;
     }
 }
 
@@ -228,14 +242,29 @@ border-radius: 0;
     .content {
         padding: 0 56px;
     }
-
-
+.lettering{
+    justify-content: center;
+}
+.sidebarContainer button{
+        width: 40px;
+        height: 40px;
+    }
+    .sidebar{
+        transform: translate(calc(100% - 40px), -50%);
+    }
+    .showSidebar{
+        transform: translate(calc(100% - 40px), -50%) !important;
+    }
+    .moveSidebar{
+        transform: translateX(calc(-100% + 40px)) !important;
+    }
 }
 @media(max-width:850px) {
     .sidebar{
         /* display: none; */
      transform: translate(calc(100% + 60px), -50%);
     }
+    
 }
 
 @media(min-width:850px) {

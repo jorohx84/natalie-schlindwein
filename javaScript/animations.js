@@ -192,31 +192,31 @@ function removeSidebar(elements) {
 
 function toggleSidbar(event) {
     const sidebar = document.getElementById('sidebar');
-
+    const openBtn = document.getElementById('sidebarOpenBtn');
     sidebar.classList.toggle('showSidebar');
-
+    openBtn.classList.add('slideSidebarBtn');
     event.stopPropagation();
 }
 
 function closeSidebar() {
     const sidebar = document.getElementById('sidebar');
-
+    const openBtn = document.getElementById('sidebarOpenBtn');
     sidebar.classList.remove('showSidebar');
-
+    openBtn.classList.remove('slideSidebarBtn');
 }
 
 function freelanceCardHighlight() {
     const trigger = window.innerHeight * 0.5;
-const cards=document.getElementsByClassName('freelancerCard');
-for (let index = 0; index < cards.length; index++) {
-    const card = cards[index];
-   const cardRect=card.getBoundingClientRect().top;
-   if (cardRect<trigger) {
-    card.classList.add('freelancerCardBorder');
-   }else{
-       card.classList.remove('freelancerCardBorder');
-   }
-}
+    const cards = document.getElementsByClassName('freelancerCard');
+    for (let index = 0; index < cards.length; index++) {
+        const card = cards[index];
+        const cardRect = card.getBoundingClientRect().top;
+        if (cardRect < trigger) {
+            card.classList.add('freelancerCardBorder');
+        } else {
+            card.classList.remove('freelancerCardBorder');
+        }
+    }
 
 }
 

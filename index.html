@@ -94,7 +94,8 @@
     </div>
 
     <section class="content" id="content">
-        <section class="hero">
+        <!--HERO Version 1 -->
+        <!-- <section class="hero">
             <div class="heroContainer" id="hero">
 
                 <div class="heroContent">
@@ -109,82 +110,135 @@
                     <img src="./assets/img/titlephoto_komprimiert.webp" alt="">
 
                 </div>
-                <!-- <div class="overlay"></div> -->
+
+
+
+            </div>
+        </section> -->
+        <!--  -->
+        <!--HERO Version 2  -->
+        <section class="hero">
+            <div class="heroContainer" id="hero">
+
+                <div class="heroContent">
+                    <div class="heroTitle">
+                        <h2 data-i18n="heroWelcome"></h2>
+                        <div class="nameContainer">
+                            <p>Natalie</p>
+                            <p> Schlindwein</p>
+                        </div>
+
+                        <span data-i18n="title"></span>
+                        <button onclick="window.location.href='#aboutme'" data-i18n="aboutmeTitle"></button>
+                    </div>
+                    <img class="titlePhoto" src="./assets/img/titlephoto_komprimiert.webp" alt="">
+                    <div class="heroContactBtns">
+                        <div class="heroContactBtnsLink">
+                            <img class="contactImage" src="assets/icons/linkedin.svg" alt="">
+                        </div>
+                        <div class="heroContactBtnsLink">
+                            <img class="contactImage" src="assets/icons/xing.svg" alt="">
+                        </div>
+                        <div class="heroContactBtnsLink">
+                            <img class="contactImage" src="assets/icons/mail.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+
 
 
             </div>
         </section>
-        <div class="dividerContainer">
-            <div class="divider"></div>
-        </div>
+        <!--  -->
 
         <section class="aboutme" id="aboutme">
             <div class="aboutmeContainer">
                 <div class="lettering" id="aboutmeLettering">
                     <span data-i18n="aboutmeTitle"></span>
                 </div>
+                <div class="aboutmePhotoContainer">
+                    <img class="aboutmePhoto" src="./assets/img/titlephoto_komprimiert.webp" alt="">
+                </div>
+
                 <div class="aboutmeContentContainer" id="aboutmeContent">
                     <!-- <h2 data-i18n="aboutmeSubtitle"></h2> -->
                     <div class="aboutmeContent">
 
                         <div class="aboutmeTextContainer">
+                            <div class="aboutmeWelcomeContainer">
+                                <h2 data-i18n="aboutmeWelcome"></h2>
+                                <h3 data-i18n="title"></h3>
+                            </div>
 
                             <div class="aboutmeText animationDiv" id="aboutmeText">
                                 <span data-i18n="aboutmeDescription"></span>
                             </div>
-                            <!-- <div class="profileDivider"></div> -->
+
+
                             <div class="profileContainer">
-                                <h3>Mein Profil</h3>
+                                <h2 data-i18n="aboutmeProfileTitle"></h2>
+                                <div class="profileDivider"></div>
                                 <div class="profileInfos">
                                     <div class="profilRow">
-                                        <div class="profileLine"></div>
                                         <div class="profileText">
-                                            <span class="profileKey">Name:</span>
+                                            <span class="profileKey" data-i18n="aboutmeName"></span>
                                             <span>Natalie Schlindwein</span>
                                         </div>
                                     </div>
 
                                     <div class="profilRow">
-                                        <div class="profileLine dot"></div>
+                                        <div class="profileText">
+                                            <span class="profileKey" data-i18n="aboutmeAge"></span>
+                                            <span data-i18n="aboutmeAgeText"></span>
+                                        </div>
                                     </div>
 
                                     <div class="profilRow">
-                                        <div class="profileLine"></div>
+
                                         <div class="profileText">
-                                            <span class="profileKey">Alter:</span>
-                                            <span>32 Jahre</span>
+                                            <span class="profileKey" data-i18n="aboutmeLocation"></span>
+                                            <span data-i18n="aboutmeLocationText"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="profilRow">
+
+                                        <div class="profileText">
+                                            <span class="profileKey" data-i18n="aboutmeExpertice"></span>
+                                            <span data-i18n="aboutmeExperticeText"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="profilRow">
+
+                                        <div class="profileText">
+                                            <span class="profileKey" data-i18n="aboutmeExperience"></span>
+                                            <span data-i18n="aboutmeExperienceText"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="profilRow">
+
+                                        <div class="profileText">
+                                            <span class="profileKey" data-i18n="aboutmeTopskills"></span>
+                                            <span data-i18n="aboutmeTopskillsText"></span>
                                         </div>
                                     </div>
                                     <div class="profilRow">
-                                        <div class="profileLine dot"></div>
-                                    </div>
-                                    <div class="profilRow">
-                                        <div class="profileLine"></div>
+
                                         <div class="profileText">
-                                            <span class="profileKey">Wohnort:</span>
-                                            <span>Frankfurt am Main</span>
+                                            <span class="profileKey" data-i18n="aboutmeAbroad"></span>
+                                            <span data-i18n="aboutmeAbroadText"></span>
                                         </div>
                                     </div>
                                     <div class="profilRow">
-                                        <div class="profileLine dot"></div>
-                                    </div>
-                                    <div class="profilRow">
-                                        <div class="profileLine"></div>
+
                                         <div class="profileText">
-                                            <span class="profileKey">Expertise:</span>
-                                            <span>Einkauf & Organisation</span>
+                                            <span class="profileKey" data-i18n="aboutmeLanguages"></span>
+                                            <span data-i18n="aboutmeLanguagesText"></span>
                                         </div>
                                     </div>
-                                    <div class="profilRow">
-                                        <div class="profileLine dot"></div>
-                                    </div>
-                                    <div class="profilRow">
-                                        <div class="profileLine"></div>
-                                        <div class="profileText">
-                                            <span class="profileKey">Berufserfahrung:</span>
-                                            <span>10 Jahre +</span>
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
 
@@ -193,8 +247,26 @@
                         </div>
 
                         <div class="aboutmeFacts">
+                            <div class="ctaContainer">
+                                <div class="profileDivider"></div>
+                                <span data-i18n="aboutmeCtaText"></span>
+
+                                <div class="aboutmeBtnContainer">
+                                    <button id="aboutmeBtn" onclick="window.location.href='#contact'"
+                                        data-i18n="aboutmeBtn"></button>
+                                </div>
+                            </div>
+                            <!-- <div class="ctaContainer">
+                        <h3>Du möchtes mehr über mich erfahren</h3>
+                        <div class="aboutmeBtnContainer">
+                            <button></button>
+                            <button></button>
+                            <button></button>
+                        </div>
+
+                    </div> -->
                             <!--  -->
-                            <div class="topSkillsContainer">
+                            <!-- <div class="topSkillsContainer">
                                 <h3>Meine Top 3 Fähigkeiten</h3>
                                 <div class="topSkills">
                                     <div class="topskillBox">
@@ -274,9 +346,9 @@
                                         <span>Spanisch</span>
                                     </div>
 
-                                </div>
-                            </div>
-                            <!-- <div class="languageSkills">
+                                </div> -->
+                        </div>
+                        <!-- <div class="languageSkills">
                                 <div class="languageContainer">
                                     <div class="percentage">
                                         <span>100</span>
@@ -299,36 +371,19 @@
                                     <span class="languageText">Spanisch</span>
                                 </div>
                             </div> -->
-                            <!--  -->
-
-
-
-                            <!-- <div class="ctaContainer">
-                                <span data-i18n="aboutmeCtaText"></span>
-
-                                <div class="aboutmeBtnContainer">
-                                    <div class="btnBG">
-                                        <button id="aboutmeBtn" onclick="window.location.href='#contact'"
-                                            data-i18n="aboutmeBtn"></button>
-                                    </div>
-                                </div>
-                            </div> -->
-                        </div>
+                        <!--  -->
 
 
 
 
                     </div>
-                    <!-- <div class="ctaContainer">
-                        <h3>Du möchtes mehr über mich erfahren</h3>
-                        <div class="aboutmeBtnContainer">
-                            <button></button>
-                            <button></button>
-                            <button></button>
-                        </div>
 
-                    </div> -->
+
+
+
                 </div>
+
+            </div>
             </div>
         </section>
 
