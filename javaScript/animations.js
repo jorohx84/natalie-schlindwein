@@ -27,17 +27,20 @@ function toogleRespMenu() {
     burgerAnimation();
     const respMenuRef = document.getElementById('respMenu');
     const contentRef = document.getElementById('content');
-      const headerRef = document.getElementById('header');
+    const headerRef = document.getElementById('header');
+
     if (respMenuRef) {
         if (hide) {
             respMenuRef.classList.add('slideIn');
             contentRef.classList.add('hideContent');
-             headerRef.classList.remove('headerscrollBG');
+            headerRef.classList.remove('headerscrollBG');
+
         } else {
             respMenuRef.classList.remove('slideIn');
             respMenuRef.classList.remove('lightBorder');
             contentRef.classList.remove('hideContent');
-                headerRef.classList.add('headerscrollBG');
+            headerRef.classList.add('headerscrollBG');
+
         }
     }
 }
@@ -48,16 +51,18 @@ function scrollHeader() {
     const headerRef = document.getElementById('header');
     const lang = document.getElementById('languages');
     const navRef = document.getElementById('nav');
+    const logo = document.getElementById('logoContainer');
     const scrollHeight = window.scrollY;
-  if (!hide) {
-            headerRef.classList.add('headerscrollBG');
-        }
+    if (!hide) {
+        headerRef.classList.add('headerscrollBG');
+    }
     if (scrollHeight > 1 && !hide) {
         navRef.classList.add('navBG');
+        logo.classList.add('dnone');
         // lang.style.opacity = "0";
     } else {
         headerRef.classList.remove('headerscrollBG');
-
+        logo.classList.remove('dnone');
         navRef.classList.remove('navBG');
         // lang.style.opacity = "1";
 

@@ -63,6 +63,7 @@ header {
 .logoContainer {
     display: flex;
     align-items: center;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .logo {

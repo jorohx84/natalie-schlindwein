@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: flex-start;
     transition: opacity 0.6s ease-in-out;
-   
+
 }
 
 .hideContent {
@@ -48,6 +48,8 @@
 }
 
 
+
+
 @media(max-width:1600px) {
     .lettering span {
         font-size: 110px;
@@ -75,6 +77,11 @@
 
 }
 
+@media(min-width:1050px) {
+.dnone{
+    opacity: 0;
+}
+}
 
 @media(max-width:800px) {
     .lettering span {
