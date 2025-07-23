@@ -259,16 +259,13 @@
         opacity: 1;
     }
 
-    .countries {
-        align-items: center;
-    }
-
-    .countries img {
-        margin-top: -50%;
-    }
 }
 
 @media(max-width: 1020px) {
+
+    .aboutme{
+        margin-bottom: 0;
+    }
     .aboutmeContainer {
         height: fit-content;
     }
@@ -290,12 +287,12 @@
 
     .aboutmeText span {
         font-size: 16px;
-        text-align: center;
+      
     }
 
-    .aboutmeBtnContainer {
+    /* .aboutmeBtnContainer {
         justify-content: center;
-    }
+    } */
 }
 
 @media(max-width: 670px) {

@@ -8,7 +8,7 @@ header {
     /* border-bottom: solid 1px var(--secondary); */
    
     background-color: var(--bg-color);
-    transition: border 0.5s ease-in-out, border-width 0.2s ease-in-out, background-color 0.5s ease-out;
+    transition: background-color 1s ease-out;
 }
 
 .headerPlaceholder {
@@ -28,8 +28,7 @@ header {
 .headerContainer {
     width: 100%;
     max-width: 1920px;
-    min-height: 120px;
-    max-height: 120px;
+   height: 100%;
     box-sizing: border-box;
     padding: 20px 72px;
 
@@ -42,31 +41,12 @@ header {
 
 }
 
-.blackBG {
-   /* background-color: var(--text-bg);
-   backdrop-filter: blur(10px); */
-}
 
-.noShadow {
+.headerscrollBG {
     border-width: 0;
-    /*   
-    border-bottom: solid; */
-    /* border-color: var(--primary);*/
-    /* border-width: 1px;*/
-    /* background-color:#01151b2a; */
     background-color: unset;
 }
 
-.headerContainer.noShadow .logo {
-    color: var(--secondary);
-}
-
-.noShadow:hover {
-
-    box-shadow: unset;
-
-
-}
 
 .navBG {
     background-color: var(--bg-color);
@@ -210,48 +190,18 @@ border-radius: 0 0 10px 10px;
 
 
 .slideIn {
-    /* transform: scaleY(1) */
     transform: translate(-50%, 0);
 }
 
-
-.lightBorder {
-    /* box-shadow: 0px 30px 30px 0px var(--primary); */
-    /* border-bottom: solid;
-    border-width: 1px;
-    border-color: var(--secondary); */
-
-}
-
-
-/* .respLanguages{
- display: flex;
- flex-direction: column;
- align-items: center;
- gap: 16px;
-}
-
-.respLanguagesBtns{
-       width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    border: solid 1px;
-    border-radius: 10px;
-}
-.respLanguagesBtns button{
-    background-color: transparent;
-    color: var(--primary);
-} */
 
 @media(max-width: 1050px) {
     nav {
         display: none;
     }
 
-.noShadow{
-    background-color: rgba(0, 0, 0, 0.741);
+.headerscrollBG{
+   background-color: var(--text-bg);
+     backdrop-filter: blur(10px);
 }
 }
 
@@ -276,14 +226,12 @@ border-radius: 0 0 10px 10px;
     }
 
     .headerContainer {
-        min-height: 80px;
-        max-height: 80px;
         padding: 20px 40px;
     }
-
-    .respMenu{
-        /* top: 80px; */
-    }
+    
+.logo{
+    width: 50px;
+}
 }
 
 
@@ -295,13 +243,8 @@ border-radius: 0 0 10px 10px;
 }
 
 @media(max-height: 950px) {
-    .headerContainer {
-        min-height: 100px;
-        max-height: 100px;
-    }
+ 
 
-    .respMenu {
-        /* top: 100px */
-    }
+ 
 
 }

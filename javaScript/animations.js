@@ -27,25 +27,17 @@ function toogleRespMenu() {
     burgerAnimation();
     const respMenuRef = document.getElementById('respMenu');
     const contentRef = document.getElementById('content');
-    const headerRef = document.getElementById('headerContainer');
+      const headerRef = document.getElementById('header');
     if (respMenuRef) {
         if (hide) {
             respMenuRef.classList.add('slideIn');
             contentRef.classList.add('hideContent');
-            headerRef.classList.add('blackBG');
-            setTimeout(() => {
-                respMenuRef.classList.add('lightBorder');
-            }, 500);
-
+             headerRef.classList.remove('headerscrollBG');
         } else {
             respMenuRef.classList.remove('slideIn');
             respMenuRef.classList.remove('lightBorder');
             contentRef.classList.remove('hideContent');
-            setTimeout(() => {
-                headerRef.classList.remove('blackBG');
-            }, 500);
-
-
+                headerRef.classList.add('headerscrollBG');
         }
     }
 }
@@ -57,14 +49,15 @@ function scrollHeader() {
     const lang = document.getElementById('languages');
     const navRef = document.getElementById('nav');
     const scrollHeight = window.scrollY;
-
-    if (scrollHeight > 1) {
-
-        headerRef.classList.add('noShadow');
+  if (!hide) {
+            headerRef.classList.add('headerscrollBG');
+        }
+    if (scrollHeight > 1 && !hide) {
         navRef.classList.add('navBG');
         // lang.style.opacity = "0";
     } else {
-        headerRef.classList.remove('noShadow');
+        headerRef.classList.remove('headerscrollBG');
+
         navRef.classList.remove('navBG');
         // lang.style.opacity = "1";
 
@@ -165,45 +158,6 @@ function btnHighlight() {
 
 }
 
-
-function moveSidebar(currentIndex, event) {
-    const elements = document.getElementsByClassName('sidebarContainer');
-    removeSidebar(elements)
-    if (currentIndex === undefined) {
-        return
-    }
-    for (let index = 0; index < elements.length; index++) {
-        const element = elements[index];
-        if (index === currentIndex) {
-            element.classList.toggle('moveSidebar');
-
-        }
-
-    }
-    event.stopPropagation();
-}
-
-function removeSidebar(elements) {
-    for (let index = 0; index < elements.length; index++) {
-        const element = elements[index];
-        element.classList.remove('moveSidebar');
-    }
-}
-
-function toggleSidbar(event) {
-    const sidebar = document.getElementById('sidebar');
-    const openBtn = document.getElementById('sidebarOpenBtn');
-    sidebar.classList.toggle('showSidebar');
-    openBtn.classList.add('slideSidebarBtn');
-    event.stopPropagation();
-}
-
-function closeSidebar() {
-    const sidebar = document.getElementById('sidebar');
-    const openBtn = document.getElementById('sidebarOpenBtn');
-    sidebar.classList.remove('showSidebar');
-    openBtn.classList.remove('slideSidebarBtn');
-}
 
 function freelanceCardHighlight() {
     const trigger = window.innerHeight * 0.5;
