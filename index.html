@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Natalie Schlindwein</title>
     <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="styles/main.css">
@@ -96,55 +96,41 @@
     </div>
 
     <section class="content" id="content">
-        <!--HERO Version 1 -->
-        <!-- <section class="hero">
-            <div class="heroContainer" id="hero">
-
-                <div class="heroContent">
-                    <div class="heroTitle">
-                        <div class="nameContainer">
-                            <p>Natalie</p>
-                            <p> Schlindwein</p>
-                        </div>
-
-                        <span data-i18n="title"></span>
-                    </div>
-                    <img src="./assets/img/titlephoto_komprimiert.webp" alt="">
-
-                </div>
-
-
-
-            </div>
-        </section> -->
-        <!--  -->
         <!--HERO Version 2  -->
         <section class="hero">
             <div class="heroContainer" id="hero">
 
                 <div class="heroContent">
-                    <div class="heroTitle">
-                        <h2 data-i18n="heroWelcome"></h2>
-                        <div class="nameContainer">
-                            <p>Natalie</p>
-                            <p> Schlindwein</p>
-                        </div>
+                    <div class="heroTitleContainer">
 
-                        <span data-i18n="title"></span>
-                        <button onclick="window.location.href='#aboutme'" data-i18n="aboutmeTitle"></button>
+
+                        <div class="heroTitle">
+                            <h2 data-i18n="heroWelcome"></h2>
+                            <div class="nameContainer">
+                                <p>Natalie</p>
+                                <p> Schlindwein</p>
+                            </div>
+
+                            <span data-i18n="title"></span>
+
+                            <button onclick="window.location.href='#aboutme'" data-i18n="aboutmeTitle"></button>
+
+
+                        </div>
+                        <div class="heroContactBtns">
+                            <div class="heroContactBtnsLink">
+                                <img class="contactImage" src="assets/icons/linkedin.svg" alt="">
+                            </div>
+                            <div class="heroContactBtnsLink">
+                                <img class="contactImage" src="assets/icons/xing.svg" alt="">
+                            </div>
+                            <div class="heroContactBtnsLink" onclick="window.location.href='#contact'">
+                                <img class="contactImage" src="assets/icons/mail.svg" alt="">
+                            </div>
+                        </div>
                     </div>
                     <img class="titlePhoto" src="./assets/img/titlephoto_komprimiert.webp" alt="">
-                    <div class="heroContactBtns">
-                        <div class="heroContactBtnsLink">
-                            <img class="contactImage" src="assets/icons/linkedin.svg" alt="">
-                        </div>
-                        <div class="heroContactBtnsLink">
-                            <img class="contactImage" src="assets/icons/xing.svg" alt="">
-                        </div>
-                        <div class="heroContactBtnsLink">
-                            <img class="contactImage" src="assets/icons/mail.svg" alt="">
-                        </div>
-                    </div>
+
                 </div>
 
 
@@ -260,126 +246,8 @@
                                     data-i18n="aboutmeBtn"></button>
                             </div>
                         </div>
-                        <!-- <div class="ctaContainer">
-                        <h3>Du möchtes mehr über mich erfahren</h3>
-                        <div class="aboutmeBtnContainer">
-                            <button></button>
-                            <button></button>
-                            <button></button>
-                        </div>
 
-                    </div> -->
-                        <!--  -->
-                        <!-- <div class="topSkillsContainer">
-                                <h3>Meine Top 3 Fähigkeiten</h3>
-                                <div class="topSkills">
-                                    <div class="topskillBox">
-                                        <span>Kommunikationsstark</span>
-                                    </div>
-                                    <div class="topskillBox">
-                                        <span>Belastbarkeit</span>
-                                    </div>
-                                    <div class="topskillBox">
-                                        <span>Organistionstalent</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="abroadContainer">
-                                <h3>Auslandserfahrung</h3>
-                                <div class="abroadRow">
-                                    <span>Deutschland</span>
-                                    <div class="percentageLine">
-                                        <div class="percentageLineInner" style="width: 100%;"></div>
-                                    </div>
-                                    <span>Heimatland</span>
-                                </div>
-                                <div class="abroadRow">
-                                    <span>Spanien</span>
-                                    <div class="percentageLine">
-                                        <div class="percentageLineInner" style="width: 65%;"></div>
-                                    </div>
-                                    <span>4 Jahre</span>
-                                </div>
-                                <div class="abroadRow">
-                                    <span>Australien</span>
-                                    <div class="percentageLine">
-                                        <div class="percentageLineInner" style="width: 25%;"></div>
-                                    </div>
-                                    <span>1 Jahr</span>
-                                </div>
-
-                            </div>
-                            <div class="circles">
-                                <h3>Sprachkenntnisse</h3>
-                                <div class="circlesContainer">
-                                    <div class="progress-circle">
-                                        <svg viewBox="0 0 36 36">
-                                            <path class="bg" d="M18 2.0845
-                                        a 15.9155 15.9155 0 0 1 0 31.831
-                                        a 15.9155 15.9155 0 0 1 0 -31.831" />
-                                            <path class="progress" stroke-dasharray="100, 100" d="M18 2.0845
-                                        a 15.9155 15.9155 0 0 1 0 31.831
-                                        a 15.9155 15.9155 0 0 1 0 -31.831" />
-                                            <text x="18" y="20.35" class="percentage">100%</text>
-                                        </svg>
-                                        <span>Deutsch</span>
-                                    </div>
-                                    <div class="progress-circle">
-                                        <svg viewBox="0 0 36 36">
-                                            <path class="bg" d="M18 2.0845
-                                        a 15.9155 15.9155 0 0 1 0 31.831
-                                        a 15.9155 15.9155 0 0 1 0 -31.831" />
-                                            <path class="progress" stroke-dasharray="90, 100" d="M18 2.0845
-                                        a 15.9155 15.9155 0 0 1 0 31.831
-                                        a 15.9155 15.9155 0 0 1 0 -31.831" />
-                                            <text x="18" y="20.35" class="percentage">90%</text>
-                                        </svg>
-                                        <span>Englisch</span>
-                                    </div>
-                                    <div class="progress-circle">
-                                        <svg viewBox="0 0 36 36">
-                                            <path class="bg" d="M18 2.0845
-                                        a 15.9155 15.9155 0 0 1 0 31.831
-                                        a 15.9155 15.9155 0 0 1 0 -31.831" />
-                                            <path class="progress" stroke-dasharray="85, 100" d="M18 2.0845
-                                        a 15.9155 15.9155 0 0 1 0 31.831
-                                        a 15.9155 15.9155 0 0 1 0 -31.831" />
-                                            <text x="18" y="20.35" class="percentage">85%</text>
-                                        </svg>
-                                        <span>Spanisch</span>
-                                    </div>
-
-                                </div> -->
                     </div>
-                    <!-- <div class="languageSkills">
-                                <div class="languageContainer">
-                                    <div class="percentage">
-                                        <span>100</span>
-                                        <p>%</p>
-                                    </div>
-                                    <span class="languageText">Deutsch</span>
-                                </div>
-                                <div class="languageContainer">
-                                    <div class="percentage">
-                                        <span>90</span>
-                                        <p>%</p>
-                                    </div>
-                                    <span class="languageText">Englisch</span>
-                                </div>
-                                <div class="languageContainer">
-                                    <div class="percentage">
-                                        <span>85</span>
-                                        <p>%</p>
-                                    </div>
-                                    <span class="languageText">Spanisch</span>
-                                </div>
-                            </div> -->
-                    <!--  -->
-
-
-
-
                 </div>
 
 
@@ -495,6 +363,9 @@
                     </div>
 
                     <div class="contactFields">
+                        <div class="contactRespHeadline">
+                            <h3 data-i18n="contactTitle"></h3>
+                        </div>
                         <div class="form">
                             <div class="inputField focus">
                                 <input class="required" onfocus="animateInputFocus(0)" type="text" id=""

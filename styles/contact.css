@@ -143,9 +143,17 @@
     width: 50%;
     height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+gap: 32px;
+}
 
+.contactRespHeadline{
+    width: 100%;
+    max-width: 550px;
+    display: flex;
+    justify-content: center;
 }
 
 .form {
@@ -268,14 +276,21 @@
 
     .contactText {
         width: 100%;
-        /* text-align: center; */
+   
     }
 
     .contactFields {
         width: 100%;
-        justify-content: flex-start;
+       align-items: flex-start;
+      
     }
 
+}
+
+@media(min-width: 1300px) {
+.contactRespHeadline{
+    display: none;
+}
 }
 
 @media(max-width: 1200px) {

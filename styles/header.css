@@ -7,7 +7,7 @@ header {
     justify-content: center;
     /* border-bottom: solid 1px var(--secondary); */
    
-    background-color: var(--bg-color);
+    /* background-color: var(--bg-color); */
     transition: background-color 1s ease-out;
 }
 

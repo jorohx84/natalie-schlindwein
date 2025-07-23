@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: flex-start;
     transition: opacity 0.6s ease-in-out;
-    gap: 56px
+   
 }
 
 .hideContent {
@@ -24,6 +24,8 @@
     transition: transform 1.2s ease-in-out, opacity 2s ease-in-out;
     opacity: 1;
     margin-top: 112px;
+    margin-bottom: 56px;
+
 
 
 }
