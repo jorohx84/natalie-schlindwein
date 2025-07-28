@@ -374,12 +374,8 @@ function renderFreelanceTasks(cardIndex, lang) {
     const tasksRef = document.getElementById(`freelanceTasks${cardIndex}`);
     tasksRef.innerHTML = '';
     const tasks = freelanceExperiences[cardIndex][lang].tasks;
-    console.log(tasks);
-    
     for (let index = 0; index < tasks.length; index++) {
         const task = tasks[index];
-        console.log(index);
-        
         tasksRef.innerHTML += `<div class="taskRow">
                                     <div class="bulletPoint"></div>
                                     <span>${task}</span>

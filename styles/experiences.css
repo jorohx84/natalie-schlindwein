@@ -3,11 +3,13 @@
     max-width: 1920px;
     height: fit-content;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
     box-sizing: border-box;
-    margin-bottom: 56px;
+    gap: 56px;
+    /* margin-bottom: 56px; */
 }
 
 .experiencesContainer {
@@ -30,7 +32,7 @@
     /* opacity: 0; */
     transition: opacity 3s ease-in-out;
     position: relative;
-    margin-top: 56px;
+    /* margin-top: 56px; */
 
 
 }

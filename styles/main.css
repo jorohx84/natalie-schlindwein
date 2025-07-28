@@ -9,13 +9,32 @@
     align-items: center;
     justify-content: flex-start;
     transition: opacity 0.6s ease-in-out;
-
+gap: 112px;
 }
 
 .hideContent {
     opacity: 0.3;
 }
+.pincolor{
+    color: var(--highlight) !important;
+}
+.headlineRespPins{
+   
+}
+.headlineRespPins h2{
+font-size: 16px;
 
+}
+
+@keyframes headlinePins{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        display: none;
+    }
+}
 
 .lettering {
     width: 100%;
@@ -74,7 +93,13 @@
     .lettering {
         justify-content: center;
     }
+.content{
+    gap: 32px;
+}
+.dnone{
+  animation: headlinePins 0.2s ease forwards;
 
+}
 }
 
 @media(min-width:1050px) {

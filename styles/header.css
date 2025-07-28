@@ -50,7 +50,7 @@ header {
 
 .navBG {
     background-color: var(--bg-color);
-    border-radius: 30px;
+    border-radius: 15px;
     border-bottom: solid;
     border-color: var(--highlight);
 

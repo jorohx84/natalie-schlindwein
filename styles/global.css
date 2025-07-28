@@ -156,9 +156,7 @@ a:active {
     transform: scale(0.95);
 }
 
-.dnone {
-    display: none;
-}
+
 
 :root {
     /* --bg-color: rgb(0, 0, 0); */

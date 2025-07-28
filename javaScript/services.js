@@ -211,9 +211,6 @@ function clearSubservices() {
 }
 
 function giveCardHighlight(currentIndex) {
-    console.log(currentIndex);
-
-
     for (let index = 0; index < services.length; index++) {
         const cardRef = document.getElementById(`serviceCard${index}`);
         if (currentIndex === index) {
@@ -243,15 +240,9 @@ function changeServiceImageColor(currentIndex) {
 }
 
 function renderServiceRespHeadline(index, lang) {
-
-    console.log(index);
-    console.log(lang);
     const headlineRef = document.getElementById('servicesRespHeadline');
     headlineRef.innerHTML = '';
     if (window.innerWidth > 950) { return }
     const headline = services[index][lang].title;
-    console.log(headline);
     headlineRef.innerHTML += `<h3>${headline}</h3>`;
-
-
 }

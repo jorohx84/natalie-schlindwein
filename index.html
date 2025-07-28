@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Natalie Schlindwein</title>
+    <link rel="icon" href="assets/img/logo.png" type="image/png">
     <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/header.css">
@@ -36,12 +37,13 @@
                 <img class="logo" src="assets/img/logo.png" alt="">
 
             </div>
+                <div class="headlineRespPins" id="headlineRespPins"></div>
             <nav id="nav">
-                <a href="#aboutme" data-i18n="header1"></a>
-                <a href="#skills" data-i18n="header2"></a>
-                <a href="#services" data-i18n="header3"></a>
-                <a href="#experiences" data-i18n="header4"></a>
-                <a href="#contact" data-i18n="header5"></a>
+                <a class="pins" href="#aboutme" data-i18n="header1"></a>
+                <a class="pins" href="#skills" data-i18n="header2"></a>
+                <a class="pins" href="#services" data-i18n="header3"></a>
+                <a class="pins" href="#experiences" data-i18n="header4"></a>
+                <a class="pins" href="#contact" data-i18n="header5"></a>
             </nav>
 
             <div onclick="toogleRespMenu()" class="burger" id="burger">
@@ -61,6 +63,7 @@
 
         </div>
     </header>
+
     <div class="sidebarOpenBtn" id="sidebarOpenBtn">
         <button onclick="toggleSidbar(event)"><img src="assets/icons/sidebar.svg" alt=""></button>
     </div>
@@ -139,7 +142,7 @@
         </section>
         <!--  -->
 
-        <section class="aboutme" id="aboutme">
+        <section class="aboutme sectionContainer" id="aboutme">
             <div class="aboutmeContainer">
                 <div class="lettering" id="aboutmeLettering">
                     <span data-i18n="aboutmeTitle"></span>
@@ -259,7 +262,7 @@
             </div>
         </section>
 
-        <section class="skills " id="skills">
+        <section class="skills sectionContainer" id="skills">
             <div class="skillsContainer">
                 <div class="lettering reverse" id="skillsLettering">
                     <span data-i18n="skillsTitle"></span>
@@ -274,7 +277,7 @@
 
             </div>
         </section>
-        <section class="services" id="services">
+        <section class="services sectionContainer" id="services">
             <div class="servicesContainer">
                 <div class="lettering" id="advantagesLettering">
                     <span data-i18n="servicesTitle"></span>
@@ -295,7 +298,7 @@
 
 
 
-        <section class="experiences" id="experiences">
+        <section class="experiences sectionContainer" id="experiences">
             <div class="experiencesContainer">
                 <div class="lettering " id="experiencesLettering">
                     <span data-i18n="experienceTitle"></span>
@@ -311,10 +314,7 @@
                 </div>
 
             </div>
-
-        </section>
-
-        <section class="freelancer" id="freelancer">
+     <section class="freelancer" id="freelancer">
             <div class="freelancerTitle">
                 <h2 data-i18n="freelancerTitle"></h2>
             </div>
@@ -322,7 +322,10 @@
             <div class="freelancerContent" id="freelancerContent"></div>
 
         </section>
-        <section class="contact" id="contact">
+        </section>
+
+   
+        <section class="contact sectionContainer" id="contact">
 
             <div class="contactContainer">
                 <div class="lettering reverse" id="contactLettering">
