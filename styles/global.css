@@ -156,7 +156,9 @@ a:active {
     transform: scale(0.95);
 }
 
-
+.showCheckBox{
+display:flex !important;
+}
 
 :root {
     /* --bg-color: rgb(0, 0, 0); */
@@ -175,6 +177,7 @@ a:active {
     /* --highlight: #f7b25d; */
     /* --text-bg: rgba(255, 255, 255, 0.145); */
     --text-bg: rgba(0, 157, 255, 0.063);
+
 }
 
 /*;rgb(4, 79, 123);*/

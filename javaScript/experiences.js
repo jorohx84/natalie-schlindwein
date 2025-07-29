@@ -1,6 +1,7 @@
 const stations = [
     {
         path: 'assets/icons/education_grey.svg',
+        year: '2009',
         de: {
             title: 'Kaufmännische Ausbildung – Der Grundstein',
             description: 'Meine berufliche Laufbahn begann bereits im Alter von 16 Jahren mit einer Ausbildung zur Groß- und Außenhandelskauffrau, die mir ein solides Fundament im kaufmännischen Bereich vermittelte.',
@@ -16,7 +17,7 @@ const stations = [
     },
     {
         path: 'assets/icons/shopping_grey.svg',
-
+        year: '2013',
         de: {
             title: 'Berufserfahrung im Einkauf & Service Management',
             description: 'Im Anschluss war ich über sechs Jahre im operativen Einkauf sowie im Service Management tätig – Bereiche, in denen ich nicht nur mein Organisationstalent, sondern auch mein wirtschaftliches Denken gezielt einsetzen und weiterentwickeln konnte.',
@@ -32,7 +33,7 @@ const stations = [
     },
     {
         path: 'assets/icons/qualification.svg',
-
+        year: '2017',
         de: {
             title: 'Weiterbildung zur Betriebswirtin mit Spanien-Fokus',
             description: 'Im Jahr 2017 entschied ich mich für eine berufliche Weiterbildung zur Staatlich geprüften Betriebswirtin (Bachelor Professional in Wirtschaft) mit dem Schwerpunkt „Europa-Betriebswirtschaft“. Hier vertiefte ich meine Kenntnisse im internationalen Kontext und legte meinen Fokus auf die Fremdsprache Spanisch.',
@@ -48,7 +49,7 @@ const stations = [
     },
     {
         path: 'assets/img/spain.svg',
-
+        year: '2019',
         de: {
             title: 'Auslandspraktikum in Valencia – Marketing & Sprache',
             description: 'Im Rahmen des Erasmus+-Programms hatte ich die Möglichkeit, ein Auslandspraktikum in Spanien zu absolvieren. Über sieben Monate hinweg arbeitete ich in der Marketingabteilung der renommierten Sprachschule „Españolé International House Valencia“, um meine Sprachkenntnisse weiter auszubauen.',
@@ -63,24 +64,24 @@ const stations = [
         }
     },
     {
-        path: 'assets/icons/speak.svg',
-
-        de: {
-            title: 'Sprachassistenz & Bildungsurlaub in Cádiz',
-            description: 'Anschließend war ich für sechs Monate als Sprachassistentin an einem College in Cádiz tätig. Dort unterstützte ich die Lehrkräfte bei der Vorbereitung der Schüler auf die international anerkannte Sprachprüfung IELTS und agierte zugleich als Dolmetscherin und Bindeglied zwischen deutschen Landesbehörden und spanischen Bildungseinrichtungen – insbesondere im Hinblick auf die Organisation von Bildungsurlauben für deutsche Arbeitnehmer.',
-        },
-        en: {
-            title: 'Language Assistance & Educational Leave in Cádiz',
-            description: 'I then spent six months as a language assistant at a college in Cádiz. I supported teachers in preparing students for the internationally recognized IELTS exam and acted as an interpreter and liaison between German authorities and Spanish educational institutions—especially for organizing educational leave for German employees.',
-        },
-        es: {
-            title: 'Asistencia lingüística y gestión de permisos educativos en Cádiz',
-            description: 'Posteriormente trabajé durante seis meses como asistente de idiomas en un colegio de Cádiz. Apoyé a los profesores en la preparación de los alumnos para el examen IELTS y actué como intérprete y enlace entre autoridades alemanas e instituciones educativas españolas, especialmente en la gestión de permisos de formación para trabajadores alemanes.',
-        }
+    path: 'assets/icons/speak.svg',
+    year: '2022',
+    de: {
+        title: 'Sprachassistenz & Bildungsurlaub in Cádiz',
+        description: 'Anschließend war ich für neun Monate als Sprachassistentin an einem College in Cádiz tätig. Dort unterstützte ich die Lehrkräfte bei der Vorbereitung der Schüler auf die international anerkannte Sprachprüfung IELTS und agierte zugleich als Dolmetscherin und Bindeglied zwischen deutschen Landesbehörden und spanischen Bildungseinrichtungen – insbesondere im Hinblick auf die Organisation von Bildungsurlauben für deutsche Arbeitnehmer.',
     },
+    en: {
+        title: 'Language Assistance & Educational Leave in Cádiz',
+        description: 'I then spent nine months as a language assistant at a college in Cádiz. I supported teachers in preparing students for the internationally recognized IELTS exam and acted as an interpreter and liaison between German authorities and Spanish educational institutions—especially for organizing educational leave for German employees.',
+    },
+    es: {
+        title: 'Asistencia lingüística y gestión de permisos educativos en Cádiz',
+        description: 'Posteriormente trabajé durante nueve meses como asistente de idiomas en un colegio de Cádiz. Apoyé a los profesores en la preparación de los alumnos para el examen IELTS y actué como intérprete y enlace entre autoridades alemanas e instituciones educativas españolas, especialmente en la gestión de permisos de formación para trabajadores alemanes.',
+    }
+},
     {
         path: 'assets/icons/freelancer.svg',
-
+        year: '2023',
         de: {
             title: 'Start in die Selbstständigkeit als Freelancerin',
             description: 'Die Erfahrungen in Spanien waren wegweisend für meinen weiteren Weg: Ich entschied mich, den Schritt in die Selbstständigkeit zu wagen. Seit Oktober 2022 bin ich als Freelancerin tätig und berate Unternehmen in unterschiedlichen Bereichen – mit internationalem Blick, interkultureller Kompetenz und einem klaren Gespür für Organisation, Sprache und Struktur.',
@@ -98,93 +99,93 @@ const stations = [
 
 
 const freelanceExperiences = [
-  {
-    path: '',
-    de: {
-      title: 'Einkäuferin von IT-Hardware für einen Konzernkunde in Frankfurt',
-      timeText: 'Projektzeit',
-      time: 'Januar 2023 - heute',
-      tasks: [
-        'Auf- und Ausbau des Leasinggeschäfts im Lifecycle',
-        'Beratung in allen beschaffungsrelevanten Fragen',
-        'Einholung und Auswertung von Angeboten ',
-        'Planung und Durchführung von Preisverhandlungen',
-        'Liefermanagement, sowie Reklamationsbearbeitung und Beschwerdemanagement',
-        'Prüfung und Kontierung der IT-Rechnungen ',
-      ]
+    {
+        path: '',
+        de: {
+            title: 'Einkäuferin von IT-Hardware für einen Konzernkunde in Frankfurt',
+            timeText: 'Projektzeit',
+            time: 'Januar 2023 - heute',
+            tasks: [
+                'Auf- und Ausbau des Leasinggeschäfts im Lifecycle',
+                'Beratung in allen beschaffungsrelevanten Fragen',
+                'Einholung und Auswertung von Angeboten ',
+                'Planung und Durchführung von Preisverhandlungen',
+                'Liefermanagement, sowie Reklamationsbearbeitung und Beschwerdemanagement',
+                'Prüfung und Kontierung der IT-Rechnungen ',
+            ]
+        },
+        en: {
+            title: 'IT Hardware Buyer for a Corporate Client in Frankfurt',
+            timeText: 'Project Duration',
+            time: 'January 2023 – Present',
+            tasks: [
+                'Development and expansion of the leasing business in the lifecycle',
+                'Consulting on all procurement-related matters',
+                'Obtaining and evaluating quotations',
+                'Planning and conducting price negotiations',
+                'Delivery management, complaint handling, and customer service',
+                'Reviewing and booking IT invoices'
+            ]
+        },
+        es: {
+            title: 'Compradora de hardware informático para un cliente corporativo en Fráncfort',
+            timeText: 'Duración del proyecto',
+            time: 'Enero de 2023 – Actualidad',
+            tasks: [
+                'Desarrollo y expansión del negocio de arrendamiento en el ciclo de vida',
+                'Asesoramiento en todas las cuestiones relacionadas con las adquisiciones',
+                'Solicitud y evaluación de presupuestos',
+                'Planificación y realización de negociaciones de precios',
+                'Gestión de entregas, tramitación de reclamaciones y atención al cliente',
+                'Revisión y contabilización de facturas de TI'
+            ]
+        },
     },
-    en: {
-      title: 'IT Hardware Buyer for a Corporate Client in Frankfurt',
-      timeText: 'Project Duration',
-      time: 'January 2023 – Present',
-      tasks: [
-        'Development and expansion of the leasing business in the lifecycle',
-        'Consulting on all procurement-related matters',
-        'Obtaining and evaluating quotations',
-        'Planning and conducting price negotiations',
-        'Delivery management, complaint handling, and customer service',
-        'Reviewing and booking IT invoices'
-      ]
+    {
+        path: '',
+        de: {
+            title: 'Betriebsleitung für ein schweizer Vertriebsunternehmen',
+            timeText: 'Projektzeit',
+            time: '2 Jahre',
+            tasks: [
+                'Leadgenerierung für verschiedene Vertriebskampagnen',
+                'Botprogrammierung über LinkedHelper',
+                'Dashboardüberwachung der wöchentlichen Performance der Kampagnen',
+                'Technischer Support für die Freelancer weltweit der verschiedenen Vertriebskampagnen',
+                'Einrichtung des CRM-Systems „HubSpot“ und Verknüpfung mit dem Bot',
+                'Lizenzverwaltung von Surfe',
+                'Backup und Updates der Cloudsysteme'
+            ],
+        },
+        en: {
+            title: 'Operations Manager for a Swiss Sales Company',
+            timeText: 'Project Duration',
+            time: '2 years',
+            tasks: [
+                'Lead generation for various sales campaigns',
+                'Bot programming using LinkedHelper',
+                'Dashboard monitoring of weekly campaign performance',
+                'Technical support for freelancers worldwide across various sales campaigns',
+                'Setup of the HubSpot CRM system and integration with the bot',
+                'License management of Surfe',
+                'Backups and updates of cloud systems'
+            ],
+        },
+        es: {
+            title: 'Directora de operaciones para una empresa suiza de ventas',
+            timeText: 'Duración del proyecto',
+            time: '2 años',
+            tasks: [
+                'Generación de leads para diversas campañas de ventas',
+                'Programación de bots con LinkedHelper',
+                'Supervisión del panel de rendimiento semanal de las campañas',
+                'Soporte técnico para freelancers de todo el mundo en diferentes campañas',
+                'Configuración del CRM HubSpot y conexión con el bot',
+                'Gestión de licencias de Surfe',
+                'Copias de seguridad y actualizaciones de los sistemas en la nube'
+            ],
+        },
     },
-    es: {
-      title: 'Compradora de hardware informático para un cliente corporativo en Fráncfort',
-      timeText: 'Duración del proyecto',
-      time: 'Enero de 2023 – Actualidad',
-      tasks: [
-        'Desarrollo y expansión del negocio de arrendamiento en el ciclo de vida',
-        'Asesoramiento en todas las cuestiones relacionadas con las adquisiciones',
-        'Solicitud y evaluación de presupuestos',
-        'Planificación y realización de negociaciones de precios',
-        'Gestión de entregas, tramitación de reclamaciones y atención al cliente',
-        'Revisión y contabilización de facturas de TI'
-      ]
-    },
-  },
-  {
-    path: '',
-    de: {
-      title: 'Betriebsleitung für ein schweizer Vertriebsunternehmen',
-      timeText: 'Projektzeit',
-      time: '2 Jahre',
-      tasks: [
-        'Leadgenerierung für verschiedene Vertriebskampagnen',
-        'Botprogrammierung über LinkedHelper',
-        'Dashboardüberwachung der wöchentlichen Performance der Kampagnen',
-        'Technischer Support für die Freelancer weltweit der verschiedenen Vertriebskampagnen',
-        'Einrichtung des CRM-Systems „HubSpot“ und Verknüpfung mit dem Bot',
-        'Lizenzverwaltung von Surfe',
-        'Backup und Updates der Cloudsysteme'
-      ],
-    },
-    en: {
-      title: 'Operations Manager for a Swiss Sales Company',
-      timeText: 'Project Duration',
-      time: '2 years',
-      tasks: [
-        'Lead generation for various sales campaigns',
-        'Bot programming using LinkedHelper',
-        'Dashboard monitoring of weekly campaign performance',
-        'Technical support for freelancers worldwide across various sales campaigns',
-        'Setup of the HubSpot CRM system and integration with the bot',
-        'License management of Surfe',
-        'Backups and updates of cloud systems'
-      ],
-    },
-    es: {
-      title: 'Directora de operaciones para una empresa suiza de ventas',
-      timeText: 'Duración del proyecto',
-      time: '2 años',
-      tasks: [
-        'Generación de leads para diversas campañas de ventas',
-        'Programación de bots con LinkedHelper',
-        'Supervisión del panel de rendimiento semanal de las campañas',
-        'Soporte técnico para freelancers de todo el mundo en diferentes campañas',
-        'Configuración del CRM HubSpot y conexión con el bot',
-        'Gestión de licencias de Surfe',
-        'Copias de seguridad y actualizaciones de los sistemas en la nube'
-      ],
-    },
-  },
 ];
 
 function renderExperiences(lang) {
@@ -192,10 +193,11 @@ function renderExperiences(lang) {
     experiencesRef.innerHTML = '';
     for (let index = 0; index < stations.length; index++) {
         const image = stations[index];
+        const year=stations[index].year;
         const station = stations[index][lang];
         experiencesRef.innerHTML += ` <div class="station">
                               <div class="timeStamp">
-                                     <p>2000</p>
+                                     <p>${year}</p>
                                       <div class="stationLine"></div>
                              </div>
                             <div class="stationDot">

@@ -113,11 +113,12 @@ function checkPhoneNumber(field, errorMessage, defaultLang) {
 function changePrivacy() {
     valid = !valid;
     const checkBox = document.getElementById('privacyImage');
+console.log(valid);
 
-    if (valid === true) {
-        checkBox.classList.remove('dnone');
+    if (!valid) {
+        checkBox.classList.remove('showCheckBox');
     } else {
-        checkBox.classList.add('dnone');
+        checkBox.classList.add('showCheckBox');
     }
 }
 

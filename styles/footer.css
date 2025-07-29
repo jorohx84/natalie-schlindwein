@@ -1,4 +1,4 @@
-footer{
+footer {
     width: 100%;
     border-top: solid;
     border-width: 1px;
@@ -6,40 +6,73 @@ footer{
     display: flex;
     justify-content: center;
 }
-.footerContainer{
+
+.footerContainer {
     width: 100%;
     max-width: 1920px;
     min-height: 100px;
-    max-height: 100px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 56px;
     box-sizing: border-box;
-    padding: 20px 72px;
+    padding: 32px 72px;
 }
 
-.legal{
+.mapleLogoContainer {
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mapleLogoContainer span {
+    box-sizing: border-box;
+    padding-left: 16px;
+}
+
+.mapleLogo {
+    width: 250px;
+    box-sizing: border-box;
+    padding: 16px;
+    border-radius: 10px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.mapleLogo:hover {
+
+    background-color: var(--secondary);
+}
+
+
+.legal {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 32px;
 }
 
-.legal a:hover{
-color: var(--secondary);
+.legal a {
+    box-sizing: border-box;
+    padding: 8px;
+    border-radius: 6px;
 }
 
-@media(max-width: 580px){
-    .footerContainer{
+.legal a:hover {
+ color: var(--highlight);
+}
+
+@media(max-width: 580px) {
+    .footerContainer {
         flex-direction: column;
         padding: 20px 20px;
     }
 
-   
+
 }
-@media(max-width: 400px){
-    .footerContainer span{
+
+@media(max-width: 400px) {
+    .footerContainer span {
         font-size: 14px;
     }
 }

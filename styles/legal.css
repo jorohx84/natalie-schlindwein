@@ -1,0 +1,96 @@
+.legalContainer {
+    width: 100%;
+    max-width: 1920px;
+    border-radius: 30px;
+  
+    box-sizing: border-box;
+    padding: 72px 72px;
+
+}
+
+.legalContent {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: var(--text-bg);
+    box-sizing: border-box;
+    padding: 56px 72px;
+    border-radius: 30px;
+}
+
+.legalContent h1 {
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    font-weight: 400;
+}
+
+.legalContent h2 {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    font-weight: 400;
+    margin-block: 32px;
+    color: var(--highlight);
+}
+
+.legalContent span {
+    font-size: 16px;
+}
+
+.imprintContact {
+    display: flex;
+    gap: 16px;
+}
+
+.contactLinkContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contactLink:hover{
+    color: var(--highlight);
+    background-color: unset;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 8px;
+    border-radius: 100px;
+    transition: background-color 0.3s ease-in-out;
+
+}
+
+.closeBtn:hover {
+    background-color: var(--secondary);
+}
+
+.legalContent a img {
+    width: 25px;
+    height: 25px;
+}
+
+@media(max-width: 800px) {
+    .legalContainer {
+        padding: 0;
+        margin-block: unset;
+    }
+}
+
+@media(max-width: 600px) {
+
+
+    .legalContent {
+        padding: 72px 24px;
+    }
+
+    .legalContent a {
+        position: fixed;
+        background-color: var(--secondary);
+    }
+}

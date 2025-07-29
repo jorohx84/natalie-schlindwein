@@ -77,17 +77,24 @@
     align-items: center;
 }
 
-.socialmedia button {
+.socialmedia a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      border: solid 1px transparent;
+      border-radius: 10px;
     background-color: transparent;
     width: 40px;
     height: 40px;
+    transition: border 0.5s ease-in-out;
 }
 
-.socialmedia button:hover {
-    border: solid;
+.socialmedia a:hover {
+    border: solid 1px var(--primary);
+   
 }
 
-.socialmedia button img {
+.socialmedia a img {
     width: 25px;
     height: 25px;
     border-radius: 5px;

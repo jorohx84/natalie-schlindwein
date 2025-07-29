@@ -30,21 +30,6 @@ const skills = [
     },
   },
   {
-    path: 'assets/icons/lightbulb.svg',
-    de: {
-      name: 'Kreatives Eventkonzept',
-      description: 'Jedes Event erzählt eine Geschichte. Ich entwickle individuelle Konzepte, die Atmosphäre schaffen, Details inszenieren und Gäste begeistern – von der Idee bis zur Umsetzung mit viel Gespür für Stil und Stimmung.',
-    },
-    en: {
-      name: 'Creative Event Concepts',
-      description: 'Every event tells a story. I create unique concepts that set the mood, highlight the details, and excite guests – from the first idea to the final implementation, with a strong sense of style and atmosphere.',
-    },
-    es: {
-      name: 'Concepto creativo de eventos',
-      description: 'Cada evento cuenta una historia. Desarrollo conceptos únicos que crean atmósfera, destacan los detalles y entusiasman a los invitados, desde la idea hasta la realización final, con sensibilidad por el estilo y el ambiente.',
-    },
-  },
-  {
     path: 'assets/icons/team.svg',
     de: {
       name: 'Teamfähigkeit',
@@ -74,21 +59,7 @@ const skills = [
       description: 'Cuando las cosas se ponen intensas, doy lo mejor de mí. Mantener la calma bajo presión y actuar de manera resolutiva son algunas de mis mayores fortalezas.',
     },
   },
-  {
-    path: 'assets/icons/laptop.svg',
-    de: {
-      name: 'Digitale Tools & Technisches Verständnis',
-      description: 'Von CRM-Systemen bis hin zu Bot-Automation – ich arbeite mich schnell in neue Tools ein und behalte auch bei komplexen Systemen den Überblick.',
-    },
-    en: {
-      name: 'Digital Tools & Technical Know-how',
-      description: 'From CRM systems to bot automation – I quickly adapt to new tools and keep track of even complex technical workflows.',
-    },
-    es: {
-      name: 'Herramientas digitales y conocimientos técnicos',
-      description: 'Desde sistemas CRM hasta automatización con bots, me adapto rápidamente a nuevas herramientas y mantengo la visión general incluso en flujos técnicos complejos.',
-    },
-  },
+
   {
     path: 'assets/icons/chart.svg',
     de: {

@@ -1,0 +1,28 @@
+   <div class="sidebarContainer" onmouseleave="moveSidebar()">
+            <button onclick="moveSidebar(0, event)"><img src="assets/icons/language.svg" alt=""></button>
+            <div class="languages" id="languages">
+                <button onclick="setLanguage('de', event)">DE</button>
+                <div class="btnDivider"></div>
+                <button onclick="setLanguage('en', event)">EN</button>
+                <div class="btnDivider"></div>
+                <button onclick="setLanguage('es', event)">ES</button>
+            </div>
+        </div>
+        <div class="sidebarContainer" onmouseleave="moveSidebar()">
+            <button onclick="moveSidebar(1, event)"><img src="assets/icons/phone.svg" alt=""></button>
+            <a class="sidebarLink" href="tel:0151 12345678">0151 12345678</a>
+        </div>
+        <div class="sidebarContainer" onmouseleave="moveSidebar()">
+            <button onclick="moveSidebar(2, event)"><img src="assets/icons/mail.svg" alt=""></button>
+            <a class="sidebarLink" href="mailto:kontakt@natalie-schlindwein.de">kontakt@natalie-schlindwein.de</a>
+        </div>
+        <div class="sidebarContainer" onmouseleave="moveSidebar()">
+            <button onclick="moveSidebar(3, event)"><img src="assets/icons/socialmedia.svg" alt=""></button>
+            <div class="socialmedia">
+                <a href="https://www.linkedin.com/in/natalie-schlindwein" target="_blank"><img src="assets/icons/linkedin.svg" alt=""></a>
+                <!-- <button><img src="assets/icons/xing.svg" alt=""></button> -->
+            </div>
+        </div>
+        <div class="sidebarContainer" onmouseleave="moveSidebar()">
+            <button onclick="window.scrollTo(0,0), moveSidebar()"><img src="assets/icons/arrow_up.svg" alt=""></button>
+        </div>

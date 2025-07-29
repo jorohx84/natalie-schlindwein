@@ -57,11 +57,11 @@ function scrollHeader() {
     }
     if (scrollHeight > 1 && !hide) {
         navRef.classList.add('navBG');
-        logo.classList.add('dnone');
+        logo.classList.add('logoOpacity');
         // lang.style.opacity = "0";
     } else {
         headerRef.classList.remove('headerscrollBG');
-        logo.classList.remove('dnone');
+        logo.classList.remove('logoOpacity');
         navRef.classList.remove('navBG');
         // lang.style.opacity = "1";
 
@@ -187,7 +187,7 @@ function showHeadlinePins() {
     for (let index = 0; index < sections.length; index++) {
         const section = sections[index];
         const sectionRect = section.getBoundingClientRect();
-        if (sectionRect.top < 0 && sectionRect.bottom > 0) {
+        if (sectionRect.top < 100 && sectionRect.bottom > 0) {
             givePinsHighlight(pins, index, headlinePinContainer);
         }
     }

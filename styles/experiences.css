@@ -406,6 +406,10 @@
 }
 
 @media(max-width: 1000px) {
+    .experiencesContainer {
+        gap: 56px;
+    }
+
     .curriculum {
         gap: 32px;
     }
@@ -512,8 +516,8 @@
     }
 
     .stationDot img {
-        width: 15px;
-        height: 15px;
+        width: 24px;
+        height: 24px;
     }
 }
 

@@ -1,80 +1,38 @@
 let currentSubIndex;
 
 const services = [
+   
+
+   
+    
     {
-        path: 'assets/icons/volunteer_pink.svg',
-        changePath: 'assets/icons/volunteer_grey.svg',
+        path: 'assets/icons/shopping_pink.svg',
+        changePath: 'assets/icons/shopping_grey.svg',
         de: {
-            title: 'Volunteer Management',
-
+            title: 'Einkäuferin',
             subservices: [
-                'Daten-Administration (Zuteilung und Erstellung von Schichtplanung)',
-                'Laufende Kommunikation mit den Volunteers',
-                'Akkreditierungsmanagement (Verwalten von Daten und die Ausgabe von Akkreditierung)',
-                'Koordination der Volunteer-Akkreditierung während der Veranstaltung',
-                'Onboarding und Betreuung vor Ort'
-            ],
-
-        },
-        en: {
-            title: 'Volunteer management',
-
-            subservices: [
-                'Data administration (allocation and creation of shift plans)',
-                'Ongoing communication with volunteers',
-                'Accreditation management (handling data and issuing credentials)',
-                'Coordination of volunteer accreditation during the event',
-                'Onboarding and on-site support'
-            ],
-        },
-        es: {
-            title: 'Gestión de voluntariado',
-
-            subservices: [
-                'Administración de datos (asignación y creación de turnos)',
-                'Comunicación continua con los voluntarios',
-                'Gestión de acreditaciones (manejo de datos y entrega de credenciales)',
-                'Coordinación de la acreditación de voluntarios durante el evento',
-                'Onboarding y asistencia in situ'
-            ],
-        }
-
-    },
-
-    {
-        path: 'assets/icons/coins_pink.svg',
-        changePath: 'assets/icons/coins_grey.svg',
-        de: {
-            title: 'Finanz Management',
-
-            subservices: [
-                'Erstellung eines Haushaltsplans',
-                'Rechnungsstellung',
-                'Finanzierungsplan/Budgetplan des Projektes',
-                'Controlling Aufgaben des Budgets',
-                'Zahlungseingänge prüfen'
+                'Operativer und Strategischer Einkauf',
+                'Materialbeschaffung',
+                'Vertragsverhandlung',
+                'Vertragsprüfung'
             ],
         },
         en: {
-            title: 'Financial management',
-
+            title: 'Buyer',
             subservices: [
-                'Creating a budget plan',
-                'Invoicing',
-                'Financial/budget planning of the project',
-                'Budget controlling tasks',
-                'Checking incoming payments'
+                'Operational and strategic purchasing',
+                'Material procurement',
+                'Contract negotiation',
+                'Contract review'
             ],
         },
         es: {
-            title: 'Gestión financiera',
-
+            title: 'Compradora',
             subservices: [
-                'Elaboración de un plan presupuestario',
-                'Facturación',
-                'Planificación financiera/presupuestaria del proyecto',
-                'Tareas de control del presupuesto',
-                'Verificación de los pagos recibidos'
+                'Compras operativas y estratégicas',
+                'Adquisición de materiales',
+                'Negociación de contratos',
+                'Revisión de contratos'
             ],
         },
     },
@@ -119,36 +77,81 @@ const services = [
             ],
         },
     },
-    {
-        path: 'assets/icons/shopping_pink.svg',
-        changePath: 'assets/icons/shopping_grey.svg',
+     {
+        path: 'assets/icons/coins_pink.svg',
+        changePath: 'assets/icons/coins_grey.svg',
         de: {
-            title: 'Einkäuferin',
+            title: 'Finanz Management',
+
             subservices: [
-                'Operativer und Strategischer Einkauf',
-                'Materialbeschaffung',
-                'Vertragsverhandlung',
-                'Vertragsprüfung'
+                'Erstellung eines Haushaltsplans',
+                'Rechnungsstellung',
+                'Finanzierungsplan/Budgetplan des Projektes',
+                'Controlling Aufgaben des Budgets',
+                'Zahlungseingänge prüfen'
             ],
         },
         en: {
-            title: 'Buyer',
+            title: 'Financial management',
+
             subservices: [
-                'Operational and strategic purchasing',
-                'Material procurement',
-                'Contract negotiation',
-                'Contract review'
+                'Creating a budget plan',
+                'Invoicing',
+                'Financial/budget planning of the project',
+                'Budget controlling tasks',
+                'Checking incoming payments'
             ],
         },
         es: {
-            title: 'Compradora',
+            title: 'Gestión financiera',
+
             subservices: [
-                'Compras operativas y estratégicas',
-                'Adquisición de materiales',
-                'Negociación de contratos',
-                'Revisión de contratos'
+                'Elaboración de un plan presupuestario',
+                'Facturación',
+                'Planificación financiera/presupuestaria del proyecto',
+                'Tareas de control del presupuesto',
+                'Verificación de los pagos recibidos'
             ],
         },
+    },
+     {
+        path: 'assets/icons/volunteer_pink.svg',
+        changePath: 'assets/icons/volunteer_grey.svg',
+        de: {
+            title: 'Volunteer Management',
+
+            subservices: [
+                'Daten-Administration (Zuteilung und Erstellung von Schichtplanung)',
+                'Laufende Kommunikation mit den Volunteers',
+                'Akkreditierungsmanagement (Verwalten von Daten und die Ausgabe von Akkreditierung)',
+                'Koordination der Volunteer-Akkreditierung während der Veranstaltung',
+                'Onboarding und Betreuung vor Ort'
+            ],
+
+        },
+        en: {
+            title: 'Volunteer management',
+
+            subservices: [
+                'Data administration (allocation and creation of shift plans)',
+                'Ongoing communication with volunteers',
+                'Accreditation management (handling data and issuing credentials)',
+                'Coordination of volunteer accreditation during the event',
+                'Onboarding and on-site support'
+            ],
+        },
+        es: {
+            title: 'Gestión de voluntariado',
+
+            subservices: [
+                'Administración de datos (asignación y creación de turnos)',
+                'Comunicación continua con los voluntarios',
+                'Gestión de acreditaciones (manejo de datos y entrega de credenciales)',
+                'Coordinación de la acreditación de voluntarios durante el evento',
+                'Onboarding y asistencia in situ'
+            ],
+        }
+
     },
 ]
 

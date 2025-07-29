@@ -1,0 +1,34 @@
+        <div class="headerContainer" id="headerContainer">
+            <div class="headerContainerLeft">
+                <div onclick="window.scrollTo(0,0)" class="logoContainer" id="logoContainer">
+                    <img class="logo" src="assets/img/logo.png" alt="">
+                </div>
+                <div class="headlineRespPins" id="headlineRespPins"></div>
+            </div>
+
+
+
+            <nav id="nav">
+                <a class="pins" href="#aboutme" data-i18n="header1"></a>
+                <a class="pins" href="#services" data-i18n="header3"></a>
+                <a class="pins" href="#skills" data-i18n="header2"></a>
+                <a class="pins" href="#experiences" data-i18n="header4"></a>
+                <a class="pins" href="#contact" data-i18n="header5"></a>
+            </nav>
+
+            <div onclick="toogleRespMenu()" class="burger" id="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <div onclick="toogleRespMenu()" class="respMenu" id="respMenu">
+                <a href="#aboutme" data-i18n="header1"></a>
+                <a href="#services" data-i18n="header3"></a>
+                <a href="#skills" data-i18n="header2"></a>
+                <a href="#experiences" data-i18n="header4"></a>
+                <a href="#contact" data-i18n="header5"></a>
+            </div>
+
+
+        </div>

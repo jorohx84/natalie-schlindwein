@@ -18,8 +18,12 @@ gap: 112px;
 .pincolor{
     color: var(--highlight) !important;
 }
-.headlineRespPins{
-   
+
+
+.headerContainerLeft{
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
 .headlineRespPins h2{
 font-size: 16px;
@@ -96,14 +100,11 @@ font-size: 16px;
 .content{
     gap: 32px;
 }
-.dnone{
-  animation: headlinePins 0.2s ease forwards;
 
-}
 }
 
 @media(min-width:1050px) {
-.dnone{
+.logoOpacity{
     opacity: 0;
 }
 }
