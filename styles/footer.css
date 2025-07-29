@@ -62,12 +62,17 @@ footer {
  color: var(--highlight);
 }
 
-@media(max-width: 580px) {
+@media(max-width: 850px) {
     .footerContainer {
-        flex-direction: column;
+        flex-direction: column-reverse;
         padding: 20px 20px;
+        gap: 16px;
     }
-
+.mapleLogoContainer{
+   align-items: center;
+   gap: 0px;
+   text-align: center;
+}
 
 }
 

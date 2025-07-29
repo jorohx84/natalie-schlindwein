@@ -54,7 +54,7 @@ const translations = {
         impressum_title: 'Impressum',
         provider_heading: 'Angaben gemäß § 5 TMG',
         provider_text: 'Maxine Mustermann\nFreelancerin für Webentwicklung & Design\nMusterstraße 12\n12345 Berlin\nDeutschland',
-       
+
         contact_heading: 'Kontakt',
         contact_phone: 'Telefon:',
         contact_mail: 'E-Mail:',
@@ -78,8 +78,12 @@ const translations = {
         rights_heading: 'Deine Rechte laut DSGVO',
         rights_text: 'Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Widerruf und Widerspruch. Wenn du glaubst, dass die Verarbeitung deiner Daten gegen das Datenschutzrecht verstößt, kannst du dich bei der zuständigen Aufsichtsbehörde beschweren.',
         responsible_heading: 'Verantwortliche Stelle',
-        responsible_text: 'Verantwortlich für die Datenverarbeitung auf dieser Website:'
+        responsible_text: 'Verantwortlich für die Datenverarbeitung auf dieser Website:',
+        external_links_heading: 'Externe Links',
+        external_links_text: 'Diese Website enthält Links zu externen Webseiten Dritter, auf deren Inhalte ich keinen Einfluss habe. Für die Datenschutzpraktiken dieser externen Seiten übernehme ich keine Verantwortung. Beim Anklicken eines solchen Links können personenbezogene Daten (z. B. IP-Adresse) an den jeweiligen Anbieter übertragen werden.',
 
+        imprintLink: 'Impressum',
+        privacyLink: 'Datenschutzerklärung',
     },
     en: {
 
@@ -133,7 +137,7 @@ const translations = {
         contactPrivacyError: 'Please accept the privacy policy',
         freelancerTitle: 'Experience as a Freelancer',
         footerMapleText: 'Idea, design, and technical implementation:',
-        impressum_title: 'Legal Disclosure',
+        impressum_title: 'Legal Notice',
         provider_heading: 'Information in accordance with Section 5 TMG',
         provider_text: 'Maxine Mustermann\nFreelance Web Developer & Designer\nMusterstraße 12\n12345 Berlin\nGermany',
         contact_phone: 'Phone:',
@@ -159,8 +163,10 @@ const translations = {
         rights_text: 'You have the right to access, rectification, erasure, restriction, data portability, withdrawal, and objection. If you believe that the processing of your data violates data protection law, you may lodge a complaint with the responsible supervisory authority.',
         responsible_heading: 'Responsible Party',
         responsible_text: 'Responsible for data processing on this website:',
-
-
+        external_links_heading: 'External Links',
+        external_links_text: 'This website contains links to external third-party websites over which I have no control. I am not responsible for the privacy practices of these external sites. When clicking such a link, personal data (such as your IP address) may be transferred to the respective provider.',
+        imprintLink: 'Legal Notice',
+        privacyLink: 'Privacy Policy',
     },
     es: {
 
@@ -219,8 +225,8 @@ const translations = {
         provider_heading: 'Información según § 5 de la TMG',
         provider_text: 'Maxine Mustermann\nDesarrolladora y diseñadora web freelance\nCalle Ejemplo 12\n12345 Berlín\nAlemania',
         contact_heading: 'Contacto',
-         contact_phone: 'Teléfono:',
-         contact_mail: 'Correo electrónico:',
+        contact_phone: 'Teléfono:',
+        contact_mail: 'Correo electrónico:',
         vat_heading: 'Número de IVA',
         vat_text: 'Número de identificación fiscal conforme al § 27a de la Ley del IVA alemana:\nDE123456789',
         liability_heading: 'Responsabilidad por los contenidos',
@@ -242,7 +248,10 @@ const translations = {
         rights_text: 'Tienes derecho de acceso, rectificación, supresión, limitación, portabilidad de datos, revocación y oposición. Si crees que el tratamiento de tus datos infringe la normativa de protección de datos, puedes presentar una reclamación ante la autoridad de control competente.',
         responsible_heading: 'Responsable',
         responsible_text: 'Responsable del tratamiento de datos en este sitio web:',
-
+        external_links_heading: 'Enlaces externos',
+        external_links_text: 'Este sitio web contiene enlaces a sitios web externos de terceros sobre los que no tengo control. No me hago responsable de las prácticas de privacidad de dichos sitios. Al hacer clic en dichos enlaces, es posible que se transfieran datos personales (como la dirección IP) al proveedor correspondiente.',
+        imprintLink: 'Aviso Legal',
+        privacyLink: 'Política de privacidad',
     }
 }
 
