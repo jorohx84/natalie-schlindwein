@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->addReplyTo($email, $name); // Antwortadresse
 
         $mail->isHTML(false);
-        $mail->Subject = 'Neue Projektanfrage über deine Webseite';
+        $mail->Subject = 'Du hast eine neue Projektanfrage';
         $mail->Body    =
             "Hi Natalie, du hast eine neue Anfrage von:\n\n" .
             "Name: $name\n" .
