@@ -146,8 +146,12 @@ function resetFormField() {
     changePrivacy();
 }
 
-function sendMessage() {
-    console.log('Validation erfolgreich');
-    resetFormField();
+function showConfirmation(){
+const mailRef=document.getElementById('mailConfirm');
+mailRef.classList.add('showConfirm');
+setTimeout(() => {
+    mailRef.classList.remove('showConfirm');
+}, 3000);
+
 }
 

@@ -36,3 +36,9 @@ function closeSidebar() {
     sidebar.classList.remove('showSidebar');
     openBtn.classList.remove('slideSidebarBtn');
 }
+
+
+window.addEventListener('scroll', () => {
+    moveSidebar();
+    closeSidebar();
+});

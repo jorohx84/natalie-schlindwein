@@ -180,8 +180,8 @@ function freelanceCardHighlight() {
 
 function showHeadlinePins() {
     const sections = document.getElementsByClassName('sectionContainer');
-     const headlinePinContainer = document.getElementById('headlineRespPins');
-      headlinePinContainer.innerHTML = '';
+    const headlinePinContainer = document.getElementById('headlineRespPins');
+    headlinePinContainer.innerHTML = '';
     const pins = document.getElementsByClassName('pins');
     clearPins(pins);
     for (let index = 0; index < sections.length; index++) {
@@ -197,12 +197,8 @@ function showHeadlinePins() {
 function givePinsHighlight(pins, index, headlinePinContainer) {
     const currentPin = pins[index];
     if (window.innerWidth > 1050) {
-        console.log('Fullscreen');
-        console.log(currentPin.innerHTML);
         currentPin.classList.add('pincolor');
     } else {
-       
-       
         headlinePinContainer.innerHTML = `<h2>${currentPin.innerHTML}</h2>`;
     }
 
@@ -221,12 +217,12 @@ function clearPins(pins) {
 window.addEventListener('resize', resetRespMenu);
 window.addEventListener('scroll', () => {
     // opacityAnimation();
-    moveSidebar();
+    // moveSidebar();
     // dividerAnimation();
     // btnHighlight();
     // skillCardHighlight();
     // sliderAnimations();
-    closeSidebar();
+
     freelanceCardHighlight();
     showHeadlinePins();
 });

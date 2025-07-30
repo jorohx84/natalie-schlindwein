@@ -50,7 +50,8 @@ const translations = {
         contactPhoneError: 'Bitte Telefonnummer prüfen',
         contactPrivacyError: 'Bitte stimmen Sie der Datenschutzerklärung zu',
         freelancerTitle: 'Erfahrung als Freelancerin',
-        footerMapleText: 'Idee, Design und technische Umsetzung:',
+        // footerMapleText: 'Idee, Design und technische Umsetzung:',
+        footerMapleText:'Design und Umsetzung von ',
         impressum_title: 'Impressum',
         provider_heading: 'Angaben gemäß § 5 TMG',
         provider_text: 'Maxine Mustermann\nFreelancerin für Webentwicklung & Design\nMusterstraße 12\n12345 Berlin\nDeutschland',
@@ -84,6 +85,7 @@ const translations = {
 
         imprintLink: 'Impressum',
         privacyLink: 'Datenschutzerklärung',
+        mailConfirm:'Nachricht gesendet !',
     },
     en: {
 
@@ -136,7 +138,8 @@ const translations = {
         contactPhoneError: 'Please check your phone number',
         contactPrivacyError: 'Please accept the privacy policy',
         freelancerTitle: 'Experience as a Freelancer',
-        footerMapleText: 'Idea, design, and technical implementation:',
+        // footerMapleText: 'Idea, design, and technical implementation:',
+        footerMapleText:'designed and created by',
         impressum_title: 'Legal Notice',
         provider_heading: 'Information in accordance with Section 5 TMG',
         provider_text: 'Maxine Mustermann\nFreelance Web Developer & Designer\nMusterstraße 12\n12345 Berlin\nGermany',
@@ -167,6 +170,7 @@ const translations = {
         external_links_text: 'This website contains links to external third-party websites over which I have no control. I am not responsible for the privacy practices of these external sites. When clicking such a link, personal data (such as your IP address) may be transferred to the respective provider.',
         imprintLink: 'Legal Notice',
         privacyLink: 'Privacy Policy',
+        mailConfirm:'message sent !',
     },
     es: {
 
@@ -220,7 +224,8 @@ const translations = {
         contactPhoneError: 'Por favor, revisa tu número de teléfono',
         contactPrivacyError: 'Por favor, acepta la política de privacidad',
         freelancerTitle: 'Experiencia como autónoma',
-        footerMapleText: 'Idea, diseño y realización técnica:',
+        // footerMapleText: 'Idea, diseño y realización técnica:',
+        footerMapleText:'diseñado y creado por',
         impressum_title: 'Aviso Legal',
         provider_heading: 'Información según § 5 de la TMG',
         provider_text: 'Maxine Mustermann\nDesarrolladora y diseñadora web freelance\nCalle Ejemplo 12\n12345 Berlín\nAlemania',
@@ -252,6 +257,7 @@ const translations = {
         external_links_text: 'Este sitio web contiene enlaces a sitios web externos de terceros sobre los que no tengo control. No me hago responsable de las prácticas de privacidad de dichos sitios. Al hacer clic en dichos enlaces, es posible que se transfieran datos personales (como la dirección IP) al proveedor correspondiente.',
         imprintLink: 'Aviso Legal',
         privacyLink: 'Política de privacidad',
+        mailConfirm:'¡Mensaje enviado!',
     }
 }
 

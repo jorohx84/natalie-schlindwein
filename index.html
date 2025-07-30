@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Natalie Schlindwein</title>
+    <meta name="description"
+        content="Freelancerin für Eventmanagement – spezialisiert auf Volunteer-Koordination, Programmassistenz, Budgetplanung und Einkauf. Unterstützung bei Events von der Planung bis zur Umsetzung. National und international einsatzbereit.">
+    <meta name="keywords"
+        content="Eventmanagement, Freelancer, Eventplanung, Volunteer Management, Budgetplanung, Programmassistenz, Logistik, Booking, Einkauf, Veranstaltungsorganisation, Akkreditierung, Onboarding, Projektkoordination, Reiselogistik, Controlling, Event-Finanzierung, internationale Events">
+    <meta name="author" content="Maxine Mustermann">
     <link rel="icon" href="assets/img/logo.png" type="image/png">
     <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="styles/main.css">
@@ -24,6 +29,7 @@
     <script src="javaScript/language.js"></script>
     <script src="javaScript/services.js"></script>
     <script src="javaScript/sidebar.js"></script>
+    <script src="javaScript/mail.js"></script>
     <script src="https://www.w3schools.com/lib/w3.js"></script>
 </head>
 
@@ -57,11 +63,11 @@
             </div>
 
             <div onclick="toogleRespMenu()" class="respMenu" id="respMenu">
-                    <a href="#aboutme" data-i18n="header1"></a>
-                    <a href="#services" data-i18n="header3"></a>
-                    <a href="#skills" data-i18n="header2"></a>
-                    <a href="#experiences" data-i18n="header4"></a>
-                    <a href="#contact" data-i18n="header5"></a>
+                <a href="#aboutme" data-i18n="header1"></a>
+                <a href="#services" data-i18n="header3"></a>
+                <a href="#skills" data-i18n="header2"></a>
+                <a href="#experiences" data-i18n="header4"></a>
+                <a href="#contact" data-i18n="header5"></a>
             </div>
 
 
@@ -341,6 +347,7 @@
                     <span data-i18n="contactTitle"></span>
                 </div>
                 <div class="contactContent" id="contactContent">
+                    <div class="mailconfirm" id="mailConfirm" data-i18n="mailConfirm"></div>
                     <div class="contactInformationsContainer">
                         <div class="contactText">
                             <h2 data-i18n="contactSubtitle"></h2>
@@ -380,25 +387,25 @@
                         </div>
                         <div class="form">
                             <div class="inputField focus">
-                                <input class="required" onfocus="animateInputFocus(0)" type="text" id=""
+                                <input class="required" onfocus="animateInputFocus(0)" type="text" id="name"
                                     name="contactName" placeholder="" data-i18n-placeholder="contactName">
 
                             </div>
                             <span class="error" id="contactName"></span>
                             <div class="inputField focus">
-                                <input class="required" onfocus="animateInputFocus(1)" type="email" placeholder=""
-                                    data-i18n-placeholder="contactMail" name="contactMail">
+                                <input class="required" onfocus="animateInputFocus(1)" type="email" id="email"
+                                    placeholder="" data-i18n-placeholder="contactMail" name="contactMail">
 
                             </div>
                             <span class="error" id="contactMail"></span>
                             <div class="inputField focus">
-                                <input class="required" onfocus="animateInputFocus(2)" type="tel" name="contactPhone"
-                                    placeholder="" data-i18n-placeholder="contactPhone">
+                                <input class="required" onfocus="animateInputFocus(2)" type="tel" id="phone"
+                                    name="contactPhone" placeholder="" data-i18n-placeholder="contactPhone">
                             </div>
                             <span class="error" id="contactPhone"></span>
                             <div class="textField focus">
-                                <textarea class="required" onfocus="animateInputFocus(3)" name="contactMessage" id=""
-                                    placeholder="" data-i18n-placeholder="contactMessage"
+                                <textarea class="required" onfocus="animateInputFocus(3)" name="contactMessage"
+                                    id="message" placeholder="" data-i18n-placeholder="contactMessage"
                                     data-errorKey="message"></textarea>
 
                             </div>

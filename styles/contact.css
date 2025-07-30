@@ -65,7 +65,7 @@
     gap: 24px;
 }
 
-.contactArea h3{
+.contactArea h3 {
     color: var(--highlight);
 }
 
@@ -89,13 +89,15 @@
     height: 20px;
 }
 
-.contactNumber:hover{
+.contactNumber:hover {
     color: var(--highlight);
-  
+
 }
-  .contactNumber:hover .mailImage{
+
+.contactNumber:hover .mailImage {
     content: url(../assets/icons/mail_pink.svg);
-  }
+}
+
 .socialmediaContact {
     width: fit-content;
     display: flex;
@@ -146,10 +148,10 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-gap: 32px;
+    gap: 32px;
 }
 
-.contactRespHeadline{
+.contactRespHeadline {
     width: 100%;
     max-width: 550px;
     display: flex;
@@ -264,6 +266,33 @@ gap: 32px;
     color: var(--highlight);
 }
 
+.mailconfirm {
+    width: 500px;
+    height: 80px;
+    border: solid 1px var(--secondary);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(100vw, -50%);
+    transition: transform 1s ease-in-out;
+}
+
+.showConfirm{
+transform: translate(-50%,-50%);
+}
+
+@keyframes confirm{
+    0%{}
+    100%{
+
+    }
+}
+
 @media(max-width: 1300px) {
     .contactContent {
         flex-direction: column;
@@ -277,21 +306,21 @@ gap: 32px;
 
     .contactText {
         width: 100%;
-   
+
     }
 
     .contactFields {
         width: 100%;
-       align-items: flex-start;
-      
+        align-items: flex-start;
+
     }
 
 }
 
 @media(min-width: 1300px) {
-.contactRespHeadline{
-    display: none;
-}
+    .contactRespHeadline {
+        display: none;
+    }
 }
 
 @media(max-width: 1200px) {
@@ -317,9 +346,13 @@ gap: 32px;
         font-size: 14px;
     }
 
-    .socialmediaContact{
+    .socialmediaContact {
         width: 100%;
-     
+
+    }
+    .mailconfirm{
+        width: 250px;
+       
     }
 
 }

@@ -212,7 +212,7 @@ function renderExperiences(lang) {
                             <img src="${image.path}">
                             </div>
                             <div class="stationDescription">
-                            <p>2000</p>
+                            <p>${year}</p>
                             <h4>${station.title}</h4>
                             <div class="experiencesDivider"></div>
                             <span>${station.description}</span>
