@@ -232,9 +232,20 @@
     background-color: rgba(0, 0, 0, 0.345)
 }
 
-@media(max-width: 1400px) {
+@media(max-width: 1750px) {
+
+    .ctaContainer span {
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 1450px) {
     .profileKey {
         max-width: 240px;
+    }
+
+    .ctaContainer span {
+        font-size: 18px;
     }
 }
 
@@ -247,9 +258,10 @@
 
 @media(max-width: 1020px) {
 
-    .aboutme{
+    .aboutme {
         margin-bottom: 0;
     }
+
     .aboutmeContainer {
         height: fit-content;
     }
@@ -271,10 +283,10 @@
 
     .aboutmeText span {
         font-size: 16px;
-      
+
     }
 
-    .aboutmePhoto{
+    .aboutmePhoto {
         max-width: 250px;
     }
 

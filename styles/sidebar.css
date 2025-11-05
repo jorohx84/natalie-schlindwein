@@ -143,10 +143,14 @@
     width: 1px;
     background-color: var(--primary);
 }
-@media(max-width:1050px) {
+@media(max-width:1750px) {
    .sidebarContainer button {
         width: 40px;
         height: 40px;
+    }
+
+    .sidebarContainer button img{
+        width: 20px;
     }
 
     .sidebar {

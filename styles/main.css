@@ -46,7 +46,7 @@ font-size: 16px;
     justify-content: flex-start;
     transition: transform 1.2s ease-in-out, opacity 2s ease-in-out;
     opacity: 1;
-    margin-top: 112px;
+    margin-top: 156px;
     margin-bottom: 56px;
 
 
@@ -58,7 +58,7 @@ font-size: 16px;
 }
 
 .lettering span {
-    font-size: 120px;
+    font-size: 124px;
     font-weight: bold;
     color: var(--secondary);
 }
@@ -73,9 +73,12 @@ font-size: 16px;
 
 
 
-@media(max-width:1600px) {
+@media(max-width:1750px) {
     .lettering span {
-        font-size: 110px;
+        font-size: 88px;
+    }
+    .lettering{
+        margin-top: 112px;
     }
 }
 
