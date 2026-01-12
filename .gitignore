@@ -1,0 +1,16 @@
+# sensible Konfigurationsdateien
+config.php
+
+# optionale lokale Varianten
+config.local.php
+.env
+.env.local
+
+# Logs
+*.log
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -4,15 +4,17 @@ use PHPMailer\PHPMailer\Exception;
 
 require 'vendor/autoload.php'; // oder passe den Pfad zu PHPMailer manuell an
 
+require 'config.php';
+
 ini_set('display_errors', '0');
 error_reporting(E_ALL);
 
 define('LOG_FILE', __DIR__ . '/error_log.txt');
 
-$db_server   = 'database-5018310625.webspace-host.com';
-$db_benutzer = 'dbu2169830';
-$db_passwort = 'NS.Webseite2025!';
-$db_name     = 'dbs14508899';
+$db_server   = DB_SERVER;
+$db_benutzer = DB_USER;
+$db_passwort = DB_PASS;
+$db_name     = DB_NAME;
 
 function log_error($message) {
     $date = date('Y-m-d H:i:s');
@@ -54,13 +56,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->isSMTP();
         $mail->Host       = 'smtp.strato.de'; // Dein SMTP-Server
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'info@natalie-schlindwein.com'; // Deine E-Mail-Adresse
+        $mail->Username   = 'info@natalie-schlindwein.de'; // Deine E-Mail-Adresse
         $mail->Password   = 'NS.Webseite2025!';           // Passwort deiner E-Mail
         $mail->SMTPSecure = 'tls';
         $mail->Port       = 587;
 
-        $mail->setFrom('info@natalie-schlindwein.com', 'Neue Projektanfrage'); // Absenderadresse
-        $mail->addAddress('info@natalie-schlindwein.com'); // Empfängeradresse
+        $mail->setFrom('info@natalie-schlindwein.de', 'Neue Projektanfrage'); // Absenderadresse
+        $mail->addAddress('info@natalie-schlindwein.de'); // Empfängeradresse
         $mail->addReplyTo($email, $name); // Antwortadresse
 
         $mail->isHTML(false);
